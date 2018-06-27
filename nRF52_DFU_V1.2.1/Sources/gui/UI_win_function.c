@@ -362,7 +362,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_bycle,BMP_FUNCTION_BYCLE_RGB_F,BMP_FUNCTION_BYCLE_RGB_B);	
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x0000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0x0000);
         #endif
         
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_yellow );
@@ -383,7 +383,7 @@ void show_function(int x, int y, int counter )
         DrawUI_Bitmap(0,40,80,80,BMP_hr_1, 0x1F<<11,0x00); 
         DrawUI_Bitmap_Ex(0,40,80,80,BMP_hr_2, 0xFFFF);	
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x2000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0x2000);
         #endif
         
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_red );
@@ -400,7 +400,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_sleep,0XF81F,BMP_FUNCTION_SLEEP_RGB_B);
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x4000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0x4000);
         #endif
         
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_blue );
@@ -412,7 +412,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_alarm,BMP_FUNCTION_ALARM_RGB_F,BMP_FUNCTION_ALARM_RGB_B);
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x6000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0x6000);
         #endif 
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_yellow );
         
@@ -423,7 +423,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_findphone,BMP_FUNCTION_FINDPHONE_RGB_F,BMP_FUNCTION_FINDPHONE_RGB_B);
         #else
-        draw_bitmap_from_flash( (80-64)/2+8, (160-64)/2, 64, 64, 0x200000+0x8000);
+        draw_bitmap_from_flash( (80-64)/2+8, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0x8000);
         #endif  
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_blue ); 
         
@@ -434,7 +434,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_info,BMP_FUNCTION_INFO_RGB_F,BMP_FUNCTION_INFO_RGB_B);
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xa000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0xa000);
         #endif   
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_yellow );
         DrawUI_Bitmap_Ex((80-32)/2,120+4,32,32,bmp_function_shutdown,0xFFFF);	
@@ -444,7 +444,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_shutdown,BMP_FUNCTION_SHUTDOWN_RGB_F,BMP_FUNCTION_SHUTDOWN_RGB_B);
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xc000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0xc000);
         #endif        
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_red );        
         DrawUI_Bitmap_Ex((80-32)/2,120+4,32,32,bmp_function_back,0xFFFF);
@@ -454,7 +454,7 @@ void show_function(int x, int y, int counter )
         #if 0
         DrawUI_Bitmap(0,40,80,80,BMP_function_back,BMP_FUNCTION_BACK_RGB_F,BMP_FUNCTION_BACK_RGB_B); 
         #else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xe000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0xe000);
         #endif      
         DrawUI_JPEG( 0, 160-34, jpeg_ui_bg_blue );
         DrawUI_Bitmap_Ex((80-32)/2,120+4,32,32,bmp_function_bycle,0xFFFF);		

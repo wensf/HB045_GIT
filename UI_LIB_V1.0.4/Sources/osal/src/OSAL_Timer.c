@@ -260,7 +260,7 @@ void platform_clock_init(void)
     
     NRF_CLOCK->LFCLKSRC = 1;
     NRF_CLOCK->TASKS_LFCLKSTART = 1;
-    while( (NRF_CLOCK->LFCLKSTAT&0x01) != 1);
+    // while( (NRF_CLOCK->LFCLKSTAT&0x01) != 1);
     #endif
     
 	NVIC_DisableIRQ(RTC1_IRQn);

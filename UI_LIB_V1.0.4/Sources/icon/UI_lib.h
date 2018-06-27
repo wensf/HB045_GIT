@@ -2,7 +2,7 @@
 #define __UI_LIB_H__
 
 #define UI_NR                      8
-#define FLASH_BASE_ADDR     0x200000
+#define FLASH_BASE_ADDR     0x1F0000
 #define USED_BY_APP                0 /* app使用时, 将该宏定设定为1 */
 
 /**

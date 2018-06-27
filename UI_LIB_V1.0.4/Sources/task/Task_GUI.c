@@ -166,7 +166,7 @@ unsigned long taskGUI( unsigned long task_id, unsigned long events )
 	    
     if ( events & TASK_GUI_FONI_INIT_EVT )
     {
-        erase_All_page   = 32;       // 共512页
+        erase_All_page   = 16;       // 共512页
         erase_Cur_page   = 0;
         Flash_stat       = 0;
         
@@ -274,19 +274,19 @@ unsigned long taskGUI( unsigned long task_id, unsigned long events )
             
             ReadPage( flash_ui[read_Cur_page].addr, buf, size);
             
-            //if ( memcmp( flash_ui[read_Cur_page].bitmap, buf, size ) != 0 )
-            for ( cidx = 0; cidx < size; cidx++ )
+            if ( memcmp( flash_ui[read_Cur_page].bitmap, buf, size ) != 0 )
+            // for ( cidx = 0; cidx < size; cidx++ )
             {
-                if ( flash_ui[read_Cur_page].bitmap[cidx] != buf[cidx] )
-                //break;
-                error_cnt[read_Cur_page]++;
+                // if ( flash_ui[read_Cur_page].bitmap[cidx] != buf[cidx] )
+                break;
+                // error_cnt[read_Cur_page]++;
             }
         }        
         Flash_stat = 3;
         
         if ( read_Cur_page != read_All_page )
         {
-            osal_start_timerEx ( task_id,TASK_GUI_FONT_READ_PAGE_EVT, 100); 
+        //    osal_start_timerEx ( task_id,TASK_GUI_FONT_READ_PAGE_EVT, 100); 
         }
         
         return ( events ^ TASK_GUI_FONT_READ_PAGE_EVT );

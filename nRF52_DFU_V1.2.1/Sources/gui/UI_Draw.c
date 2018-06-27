@@ -89,10 +89,11 @@ void draw_bitmap_from_flash(int fx, int fy, int width, int height, unsigned long
     CS_FONT_ENABLE();
    
     //发送命令及地址
-    spi_write_byte( NRF_SPI0, 0x03 );               /* Command   */
+    spi_write_byte( NRF_SPI0, 0x0B );               /* Command   */
     spi_write_byte( NRF_SPI0,(addr>>16) & 0xFF);    /* Address 1 */
     spi_write_byte( NRF_SPI0,(addr>> 8) & 0xFF);    /* Address 2 */
     spi_write_byte( NRF_SPI0,(addr>> 0) & 0xFF);    /* Address 3 */    
+    spi_write_byte( NRF_SPI0,0xA5);
     
 	for( int y = fy; y < (fy + height); y++ )
 	{
