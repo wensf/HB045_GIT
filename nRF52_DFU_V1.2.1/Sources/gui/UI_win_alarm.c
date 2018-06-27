@@ -17,6 +17,7 @@
 #include "UI_alarm_icon.h"
 #include "UI_comm_icon.h"
 #include "UI_function_icon.h"
+#include "UI_Flash_Lib.h"
 
 #define COLOR_F 0xFFFF
 #define COLOR_B 0x0000
@@ -26,7 +27,7 @@ void show_alarm(int x, int y, int hour, int minute )
     #if 0
 	DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_alarm,BMP_FUNCTION_ALARM_RGB_F);	
 	#else
-    draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, 0x200000+0x6000);    
+    draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, FLASH_BASE_ADDR+0x6000);    
     #endif
     
 	DrawUI_Bitmap_Ex(13,114,11,24,Font_11x24[hour/10], COLOR_F);	

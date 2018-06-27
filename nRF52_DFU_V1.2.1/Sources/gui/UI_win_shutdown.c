@@ -14,6 +14,8 @@
 #include "UI_function_icon.h"
 #include "bma253.h"
 #include "Task_Battery.h"
+#include "UI_Flash_Lib.h"
+
 
 extern void ConnectionTerminate( int enable );
 extern unsigned char showLogoFlag;
@@ -52,7 +54,7 @@ void show_shutdown_icon(int x, int y )
     #if 0
 	DrawUI_Bitmap_Ex(0,(160-80)/2,80,80,BMP_function_shutdown,BMP_FUNCTION_SHUTDOWN_RGB_F);
     #else
-    draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xc000);    
+    draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0xc000);    
     #endif
 }
 

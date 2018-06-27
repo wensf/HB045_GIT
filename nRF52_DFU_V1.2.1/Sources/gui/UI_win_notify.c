@@ -576,6 +576,7 @@ void ui_earse_app_notify( int msg_id, unsigned long arg ){}
 #include "UI_comm_icon.h"
 #include "UI_win_alarm.h"
 #include "ClockTick.h"
+#include "UI_Flash_Lib.h"
 	
 static void DrawAlarmTimer(int x, int y, int hour, int minute )
 {	
@@ -586,7 +587,7 @@ static void DrawAlarmTimer(int x, int y, int hour, int minute )
         #if 0
 		DrawUI_Bitmap(0,24,80,80,BMP_function_alarm,BMP_FUNCTION_ALARM_RGB_F,BMP_FUNCTION_ALARM_RGB_B);	
 		#else
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x6000);             
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, FLASH_BASE_ADDR+0x6000);             
         #endif
 	 }else{
 

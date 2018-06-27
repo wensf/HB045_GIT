@@ -14,6 +14,7 @@
 #include "UI_comm_icon.h"
 #include "UI_function_icon.h"
 #include "sleep_algorithm.h"
+#include "UI_Flash_Lib.h"
 
 #define COLOR_F 0xffff
 #define COLOR_B 0x0000
@@ -39,7 +40,7 @@ void show_sleep_timer(int x, int y, int deep_time,int light_time)
 	#if 0
 	DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_sleep,0XF81F);	
 	#else
-    draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, 0x200000+0x4000);    
+    draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, FLASH_BASE_ADDR+0x4000);    
     #endif
 	if ( (int)(vh) > 9 )
 	{
