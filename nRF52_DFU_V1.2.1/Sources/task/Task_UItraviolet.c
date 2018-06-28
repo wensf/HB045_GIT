@@ -215,7 +215,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             osal_set_event ( task_id, TASK_UIT_UPDATE_UV_EVT );
         }
         
-        if ( !(sampleCnt % 30) )           /* 3分钟保存1个,1次保存2个,6分钟1组 */
+        if ( !(sampleCnt % 30) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 3分钟保存1个,1次保存2个,6分钟1组 */
         {
             if ( dataCnt == 0 )
             {
@@ -228,7 +228,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             } 
         }
         
-        if ( !(sampleCnt % 60) )         /* 每个60分钟上报一次 */
+        if ( !(sampleCnt % 60) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
         {
             local_tx[0] = 0x28;
             local_tx[1] = 0x02;

@@ -14,3 +14,4 @@ nRF52_DFU.uvguix.Think
 nRF52_DFU.uvguix.jacky
 *.TMP
 JLinkLog.txt
+app.map

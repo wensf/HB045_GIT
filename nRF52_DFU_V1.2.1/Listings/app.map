@@ -652,6 +652,7 @@ Section Cross References
     task_uitraviolet.o(i.taskUItraviolet) refers to btprotocol.o(i.bt_protocol_tx) for bt_protocol_tx
     task_uitraviolet.o(i.taskUItraviolet) refers to task_uitraviolet.o(.bss) for .bss
     task_uitraviolet.o(i.taskUItraviolet) refers to task_uitraviolet.o(.data) for .data
+    task_uitraviolet.o(i.taskUItraviolet) refers to clocktick.o(.data) for current_timer
     task_uitraviolet.o(i.taskUItraviolet) refers to task_store.o(.data) for taskStoreTaskId
     task_uitraviolet.o(i.taskUItraviolet) refers to task_flash.o(.bss) for fm
     task_uitraviolet.o(i.taskUItravioletInit) refers to osal.o(i.osal_set_event) for osal_set_event
@@ -4340,293 +4341,293 @@ Image Symbol Table
     i.taskTouch                              0x00030618   Section        0  task_touch.o(i.taskTouch)
     i.taskTouchInit                          0x000306f4   Section        0  task_touch.o(i.taskTouchInit)
     i.taskUItraviolet                        0x00030700   Section        0  task_uitraviolet.o(i.taskUItraviolet)
-    i.taskUItravioletInit                    0x0003093c   Section        0  task_uitraviolet.o(i.taskUItravioletInit)
-    i.taskUpload                             0x0003094c   Section        0  task_upload.o(i.taskUpload)
-    i.taskUploadInit                         0x000316e0   Section        0  task_upload.o(i.taskUploadInit)
-    i.tx_buffer_process                      0x000316ec   Section        0  ble_ancs_c.o(i.tx_buffer_process)
-    tx_buffer_process                        0x000316ed   Thumb Code    64  ble_ancs_c.o(i.tx_buffer_process)
-    i.tx_char_add                            0x00031734   Section        0  ble_nus.o(i.tx_char_add)
-    tx_char_add                              0x00031735   Thumb Code   162  ble_nus.o(i.tx_char_add)
-    i.ui_alarm_notify                        0x000317d8   Section        0  ui_win_notify.o(i.ui_alarm_notify)
-    i.ui_app_notify                          0x00031804   Section        0  ui_win_notify.o(i.ui_app_notify)
-    i.ui_ble_notify                          0x00031878   Section        0  ui_win_notify.o(i.ui_ble_notify)
-    i.ui_calling_notify                      0x000318bc   Section        0  ui_win_notify.o(i.ui_calling_notify)
-    i.ui_drink_notify                        0x00031910   Section        0  ui_win_notify.o(i.ui_drink_notify)
-    i.ui_earse_app_notify                    0x0003196c   Section        0  ui_win_notify.o(i.ui_earse_app_notify)
-    i.ui_erase_alarm_notify                  0x0003196e   Section        0  ui_win_notify.o(i.ui_erase_alarm_notify)
-    i.ui_erase_ble_notify                    0x00031970   Section        0  ui_win_notify.o(i.ui_erase_ble_notify)
-    i.ui_erase_calling_notify                0x00031974   Section        0  ui_win_notify.o(i.ui_erase_calling_notify)
-    i.ui_erase_drink_notify                  0x0003198c   Section        0  ui_win_notify.o(i.ui_erase_drink_notify)
-    i.ui_erase_find_me_notify                0x0003198e   Section        0  ui_win_notify.o(i.ui_erase_find_me_notify)
-    i.ui_erase_medicine_notify               0x00031990   Section        0  ui_win_notify.o(i.ui_erase_medicine_notify)
-    i.ui_erase_message_notify                0x00031994   Section        0  ui_win_notify.o(i.ui_erase_message_notify)
-    i.ui_erase_sedentary_notify              0x000319ac   Section        0  ui_win_notify.o(i.ui_erase_sedentary_notify)
-    i.ui_erase_uit_notify                    0x000319ae   Section        0  ui_win_notify.o(i.ui_erase_uit_notify)
-    i.ui_find_me_notify                      0x000319b0   Section        0  ui_win_notify.o(i.ui_find_me_notify)
-    i.ui_medicine_notify                     0x000319f8   Section        0  ui_win_notify.o(i.ui_medicine_notify)
-    i.ui_message_notify                      0x00031a3c   Section        0  ui_win_notify.o(i.ui_message_notify)
-    i.ui_sedentary_notify                    0x00031a8c   Section        0  ui_win_notify.o(i.ui_sedentary_notify)
-    i.ui_show_version                        0x00031ad0   Section        0  ui_win_info.o(i.ui_show_version)
-    i.ui_uit_notify                          0x00031b54   Section        0  ui_win_notify.o(i.ui_uit_notify)
-    i.ui_weather                             0x00031bf0   Section        0  ui_win_main.o(i.ui_weather)
-    i.ui_win_hr_done                         0x000322f4   Section        0  ui_win_hr.o(i.ui_win_hr_done)
-    i.ui_win_hr_error                        0x000324bc   Section        0  ui_win_hr.o(i.ui_win_hr_error)
-    i.ui_win_hr_none                         0x0003250c   Section        0  ui_win_hr.o(i.ui_win_hr_none)
-    i.ui_win_hr_ready                        0x0003255c   Section        0  ui_win_hr.o(i.ui_win_hr_ready)
-    i.ui_win_hr_stop                         0x000325e8   Section        0  ui_win_hr.o(i.ui_win_hr_stop)
-    i.ui_win_sport                           0x0003279c   Section        0  ui_win_sport.o(i.ui_win_sport)
-    i.ui_window_manager                      0x000327c4   Section        0  window.o(i.ui_window_manager)
-    i.uint16_encode                          0x000327f4   Section        0  ble_advdata.o(i.uint16_encode)
-    uint16_encode                            0x000327f5   Thumb Code    10  ble_advdata.o(i.uint16_encode)
-    i.uit_get_level                          0x000327fe   Section        0  ui_win_main.o(i.uit_get_level)
-    i.unit_update                            0x00032824   Section        0  task_step.o(i.unit_update)
-    i.unziphfmex                             0x00032908   Section        0  hfma2ylib.o(i.unziphfmex)
-    i.update_status_bit_reset                0x00032a1c   Section        0  device_manager_peripheral.o(i.update_status_bit_reset)
-    update_status_bit_reset                  0x00032a1d   Thumb Code    14  device_manager_peripheral.o(i.update_status_bit_reset)
-    i.update_timeout_handler                 0x00032a30   Section        0  ble_conn_params.o(i.update_timeout_handler)
-    update_timeout_handler                   0x00032a31   Thumb Code    88  ble_conn_params.o(i.update_timeout_handler)
-    i.uuid_list_encode                       0x00032a90   Section        0  ble_advdata.o(i.uuid_list_encode)
-    uuid_list_encode                         0x00032a91   Thumb Code    48  ble_advdata.o(i.uuid_list_encode)
-    i.uuid_list_sized_encode                 0x00032ac0   Section        0  ble_advdata.o(i.uuid_list_sized_encode)
-    uuid_list_sized_encode                   0x00032ac1   Thumb Code   158  ble_advdata.o(i.uuid_list_sized_encode)
-    i.v_to_cm2                               0x00032b60   Section        0  task_uitraviolet.o(i.v_to_cm2)
-    i.wchat_pedometer_profile_init           0x00032d68   Section        0  ble_wechat_service.o(i.wchat_pedometer_profile_init)
-    i.wchat_target_profile_init              0x00032e10   Section        0  ble_wechat_service.o(i.wchat_target_profile_init)
-    i.wechat_indicate_pedometer              0x00032ec0   Section        0  ble_wechat_service.o(i.wechat_indicate_pedometer)
-    i.wechat_services_init                   0x00032f18   Section        0  ble_wechat_service.o(i.wechat_services_init)
-    i.whitelist_has_entries                  0x00032f84   Section        0  ble_advertising.o(i.whitelist_has_entries)
-    whitelist_has_entries                    0x00032f85   Thumb Code    14  ble_advertising.o(i.whitelist_has_entries)
-    i.win_alarm_proc                         0x00032f94   Section        0  ui_win_alarm.o(i.win_alarm_proc)
-    i.win_camera_proc                        0x000330c8   Section        0  ui_win_camera.o(i.win_camera_proc)
-    i.win_findphone_proc                     0x000331fc   Section        0  ui_win_findphone.o(i.win_findphone_proc)
-    i.win_function_proc                      0x000333e0   Section        0  ui_win_function.o(i.win_function_proc)
-    i.win_hr_proc                            0x00033580   Section        0  ui_win_hr.o(i.win_hr_proc)
-    i.win_info_proc                          0x000337c0   Section        0  ui_win_info.o(i.win_info_proc)
-    i.win_main_proc                          0x000338e0   Section        0  ui_win_main.o(i.win_main_proc)
-    i.win_notify_proc                        0x00033adc   Section        0  ui_win_notify.o(i.win_notify_proc)
-    i.win_pedometer_proc                     0x00033db0   Section        0  ui_win_pedometer.o(i.win_pedometer_proc)
-    i.win_shutdown_proc                      0x00033f5c   Section        0  ui_win_shutdown.o(i.win_shutdown_proc)
-    i.win_sleep_proc                         0x000340cc   Section        0  ui_win_sleep.o(i.win_sleep_proc)
-    i.win_sport_proc                         0x000341e8   Section        0  ui_win_sport.o(i.win_sport_proc)
-    i.window_get                             0x00034408   Section        0  window.o(i.window_get)
-    i.window_init                            0x0003443c   Section        0  window.o(i.window_init)
-    i.window_pop                             0x00034478   Section        0  window.o(i.window_pop)
-    i.window_push                            0x000344a0   Section        0  window.o(i.window_push)
-    i.window_tack_reset                      0x000344b8   Section        0  window.o(i.window_tack_reset)
-    .constdata                               0x000344d4   Section       17  main.o(.constdata)
-    .constdata                               0x000344e8   Section       61  clocktick.o(.constdata)
-    .constdata                               0x00034525   Section        3  btprotocol.o(.constdata)
-    .constdata                               0x00034528   Section       52  osal_task.o(.constdata)
-    .constdata                               0x0003455c   Section        4  osal_task.o(.constdata)
-    .constdata                               0x00034560   Section        4  task_ble.o(.constdata)
-    .constdata                               0x00034564   Section       80  task_hr.o(.constdata)
-    .constdata                               0x000345b4   Section       16  ble_dfu.o(.constdata)
-    .constdata                               0x000345c4   Section       16  ble_nus.o(.constdata)
-    .constdata                               0x000345d4   Section       52  device_manager_peripheral.o(.constdata)
-    .constdata                               0x00034608   Section       64  ble_ancs_c.o(.constdata)
-    .constdata                               0x00034648   Section       40  pstorage.o(.constdata)
-    swap_sub_state_sm_lut                    0x00034648   Data          20  pstorage.o(.constdata)
-    swap_sub_state_sm_lut                    0x0003465c   Data          20  pstorage.o(.constdata)
-    .constdata                               0x00034670   Section     6628  qr_encode.o(.constdata)
-    QR_VersonInfo                            0x00034670   Data        6068  qr_encode.o(.constdata)
-    byExpToInt                               0x00035e24   Data         256  qr_encode.o(.constdata)
-    byIntToExp                               0x00035f24   Data         256  qr_encode.o(.constdata)
-    nIndicatorLenNumeral                     0x00036024   Data          12  qr_encode.o(.constdata)
-    nIndicatorLenAlphabet                    0x00036030   Data          12  qr_encode.o(.constdata)
-    nIndicatorLen8Bit                        0x0003603c   Data          12  qr_encode.o(.constdata)
-    nIndicatorLenKanji                       0x00036048   Data          12  qr_encode.o(.constdata)
-    .constdata                               0x00036054   Section        7  qr_encode.o(.constdata)
-    byRSExp7                                 0x00036054   Data           7  qr_encode.o(.constdata)
-    .constdata                               0x0003605b   Section       10  qr_encode.o(.constdata)
-    byRSExp10                                0x0003605b   Data          10  qr_encode.o(.constdata)
-    .constdata                               0x00036065   Section       13  qr_encode.o(.constdata)
-    byRSExp13                                0x00036065   Data          13  qr_encode.o(.constdata)
-    .constdata                               0x00036072   Section       15  qr_encode.o(.constdata)
-    byRSExp15                                0x00036072   Data          15  qr_encode.o(.constdata)
-    .constdata                               0x00036081   Section       16  qr_encode.o(.constdata)
-    byRSExp16                                0x00036081   Data          16  qr_encode.o(.constdata)
-    .constdata                               0x00036091   Section       17  qr_encode.o(.constdata)
-    byRSExp17                                0x00036091   Data          17  qr_encode.o(.constdata)
-    .constdata                               0x000360a2   Section       18  qr_encode.o(.constdata)
-    byRSExp18                                0x000360a2   Data          18  qr_encode.o(.constdata)
-    .constdata                               0x000360b4   Section       20  qr_encode.o(.constdata)
-    byRSExp20                                0x000360b4   Data          20  qr_encode.o(.constdata)
-    .constdata                               0x000360c8   Section       22  qr_encode.o(.constdata)
-    byRSExp22                                0x000360c8   Data          22  qr_encode.o(.constdata)
-    .constdata                               0x000360de   Section       24  qr_encode.o(.constdata)
-    byRSExp24                                0x000360de   Data          24  qr_encode.o(.constdata)
-    .constdata                               0x000360f6   Section       26  qr_encode.o(.constdata)
-    byRSExp26                                0x000360f6   Data          26  qr_encode.o(.constdata)
-    .constdata                               0x00036110   Section       28  qr_encode.o(.constdata)
-    byRSExp28                                0x00036110   Data          28  qr_encode.o(.constdata)
-    .constdata                               0x0003612c   Section       30  qr_encode.o(.constdata)
-    byRSExp30                                0x0003612c   Data          30  qr_encode.o(.constdata)
-    .constdata                               0x0003614a   Section       32  qr_encode.o(.constdata)
-    byRSExp32                                0x0003614a   Data          32  qr_encode.o(.constdata)
-    .constdata                               0x0003616a   Section       34  qr_encode.o(.constdata)
-    byRSExp34                                0x0003616a   Data          34  qr_encode.o(.constdata)
-    .constdata                               0x0003618c   Section       36  qr_encode.o(.constdata)
-    byRSExp36                                0x0003618c   Data          36  qr_encode.o(.constdata)
-    .constdata                               0x000361b0   Section       38  qr_encode.o(.constdata)
-    byRSExp38                                0x000361b0   Data          38  qr_encode.o(.constdata)
-    .constdata                               0x000361d6   Section       40  qr_encode.o(.constdata)
-    byRSExp40                                0x000361d6   Data          40  qr_encode.o(.constdata)
-    .constdata                               0x000361fe   Section       42  qr_encode.o(.constdata)
-    byRSExp42                                0x000361fe   Data          42  qr_encode.o(.constdata)
-    .constdata                               0x00036228   Section       44  qr_encode.o(.constdata)
-    byRSExp44                                0x00036228   Data          44  qr_encode.o(.constdata)
-    .constdata                               0x00036254   Section       46  qr_encode.o(.constdata)
-    byRSExp46                                0x00036254   Data          46  qr_encode.o(.constdata)
-    .constdata                               0x00036282   Section       48  qr_encode.o(.constdata)
-    byRSExp48                                0x00036282   Data          48  qr_encode.o(.constdata)
-    .constdata                               0x000362b2   Section       50  qr_encode.o(.constdata)
-    byRSExp50                                0x000362b2   Data          50  qr_encode.o(.constdata)
-    .constdata                               0x000362e4   Section       52  qr_encode.o(.constdata)
-    byRSExp52                                0x000362e4   Data          52  qr_encode.o(.constdata)
-    .constdata                               0x00036318   Section       54  qr_encode.o(.constdata)
-    byRSExp54                                0x00036318   Data          54  qr_encode.o(.constdata)
-    .constdata                               0x0003634e   Section       56  qr_encode.o(.constdata)
-    byRSExp56                                0x0003634e   Data          56  qr_encode.o(.constdata)
-    .constdata                               0x00036386   Section       58  qr_encode.o(.constdata)
-    byRSExp58                                0x00036386   Data          58  qr_encode.o(.constdata)
-    .constdata                               0x000363c0   Section       60  qr_encode.o(.constdata)
-    byRSExp60                                0x000363c0   Data          60  qr_encode.o(.constdata)
-    .constdata                               0x000363fc   Section       62  qr_encode.o(.constdata)
-    byRSExp62                                0x000363fc   Data          62  qr_encode.o(.constdata)
-    .constdata                               0x0003643a   Section       64  qr_encode.o(.constdata)
-    byRSExp64                                0x0003643a   Data          64  qr_encode.o(.constdata)
-    .constdata                               0x0003647a   Section       66  qr_encode.o(.constdata)
-    byRSExp66                                0x0003647a   Data          66  qr_encode.o(.constdata)
-    .constdata                               0x000364bc   Section       68  qr_encode.o(.constdata)
-    byRSExp68                                0x000364bc   Data          68  qr_encode.o(.constdata)
-    .constdata                               0x00036500   Section     2060  ui_win_main.o(.constdata)
-    .constdata                               0x00036d0c   Section      520  ui_win_pedometer.o(.constdata)
-    .constdata                               0x00036f14   Section     5204  ui_win_function.o(.constdata)
-    .constdata                               0x00038368   Section      120  ui_win_notify.o(.constdata)
-    notify_max                               0x00038368   Data          40  ui_win_notify.o(.constdata)
-    .constdata                               0x000383e0   Section        4  window.o(.constdata)
-    .constdata                               0x000383e4   Section      152  ui_main_icon.o(.constdata)
-    .constdata                               0x0003847c   Section       10  ui_main_icon.o(.constdata)
-    .constdata                               0x00038486   Section      880  ui_main_icon.o(.constdata)
-    .constdata                               0x000387f6   Section      144  ui_main_icon.o(.constdata)
-    .constdata                               0x00038886   Section      476  ui_main_icon.o(.constdata)
-    .constdata                               0x00038a62   Section      264  ui_main_icon.o(.constdata)
-    .constdata                               0x00038b6a   Section      726  ui_main_icon.o(.constdata)
-    .constdata                               0x00038e40   Section      364  ui_main_icon.o(.constdata)
-    .constdata                               0x00038fac   Section      354  ui_main_icon.o(.constdata)
-    .constdata                               0x0003910e   Section      350  ui_main_icon.o(.constdata)
-    .constdata                               0x0003926c   Section      365  ui_main_icon.o(.constdata)
-    .constdata                               0x000393d9   Section      373  ui_main_icon.o(.constdata)
-    .constdata                               0x0003954e   Section      369  ui_main_icon.o(.constdata)
-    .constdata                               0x000396bf   Section      367  ui_main_icon.o(.constdata)
-    .constdata                               0x0003982e   Section      368  ui_main_icon.o(.constdata)
-    .constdata                               0x0003999e   Section      376  ui_main_icon.o(.constdata)
-    .constdata                               0x00039b16   Section      354  ui_main_icon.o(.constdata)
-    .constdata                               0x00039c78   Section      372  ui_main_icon.o(.constdata)
-    .constdata                               0x00039dec   Section      354  ui_main_icon.o(.constdata)
-    .constdata                               0x00039f4e   Section      334  ui_main_icon.o(.constdata)
-    .constdata                               0x0003a09c   Section      448  ui_main_icon.o(.constdata)
-    .constdata                               0x0003a25c   Section     1453  ui_main_icon.o(.constdata)
-    .constdata                               0x0003a809   Section     1320  ui_main_icon.o(.constdata)
-    .constdata                               0x0003ad31   Section     1658  ui_main_icon.o(.constdata)
-    .constdata                               0x0003b3ab   Section     1641  ui_main_icon.o(.constdata)
-    .constdata                               0x0003ba14   Section     1532  ui_main_icon.o(.constdata)
-    .constdata                               0x0003c010   Section     1472  ui_main_icon.o(.constdata)
-    .constdata                               0x0003c5d0   Section     1073  ui_main_icon.o(.constdata)
-    .constdata                               0x0003ca01   Section      713  ui_main_icon.o(.constdata)
-    .constdata                               0x0003ccca   Section      513  ui_main_icon.o(.constdata)
-    .constdata                               0x0003cecb   Section      530  ui_main_icon.o(.constdata)
-    .constdata                               0x0003d0dd   Section      517  ui_main_icon.o(.constdata)
-    .constdata                               0x0003d2e2   Section      482  ui_main_icon.o(.constdata)
-    .constdata                               0x0003d4c4   Section      477  ui_main_icon.o(.constdata)
-    .constdata                               0x0003d6a1   Section      467  ui_main_icon.o(.constdata)
-    .constdata                               0x0003d874   Section      581  ui_main_icon.o(.constdata)
-    .constdata                               0x0003dab9   Section      544  ui_main_icon.o(.constdata)
-    .constdata                               0x0003dcd9   Section     1901  ui_main_icon.o(.constdata)
-    .constdata                               0x0003e446   Section     1854  ui_main_icon.o(.constdata)
-    .constdata                               0x0003eb84   Section     1936  ui_main_icon.o(.constdata)
-    .constdata                               0x0003f314   Section     1847  ui_main_icon.o(.constdata)
-    .constdata                               0x0003fa4b   Section     1812  ui_main_icon.o(.constdata)
-    .constdata                               0x0004015f   Section     6545  ui_main_icon.o(.constdata)
-    .constdata                               0x00041af0   Section      512  ui_pedometer_icon.o(.constdata)
-    .constdata                               0x00041cf0   Section      512  ui_pedometer_icon.o(.constdata)
-    .constdata                               0x00041ef0   Section       38  ui_pedometer_icon.o(.constdata)
-    .constdata                               0x00041f16   Section       80  ui_pedometer_icon.o(.constdata)
-    .constdata                               0x00041f66   Section       80  ui_pedometer_icon.o(.constdata)
-    .constdata                               0x00041fb6   Section       64  ui_pedometer_icon.o(.constdata)
-    .constdata                               0x00041ff6   Section      800  ui_function_icon.o(.constdata)
-    .constdata                               0x00042316   Section      800  ui_function_icon.o(.constdata)
-    .constdata                               0x00042636   Section      800  ui_function_icon.o(.constdata)
-    .constdata                               0x00042956   Section      800  ui_function_icon.o(.constdata)
-    .constdata                               0x00042c76   Section      800  ui_function_icon.o(.constdata)
-    .constdata                               0x00042f96   Section      800  ui_function_icon.o(.constdata)
-    .constdata                               0x000432b6   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x00043336   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x000433b6   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x00043436   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x000434b6   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x00043536   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x000435b6   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x00043636   Section      128  ui_function_icon.o(.constdata)
-    .constdata                               0x000436b6   Section      408  ui_function_icon.o(.constdata)
-    .constdata                               0x0004384e   Section      270  ui_function_icon.o(.constdata)
-    .constdata                               0x0004395c   Section       72  ui_hr_icon.o(.constdata)
-    .constdata                               0x000439a4   Section      512  ui_hr_icon.o(.constdata)
-    .constdata                               0x00043ba4   Section      512  ui_hr_icon.o(.constdata)
-    .constdata                               0x00043da4   Section      512  ui_hr_icon.o(.constdata)
-    .constdata                               0x00043fa4   Section      640  ui_hr_icon.o(.constdata)
-    .constdata                               0x00044224   Section      800  ui_findphone_icon.o(.constdata)
-    .constdata                               0x00044544   Section      429  ui_comm_icon.o(.constdata)
-    .constdata                               0x000446f1   Section      196  ui_comm_icon.o(.constdata)
-    .constdata                               0x000447b5   Section     8192  ui_notify_icon.o(.constdata)
-    .constdata                               0x000467b5   Section      200  ui_notify_icon.o(.constdata)
-    .constdata                               0x0004687d   Section      196  ui_notify_icon.o(.constdata)
-    .constdata                               0x00046941   Section      246  ui_notify_icon.o(.constdata)
-    .constdata                               0x00046a37   Section      348  ui_notify_icon.o(.constdata)
-    .constdata                               0x00046b93   Section      512  ui_notify_icon.o(.constdata)
-    .constdata                               0x00046d93   Section      210  ui_notify_icon.o(.constdata)
-    .constdata                               0x00046e65   Section      512  ui_notify_icon.o(.constdata)
-    .constdata                               0x00047065   Section      512  ui_notify_icon.o(.constdata)
-    .constdata                               0x00047265   Section      800  ui_notify_icon.o(.constdata)
-    .constdata                               0x00047585   Section      324  ui_notify_icon.o(.constdata)
-    .constdata                               0x000476c9   Section      288  ui_notify_icon.o(.constdata)
-    .constdata                               0x000477e9   Section      165  ui_notify_icon.o(.constdata)
-    .constdata                               0x0004788e   Section      300  ui_notify_icon.o(.constdata)
-    .constdata                               0x000479ba   Section      104  ui_notify_icon.o(.constdata)
-    .constdata                               0x00047a22   Section     1969  ui_notify_icon.o(.constdata)
-    .constdata                               0x000481d3   Section      800  ui_notify_icon.o(.constdata)
-    .constdata                               0x000484f3   Section      800  ui_notify_icon.o(.constdata)
-    .constdata                               0x00048813   Section      800  ui_notify_icon.o(.constdata)
-    .constdata                               0x00048b33   Section      512  ui_camera_icon.o(.constdata)
-    .constdata                               0x00048d33   Section       72  ui_sport_icon.o(.constdata)
-    .constdata                               0x00048d7b   Section      174  ui_sport_icon.o(.constdata)
-    .constdata                               0x00048e29   Section       32  ui_sport_icon.o(.constdata)
-    .constdata                               0x00048e49   Section       48  ui_sport_icon.o(.constdata)
-    .constdata                               0x00048e79   Section      608  ui_sport_icon.o(.constdata)
-    .constdata                               0x000490d9   Section      363  ui_sport_icon.o(.constdata)
-    .constdata                               0x00049244   Section      192  ui_sport_icon.o(.constdata)
-    .constdata                               0x00049304   Section     1216  tjpgd.o(.constdata)
-    Zig                                      0x00049304   Data          64  tjpgd.o(.constdata)
-    Ipsf                                     0x00049344   Data         128  tjpgd.o(.constdata)
-    Clip8                                    0x000493c4   Data        1024  tjpgd.o(.constdata)
-    .constdata                               0x000497c8   Section      136  pow.o(.constdata)
-    bp                                       0x000497c8   Data          16  pow.o(.constdata)
-    dp_h                                     0x000497d8   Data          16  pow.o(.constdata)
-    dp_l                                     0x000497e8   Data          16  pow.o(.constdata)
-    L                                        0x000497f8   Data          48  pow.o(.constdata)
-    P                                        0x00049828   Data          40  pow.o(.constdata)
-    .constdata                               0x00049850   Section       12  mktime.o(.constdata)
-    monlen                                   0x00049850   Data          12  mktime.o(.constdata)
-    .constdata                               0x00049860   Section       48  cos_i.o(.constdata)
-    C                                        0x00049860   Data          48  cos_i.o(.constdata)
-    .constdata                               0x00049890   Section        8  qnan.o(.constdata)
-    .constdata                               0x00049898   Section      200  rred.o(.constdata)
-    pio2s                                    0x00049898   Data          48  rred.o(.constdata)
-    twooverpi                                0x000498c8   Data         152  rred.o(.constdata)
-    .constdata                               0x00049960   Section       40  sin_i.o(.constdata)
-    S                                        0x00049960   Data          40  sin_i.o(.constdata)
-    .constdata                               0x00049988   Section       12  localtime_i.o(.constdata)
-    monlen                                   0x00049988   Data          12  localtime_i.o(.constdata)
+    i.taskUItravioletInit                    0x0003095c   Section        0  task_uitraviolet.o(i.taskUItravioletInit)
+    i.taskUpload                             0x0003096c   Section        0  task_upload.o(i.taskUpload)
+    i.taskUploadInit                         0x00031700   Section        0  task_upload.o(i.taskUploadInit)
+    i.tx_buffer_process                      0x0003170c   Section        0  ble_ancs_c.o(i.tx_buffer_process)
+    tx_buffer_process                        0x0003170d   Thumb Code    64  ble_ancs_c.o(i.tx_buffer_process)
+    i.tx_char_add                            0x00031754   Section        0  ble_nus.o(i.tx_char_add)
+    tx_char_add                              0x00031755   Thumb Code   162  ble_nus.o(i.tx_char_add)
+    i.ui_alarm_notify                        0x000317f8   Section        0  ui_win_notify.o(i.ui_alarm_notify)
+    i.ui_app_notify                          0x00031824   Section        0  ui_win_notify.o(i.ui_app_notify)
+    i.ui_ble_notify                          0x00031898   Section        0  ui_win_notify.o(i.ui_ble_notify)
+    i.ui_calling_notify                      0x000318dc   Section        0  ui_win_notify.o(i.ui_calling_notify)
+    i.ui_drink_notify                        0x00031930   Section        0  ui_win_notify.o(i.ui_drink_notify)
+    i.ui_earse_app_notify                    0x0003198c   Section        0  ui_win_notify.o(i.ui_earse_app_notify)
+    i.ui_erase_alarm_notify                  0x0003198e   Section        0  ui_win_notify.o(i.ui_erase_alarm_notify)
+    i.ui_erase_ble_notify                    0x00031990   Section        0  ui_win_notify.o(i.ui_erase_ble_notify)
+    i.ui_erase_calling_notify                0x00031994   Section        0  ui_win_notify.o(i.ui_erase_calling_notify)
+    i.ui_erase_drink_notify                  0x000319ac   Section        0  ui_win_notify.o(i.ui_erase_drink_notify)
+    i.ui_erase_find_me_notify                0x000319ae   Section        0  ui_win_notify.o(i.ui_erase_find_me_notify)
+    i.ui_erase_medicine_notify               0x000319b0   Section        0  ui_win_notify.o(i.ui_erase_medicine_notify)
+    i.ui_erase_message_notify                0x000319b4   Section        0  ui_win_notify.o(i.ui_erase_message_notify)
+    i.ui_erase_sedentary_notify              0x000319cc   Section        0  ui_win_notify.o(i.ui_erase_sedentary_notify)
+    i.ui_erase_uit_notify                    0x000319ce   Section        0  ui_win_notify.o(i.ui_erase_uit_notify)
+    i.ui_find_me_notify                      0x000319d0   Section        0  ui_win_notify.o(i.ui_find_me_notify)
+    i.ui_medicine_notify                     0x00031a18   Section        0  ui_win_notify.o(i.ui_medicine_notify)
+    i.ui_message_notify                      0x00031a5c   Section        0  ui_win_notify.o(i.ui_message_notify)
+    i.ui_sedentary_notify                    0x00031aac   Section        0  ui_win_notify.o(i.ui_sedentary_notify)
+    i.ui_show_version                        0x00031af0   Section        0  ui_win_info.o(i.ui_show_version)
+    i.ui_uit_notify                          0x00031b74   Section        0  ui_win_notify.o(i.ui_uit_notify)
+    i.ui_weather                             0x00031c10   Section        0  ui_win_main.o(i.ui_weather)
+    i.ui_win_hr_done                         0x00032314   Section        0  ui_win_hr.o(i.ui_win_hr_done)
+    i.ui_win_hr_error                        0x000324dc   Section        0  ui_win_hr.o(i.ui_win_hr_error)
+    i.ui_win_hr_none                         0x0003252c   Section        0  ui_win_hr.o(i.ui_win_hr_none)
+    i.ui_win_hr_ready                        0x0003257c   Section        0  ui_win_hr.o(i.ui_win_hr_ready)
+    i.ui_win_hr_stop                         0x00032608   Section        0  ui_win_hr.o(i.ui_win_hr_stop)
+    i.ui_win_sport                           0x000327bc   Section        0  ui_win_sport.o(i.ui_win_sport)
+    i.ui_window_manager                      0x000327e4   Section        0  window.o(i.ui_window_manager)
+    i.uint16_encode                          0x00032814   Section        0  ble_advdata.o(i.uint16_encode)
+    uint16_encode                            0x00032815   Thumb Code    10  ble_advdata.o(i.uint16_encode)
+    i.uit_get_level                          0x0003281e   Section        0  ui_win_main.o(i.uit_get_level)
+    i.unit_update                            0x00032844   Section        0  task_step.o(i.unit_update)
+    i.unziphfmex                             0x00032928   Section        0  hfma2ylib.o(i.unziphfmex)
+    i.update_status_bit_reset                0x00032a3c   Section        0  device_manager_peripheral.o(i.update_status_bit_reset)
+    update_status_bit_reset                  0x00032a3d   Thumb Code    14  device_manager_peripheral.o(i.update_status_bit_reset)
+    i.update_timeout_handler                 0x00032a50   Section        0  ble_conn_params.o(i.update_timeout_handler)
+    update_timeout_handler                   0x00032a51   Thumb Code    88  ble_conn_params.o(i.update_timeout_handler)
+    i.uuid_list_encode                       0x00032ab0   Section        0  ble_advdata.o(i.uuid_list_encode)
+    uuid_list_encode                         0x00032ab1   Thumb Code    48  ble_advdata.o(i.uuid_list_encode)
+    i.uuid_list_sized_encode                 0x00032ae0   Section        0  ble_advdata.o(i.uuid_list_sized_encode)
+    uuid_list_sized_encode                   0x00032ae1   Thumb Code   158  ble_advdata.o(i.uuid_list_sized_encode)
+    i.v_to_cm2                               0x00032b80   Section        0  task_uitraviolet.o(i.v_to_cm2)
+    i.wchat_pedometer_profile_init           0x00032d88   Section        0  ble_wechat_service.o(i.wchat_pedometer_profile_init)
+    i.wchat_target_profile_init              0x00032e30   Section        0  ble_wechat_service.o(i.wchat_target_profile_init)
+    i.wechat_indicate_pedometer              0x00032ee0   Section        0  ble_wechat_service.o(i.wechat_indicate_pedometer)
+    i.wechat_services_init                   0x00032f38   Section        0  ble_wechat_service.o(i.wechat_services_init)
+    i.whitelist_has_entries                  0x00032fa4   Section        0  ble_advertising.o(i.whitelist_has_entries)
+    whitelist_has_entries                    0x00032fa5   Thumb Code    14  ble_advertising.o(i.whitelist_has_entries)
+    i.win_alarm_proc                         0x00032fb4   Section        0  ui_win_alarm.o(i.win_alarm_proc)
+    i.win_camera_proc                        0x000330e8   Section        0  ui_win_camera.o(i.win_camera_proc)
+    i.win_findphone_proc                     0x0003321c   Section        0  ui_win_findphone.o(i.win_findphone_proc)
+    i.win_function_proc                      0x00033400   Section        0  ui_win_function.o(i.win_function_proc)
+    i.win_hr_proc                            0x000335a0   Section        0  ui_win_hr.o(i.win_hr_proc)
+    i.win_info_proc                          0x000337e0   Section        0  ui_win_info.o(i.win_info_proc)
+    i.win_main_proc                          0x00033900   Section        0  ui_win_main.o(i.win_main_proc)
+    i.win_notify_proc                        0x00033afc   Section        0  ui_win_notify.o(i.win_notify_proc)
+    i.win_pedometer_proc                     0x00033dd0   Section        0  ui_win_pedometer.o(i.win_pedometer_proc)
+    i.win_shutdown_proc                      0x00033f7c   Section        0  ui_win_shutdown.o(i.win_shutdown_proc)
+    i.win_sleep_proc                         0x000340ec   Section        0  ui_win_sleep.o(i.win_sleep_proc)
+    i.win_sport_proc                         0x00034208   Section        0  ui_win_sport.o(i.win_sport_proc)
+    i.window_get                             0x00034428   Section        0  window.o(i.window_get)
+    i.window_init                            0x0003445c   Section        0  window.o(i.window_init)
+    i.window_pop                             0x00034498   Section        0  window.o(i.window_pop)
+    i.window_push                            0x000344c0   Section        0  window.o(i.window_push)
+    i.window_tack_reset                      0x000344d8   Section        0  window.o(i.window_tack_reset)
+    .constdata                               0x000344f4   Section       17  main.o(.constdata)
+    .constdata                               0x00034508   Section       61  clocktick.o(.constdata)
+    .constdata                               0x00034545   Section        3  btprotocol.o(.constdata)
+    .constdata                               0x00034548   Section       52  osal_task.o(.constdata)
+    .constdata                               0x0003457c   Section        4  osal_task.o(.constdata)
+    .constdata                               0x00034580   Section        4  task_ble.o(.constdata)
+    .constdata                               0x00034584   Section       80  task_hr.o(.constdata)
+    .constdata                               0x000345d4   Section       16  ble_dfu.o(.constdata)
+    .constdata                               0x000345e4   Section       16  ble_nus.o(.constdata)
+    .constdata                               0x000345f4   Section       52  device_manager_peripheral.o(.constdata)
+    .constdata                               0x00034628   Section       64  ble_ancs_c.o(.constdata)
+    .constdata                               0x00034668   Section       40  pstorage.o(.constdata)
+    swap_sub_state_sm_lut                    0x00034668   Data          20  pstorage.o(.constdata)
+    swap_sub_state_sm_lut                    0x0003467c   Data          20  pstorage.o(.constdata)
+    .constdata                               0x00034690   Section     6628  qr_encode.o(.constdata)
+    QR_VersonInfo                            0x00034690   Data        6068  qr_encode.o(.constdata)
+    byExpToInt                               0x00035e44   Data         256  qr_encode.o(.constdata)
+    byIntToExp                               0x00035f44   Data         256  qr_encode.o(.constdata)
+    nIndicatorLenNumeral                     0x00036044   Data          12  qr_encode.o(.constdata)
+    nIndicatorLenAlphabet                    0x00036050   Data          12  qr_encode.o(.constdata)
+    nIndicatorLen8Bit                        0x0003605c   Data          12  qr_encode.o(.constdata)
+    nIndicatorLenKanji                       0x00036068   Data          12  qr_encode.o(.constdata)
+    .constdata                               0x00036074   Section        7  qr_encode.o(.constdata)
+    byRSExp7                                 0x00036074   Data           7  qr_encode.o(.constdata)
+    .constdata                               0x0003607b   Section       10  qr_encode.o(.constdata)
+    byRSExp10                                0x0003607b   Data          10  qr_encode.o(.constdata)
+    .constdata                               0x00036085   Section       13  qr_encode.o(.constdata)
+    byRSExp13                                0x00036085   Data          13  qr_encode.o(.constdata)
+    .constdata                               0x00036092   Section       15  qr_encode.o(.constdata)
+    byRSExp15                                0x00036092   Data          15  qr_encode.o(.constdata)
+    .constdata                               0x000360a1   Section       16  qr_encode.o(.constdata)
+    byRSExp16                                0x000360a1   Data          16  qr_encode.o(.constdata)
+    .constdata                               0x000360b1   Section       17  qr_encode.o(.constdata)
+    byRSExp17                                0x000360b1   Data          17  qr_encode.o(.constdata)
+    .constdata                               0x000360c2   Section       18  qr_encode.o(.constdata)
+    byRSExp18                                0x000360c2   Data          18  qr_encode.o(.constdata)
+    .constdata                               0x000360d4   Section       20  qr_encode.o(.constdata)
+    byRSExp20                                0x000360d4   Data          20  qr_encode.o(.constdata)
+    .constdata                               0x000360e8   Section       22  qr_encode.o(.constdata)
+    byRSExp22                                0x000360e8   Data          22  qr_encode.o(.constdata)
+    .constdata                               0x000360fe   Section       24  qr_encode.o(.constdata)
+    byRSExp24                                0x000360fe   Data          24  qr_encode.o(.constdata)
+    .constdata                               0x00036116   Section       26  qr_encode.o(.constdata)
+    byRSExp26                                0x00036116   Data          26  qr_encode.o(.constdata)
+    .constdata                               0x00036130   Section       28  qr_encode.o(.constdata)
+    byRSExp28                                0x00036130   Data          28  qr_encode.o(.constdata)
+    .constdata                               0x0003614c   Section       30  qr_encode.o(.constdata)
+    byRSExp30                                0x0003614c   Data          30  qr_encode.o(.constdata)
+    .constdata                               0x0003616a   Section       32  qr_encode.o(.constdata)
+    byRSExp32                                0x0003616a   Data          32  qr_encode.o(.constdata)
+    .constdata                               0x0003618a   Section       34  qr_encode.o(.constdata)
+    byRSExp34                                0x0003618a   Data          34  qr_encode.o(.constdata)
+    .constdata                               0x000361ac   Section       36  qr_encode.o(.constdata)
+    byRSExp36                                0x000361ac   Data          36  qr_encode.o(.constdata)
+    .constdata                               0x000361d0   Section       38  qr_encode.o(.constdata)
+    byRSExp38                                0x000361d0   Data          38  qr_encode.o(.constdata)
+    .constdata                               0x000361f6   Section       40  qr_encode.o(.constdata)
+    byRSExp40                                0x000361f6   Data          40  qr_encode.o(.constdata)
+    .constdata                               0x0003621e   Section       42  qr_encode.o(.constdata)
+    byRSExp42                                0x0003621e   Data          42  qr_encode.o(.constdata)
+    .constdata                               0x00036248   Section       44  qr_encode.o(.constdata)
+    byRSExp44                                0x00036248   Data          44  qr_encode.o(.constdata)
+    .constdata                               0x00036274   Section       46  qr_encode.o(.constdata)
+    byRSExp46                                0x00036274   Data          46  qr_encode.o(.constdata)
+    .constdata                               0x000362a2   Section       48  qr_encode.o(.constdata)
+    byRSExp48                                0x000362a2   Data          48  qr_encode.o(.constdata)
+    .constdata                               0x000362d2   Section       50  qr_encode.o(.constdata)
+    byRSExp50                                0x000362d2   Data          50  qr_encode.o(.constdata)
+    .constdata                               0x00036304   Section       52  qr_encode.o(.constdata)
+    byRSExp52                                0x00036304   Data          52  qr_encode.o(.constdata)
+    .constdata                               0x00036338   Section       54  qr_encode.o(.constdata)
+    byRSExp54                                0x00036338   Data          54  qr_encode.o(.constdata)
+    .constdata                               0x0003636e   Section       56  qr_encode.o(.constdata)
+    byRSExp56                                0x0003636e   Data          56  qr_encode.o(.constdata)
+    .constdata                               0x000363a6   Section       58  qr_encode.o(.constdata)
+    byRSExp58                                0x000363a6   Data          58  qr_encode.o(.constdata)
+    .constdata                               0x000363e0   Section       60  qr_encode.o(.constdata)
+    byRSExp60                                0x000363e0   Data          60  qr_encode.o(.constdata)
+    .constdata                               0x0003641c   Section       62  qr_encode.o(.constdata)
+    byRSExp62                                0x0003641c   Data          62  qr_encode.o(.constdata)
+    .constdata                               0x0003645a   Section       64  qr_encode.o(.constdata)
+    byRSExp64                                0x0003645a   Data          64  qr_encode.o(.constdata)
+    .constdata                               0x0003649a   Section       66  qr_encode.o(.constdata)
+    byRSExp66                                0x0003649a   Data          66  qr_encode.o(.constdata)
+    .constdata                               0x000364dc   Section       68  qr_encode.o(.constdata)
+    byRSExp68                                0x000364dc   Data          68  qr_encode.o(.constdata)
+    .constdata                               0x00036520   Section     2060  ui_win_main.o(.constdata)
+    .constdata                               0x00036d2c   Section      520  ui_win_pedometer.o(.constdata)
+    .constdata                               0x00036f34   Section     5204  ui_win_function.o(.constdata)
+    .constdata                               0x00038388   Section      120  ui_win_notify.o(.constdata)
+    notify_max                               0x00038388   Data          40  ui_win_notify.o(.constdata)
+    .constdata                               0x00038400   Section        4  window.o(.constdata)
+    .constdata                               0x00038404   Section      152  ui_main_icon.o(.constdata)
+    .constdata                               0x0003849c   Section       10  ui_main_icon.o(.constdata)
+    .constdata                               0x000384a6   Section      880  ui_main_icon.o(.constdata)
+    .constdata                               0x00038816   Section      144  ui_main_icon.o(.constdata)
+    .constdata                               0x000388a6   Section      476  ui_main_icon.o(.constdata)
+    .constdata                               0x00038a82   Section      264  ui_main_icon.o(.constdata)
+    .constdata                               0x00038b8a   Section      726  ui_main_icon.o(.constdata)
+    .constdata                               0x00038e60   Section      364  ui_main_icon.o(.constdata)
+    .constdata                               0x00038fcc   Section      354  ui_main_icon.o(.constdata)
+    .constdata                               0x0003912e   Section      350  ui_main_icon.o(.constdata)
+    .constdata                               0x0003928c   Section      365  ui_main_icon.o(.constdata)
+    .constdata                               0x000393f9   Section      373  ui_main_icon.o(.constdata)
+    .constdata                               0x0003956e   Section      369  ui_main_icon.o(.constdata)
+    .constdata                               0x000396df   Section      367  ui_main_icon.o(.constdata)
+    .constdata                               0x0003984e   Section      368  ui_main_icon.o(.constdata)
+    .constdata                               0x000399be   Section      376  ui_main_icon.o(.constdata)
+    .constdata                               0x00039b36   Section      354  ui_main_icon.o(.constdata)
+    .constdata                               0x00039c98   Section      372  ui_main_icon.o(.constdata)
+    .constdata                               0x00039e0c   Section      354  ui_main_icon.o(.constdata)
+    .constdata                               0x00039f6e   Section      334  ui_main_icon.o(.constdata)
+    .constdata                               0x0003a0bc   Section      448  ui_main_icon.o(.constdata)
+    .constdata                               0x0003a27c   Section     1453  ui_main_icon.o(.constdata)
+    .constdata                               0x0003a829   Section     1320  ui_main_icon.o(.constdata)
+    .constdata                               0x0003ad51   Section     1658  ui_main_icon.o(.constdata)
+    .constdata                               0x0003b3cb   Section     1641  ui_main_icon.o(.constdata)
+    .constdata                               0x0003ba34   Section     1532  ui_main_icon.o(.constdata)
+    .constdata                               0x0003c030   Section     1472  ui_main_icon.o(.constdata)
+    .constdata                               0x0003c5f0   Section     1073  ui_main_icon.o(.constdata)
+    .constdata                               0x0003ca21   Section      713  ui_main_icon.o(.constdata)
+    .constdata                               0x0003ccea   Section      513  ui_main_icon.o(.constdata)
+    .constdata                               0x0003ceeb   Section      530  ui_main_icon.o(.constdata)
+    .constdata                               0x0003d0fd   Section      517  ui_main_icon.o(.constdata)
+    .constdata                               0x0003d302   Section      482  ui_main_icon.o(.constdata)
+    .constdata                               0x0003d4e4   Section      477  ui_main_icon.o(.constdata)
+    .constdata                               0x0003d6c1   Section      467  ui_main_icon.o(.constdata)
+    .constdata                               0x0003d894   Section      581  ui_main_icon.o(.constdata)
+    .constdata                               0x0003dad9   Section      544  ui_main_icon.o(.constdata)
+    .constdata                               0x0003dcf9   Section     1901  ui_main_icon.o(.constdata)
+    .constdata                               0x0003e466   Section     1854  ui_main_icon.o(.constdata)
+    .constdata                               0x0003eba4   Section     1936  ui_main_icon.o(.constdata)
+    .constdata                               0x0003f334   Section     1847  ui_main_icon.o(.constdata)
+    .constdata                               0x0003fa6b   Section     1812  ui_main_icon.o(.constdata)
+    .constdata                               0x0004017f   Section     6545  ui_main_icon.o(.constdata)
+    .constdata                               0x00041b10   Section      512  ui_pedometer_icon.o(.constdata)
+    .constdata                               0x00041d10   Section      512  ui_pedometer_icon.o(.constdata)
+    .constdata                               0x00041f10   Section       38  ui_pedometer_icon.o(.constdata)
+    .constdata                               0x00041f36   Section       80  ui_pedometer_icon.o(.constdata)
+    .constdata                               0x00041f86   Section       80  ui_pedometer_icon.o(.constdata)
+    .constdata                               0x00041fd6   Section       64  ui_pedometer_icon.o(.constdata)
+    .constdata                               0x00042016   Section      800  ui_function_icon.o(.constdata)
+    .constdata                               0x00042336   Section      800  ui_function_icon.o(.constdata)
+    .constdata                               0x00042656   Section      800  ui_function_icon.o(.constdata)
+    .constdata                               0x00042976   Section      800  ui_function_icon.o(.constdata)
+    .constdata                               0x00042c96   Section      800  ui_function_icon.o(.constdata)
+    .constdata                               0x00042fb6   Section      800  ui_function_icon.o(.constdata)
+    .constdata                               0x000432d6   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x00043356   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x000433d6   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x00043456   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x000434d6   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x00043556   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x000435d6   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x00043656   Section      128  ui_function_icon.o(.constdata)
+    .constdata                               0x000436d6   Section      408  ui_function_icon.o(.constdata)
+    .constdata                               0x0004386e   Section      270  ui_function_icon.o(.constdata)
+    .constdata                               0x0004397c   Section       72  ui_hr_icon.o(.constdata)
+    .constdata                               0x000439c4   Section      512  ui_hr_icon.o(.constdata)
+    .constdata                               0x00043bc4   Section      512  ui_hr_icon.o(.constdata)
+    .constdata                               0x00043dc4   Section      512  ui_hr_icon.o(.constdata)
+    .constdata                               0x00043fc4   Section      640  ui_hr_icon.o(.constdata)
+    .constdata                               0x00044244   Section      800  ui_findphone_icon.o(.constdata)
+    .constdata                               0x00044564   Section      429  ui_comm_icon.o(.constdata)
+    .constdata                               0x00044711   Section      196  ui_comm_icon.o(.constdata)
+    .constdata                               0x000447d5   Section     8192  ui_notify_icon.o(.constdata)
+    .constdata                               0x000467d5   Section      200  ui_notify_icon.o(.constdata)
+    .constdata                               0x0004689d   Section      196  ui_notify_icon.o(.constdata)
+    .constdata                               0x00046961   Section      246  ui_notify_icon.o(.constdata)
+    .constdata                               0x00046a57   Section      348  ui_notify_icon.o(.constdata)
+    .constdata                               0x00046bb3   Section      512  ui_notify_icon.o(.constdata)
+    .constdata                               0x00046db3   Section      210  ui_notify_icon.o(.constdata)
+    .constdata                               0x00046e85   Section      512  ui_notify_icon.o(.constdata)
+    .constdata                               0x00047085   Section      512  ui_notify_icon.o(.constdata)
+    .constdata                               0x00047285   Section      800  ui_notify_icon.o(.constdata)
+    .constdata                               0x000475a5   Section      324  ui_notify_icon.o(.constdata)
+    .constdata                               0x000476e9   Section      288  ui_notify_icon.o(.constdata)
+    .constdata                               0x00047809   Section      165  ui_notify_icon.o(.constdata)
+    .constdata                               0x000478ae   Section      300  ui_notify_icon.o(.constdata)
+    .constdata                               0x000479da   Section      104  ui_notify_icon.o(.constdata)
+    .constdata                               0x00047a42   Section     1969  ui_notify_icon.o(.constdata)
+    .constdata                               0x000481f3   Section      800  ui_notify_icon.o(.constdata)
+    .constdata                               0x00048513   Section      800  ui_notify_icon.o(.constdata)
+    .constdata                               0x00048833   Section      800  ui_notify_icon.o(.constdata)
+    .constdata                               0x00048b53   Section      512  ui_camera_icon.o(.constdata)
+    .constdata                               0x00048d53   Section       72  ui_sport_icon.o(.constdata)
+    .constdata                               0x00048d9b   Section      174  ui_sport_icon.o(.constdata)
+    .constdata                               0x00048e49   Section       32  ui_sport_icon.o(.constdata)
+    .constdata                               0x00048e69   Section       48  ui_sport_icon.o(.constdata)
+    .constdata                               0x00048e99   Section      608  ui_sport_icon.o(.constdata)
+    .constdata                               0x000490f9   Section      363  ui_sport_icon.o(.constdata)
+    .constdata                               0x00049264   Section      192  ui_sport_icon.o(.constdata)
+    .constdata                               0x00049324   Section     1216  tjpgd.o(.constdata)
+    Zig                                      0x00049324   Data          64  tjpgd.o(.constdata)
+    Ipsf                                     0x00049364   Data         128  tjpgd.o(.constdata)
+    Clip8                                    0x000493e4   Data        1024  tjpgd.o(.constdata)
+    .constdata                               0x000497e8   Section      136  pow.o(.constdata)
+    bp                                       0x000497e8   Data          16  pow.o(.constdata)
+    dp_h                                     0x000497f8   Data          16  pow.o(.constdata)
+    dp_l                                     0x00049808   Data          16  pow.o(.constdata)
+    L                                        0x00049818   Data          48  pow.o(.constdata)
+    P                                        0x00049848   Data          40  pow.o(.constdata)
+    .constdata                               0x00049870   Section       12  mktime.o(.constdata)
+    monlen                                   0x00049870   Data          12  mktime.o(.constdata)
+    .constdata                               0x00049880   Section       48  cos_i.o(.constdata)
+    C                                        0x00049880   Data          48  cos_i.o(.constdata)
+    .constdata                               0x000498b0   Section        8  qnan.o(.constdata)
+    .constdata                               0x000498b8   Section      200  rred.o(.constdata)
+    pio2s                                    0x000498b8   Data          48  rred.o(.constdata)
+    twooverpi                                0x000498e8   Data         152  rred.o(.constdata)
+    .constdata                               0x00049980   Section       40  sin_i.o(.constdata)
+    S                                        0x00049980   Data          40  sin_i.o(.constdata)
+    .constdata                               0x000499a8   Section       12  localtime_i.o(.constdata)
+    monlen                                   0x000499a8   Data          12  localtime_i.o(.constdata)
     .data                                    0x20002080   Section       36  alarm.o(.data)
     .data                                    0x200020a4   Section       16  clocktick.o(.data)
     .data                                    0x200020b4   Section       80  usersetting.o(.data)
@@ -5396,203 +5397,203 @@ Image Symbol Table
     taskStoreInit                            0x0003060d   Thumb Code     6  task_store.o(i.taskStoreInit)
     taskTouch                                0x00030619   Thumb Code   204  task_touch.o(i.taskTouch)
     taskTouchInit                            0x000306f5   Thumb Code     6  task_touch.o(i.taskTouchInit)
-    taskUItraviolet                          0x00030701   Thumb Code   532  task_uitraviolet.o(i.taskUItraviolet)
-    taskUItravioletInit                      0x0003093d   Thumb Code    10  task_uitraviolet.o(i.taskUItravioletInit)
-    taskUpload                               0x0003094d   Thumb Code  3470  task_upload.o(i.taskUpload)
-    taskUploadInit                           0x000316e1   Thumb Code     6  task_upload.o(i.taskUploadInit)
-    ui_alarm_notify                          0x000317d9   Thumb Code    34  ui_win_notify.o(i.ui_alarm_notify)
-    ui_app_notify                            0x00031805   Thumb Code   100  ui_win_notify.o(i.ui_app_notify)
-    ui_ble_notify                            0x00031879   Thumb Code    56  ui_win_notify.o(i.ui_ble_notify)
-    ui_calling_notify                        0x000318bd   Thumb Code    68  ui_win_notify.o(i.ui_calling_notify)
-    ui_drink_notify                          0x00031911   Thumb Code    74  ui_win_notify.o(i.ui_drink_notify)
-    ui_earse_app_notify                      0x0003196d   Thumb Code     2  ui_win_notify.o(i.ui_earse_app_notify)
-    ui_erase_alarm_notify                    0x0003196f   Thumb Code     2  ui_win_notify.o(i.ui_erase_alarm_notify)
-    ui_erase_ble_notify                      0x00031971   Thumb Code     2  ui_win_notify.o(i.ui_erase_ble_notify)
-    ui_erase_calling_notify                  0x00031975   Thumb Code    20  ui_win_notify.o(i.ui_erase_calling_notify)
-    ui_erase_drink_notify                    0x0003198d   Thumb Code     2  ui_win_notify.o(i.ui_erase_drink_notify)
-    ui_erase_find_me_notify                  0x0003198f   Thumb Code     2  ui_win_notify.o(i.ui_erase_find_me_notify)
-    ui_erase_medicine_notify                 0x00031991   Thumb Code     2  ui_win_notify.o(i.ui_erase_medicine_notify)
-    ui_erase_message_notify                  0x00031995   Thumb Code    20  ui_win_notify.o(i.ui_erase_message_notify)
-    ui_erase_sedentary_notify                0x000319ad   Thumb Code     2  ui_win_notify.o(i.ui_erase_sedentary_notify)
-    ui_erase_uit_notify                      0x000319af   Thumb Code     2  ui_win_notify.o(i.ui_erase_uit_notify)
-    ui_find_me_notify                        0x000319b1   Thumb Code    58  ui_win_notify.o(i.ui_find_me_notify)
-    ui_medicine_notify                       0x000319f9   Thumb Code    56  ui_win_notify.o(i.ui_medicine_notify)
-    ui_message_notify                        0x00031a3d   Thumb Code    66  ui_win_notify.o(i.ui_message_notify)
-    ui_sedentary_notify                      0x00031a8d   Thumb Code    56  ui_win_notify.o(i.ui_sedentary_notify)
-    ui_show_version                          0x00031ad1   Thumb Code   126  ui_win_info.o(i.ui_show_version)
-    ui_uit_notify                            0x00031b55   Thumb Code   132  ui_win_notify.o(i.ui_uit_notify)
-    ui_weather                               0x00031bf1   Thumb Code  1782  ui_win_main.o(i.ui_weather)
-    ui_win_hr_done                           0x000322f5   Thumb Code   426  ui_win_hr.o(i.ui_win_hr_done)
-    ui_win_hr_error                          0x000324bd   Thumb Code    68  ui_win_hr.o(i.ui_win_hr_error)
-    ui_win_hr_none                           0x0003250d   Thumb Code    68  ui_win_hr.o(i.ui_win_hr_none)
-    ui_win_hr_ready                          0x0003255d   Thumb Code   124  ui_win_hr.o(i.ui_win_hr_ready)
-    ui_win_hr_stop                           0x000325e9   Thumb Code   412  ui_win_hr.o(i.ui_win_hr_stop)
-    ui_win_sport                             0x0003279d   Thumb Code    36  ui_win_sport.o(i.ui_win_sport)
-    ui_window_manager                        0x000327c5   Thumb Code    38  window.o(i.ui_window_manager)
-    uit_get_level                            0x000327ff   Thumb Code    36  ui_win_main.o(i.uit_get_level)
-    unit_update                              0x00032825   Thumb Code   188  task_step.o(i.unit_update)
-    unziphfmex                               0x00032909   Thumb Code   270  hfma2ylib.o(i.unziphfmex)
-    v_to_cm2                                 0x00032b61   Thumb Code   392  task_uitraviolet.o(i.v_to_cm2)
-    wchat_pedometer_profile_init             0x00032d69   Thumb Code   162  ble_wechat_service.o(i.wchat_pedometer_profile_init)
-    wchat_target_profile_init                0x00032e11   Thumb Code   170  ble_wechat_service.o(i.wchat_target_profile_init)
-    wechat_indicate_pedometer                0x00032ec1   Thumb Code    82  ble_wechat_service.o(i.wechat_indicate_pedometer)
-    wechat_services_init                     0x00032f19   Thumb Code   108  ble_wechat_service.o(i.wechat_services_init)
-    win_alarm_proc                           0x00032f95   Thumb Code   276  ui_win_alarm.o(i.win_alarm_proc)
-    win_camera_proc                          0x000330c9   Thumb Code   274  ui_win_camera.o(i.win_camera_proc)
-    win_findphone_proc                       0x000331fd   Thumb Code   438  ui_win_findphone.o(i.win_findphone_proc)
-    win_function_proc                        0x000333e1   Thumb Code   384  ui_win_function.o(i.win_function_proc)
-    win_hr_proc                              0x00033581   Thumb Code   526  ui_win_hr.o(i.win_hr_proc)
-    win_info_proc                            0x000337c1   Thumb Code   256  ui_win_info.o(i.win_info_proc)
-    win_main_proc                            0x000338e1   Thumb Code   462  ui_win_main.o(i.win_main_proc)
-    win_notify_proc                          0x00033add   Thumb Code   670  ui_win_notify.o(i.win_notify_proc)
-    win_pedometer_proc                       0x00033db1   Thumb Code   386  ui_win_pedometer.o(i.win_pedometer_proc)
-    win_shutdown_proc                        0x00033f5d   Thumb Code   336  ui_win_shutdown.o(i.win_shutdown_proc)
-    win_sleep_proc                           0x000340cd   Thumb Code   252  ui_win_sleep.o(i.win_sleep_proc)
-    win_sport_proc                           0x000341e9   Thumb Code   498  ui_win_sport.o(i.win_sport_proc)
-    window_get                               0x00034409   Thumb Code    46  window.o(i.window_get)
-    window_init                              0x0003443d   Thumb Code    52  window.o(i.window_init)
-    window_pop                               0x00034479   Thumb Code    32  window.o(i.window_pop)
-    window_push                              0x000344a1   Thumb Code    16  window.o(i.window_push)
-    window_tack_reset                        0x000344b9   Thumb Code    18  window.o(i.window_tack_reset)
-    hex                                      0x000344d4   Data          17  main.o(.constdata)
-    mtable                                   0x000344e8   Data          48  clocktick.o(.constdata)
-    Mon_Table                                0x00034518   Data          13  clocktick.o(.constdata)
-    lcd_level                                0x00034525   Data           3  btprotocol.o(.constdata)
-    tasksArr                                 0x00034528   Data          52  osal_task.o(.constdata)
-    tasksCnt                                 0x0003455c   Data           4  osal_task.o(.constdata)
-    sp_h                                     0x00034564   Data          24  task_hr.o(.constdata)
-    sp_l                                     0x0003457c   Data          20  task_hr.o(.constdata)
-    bp_h                                     0x00034590   Data          18  task_hr.o(.constdata)
-    bp_l                                     0x000345a2   Data          18  task_hr.o(.constdata)
-    m_context_init_len                       0x000345d4   Data           4  device_manager_peripheral.o(.constdata)
-    m_service_context_store                  0x000345d8   Data          16  device_manager_peripheral.o(.constdata)
-    m_service_context_load                   0x000345e8   Data          16  device_manager_peripheral.o(.constdata)
-    m_service_context_apply                  0x000345f8   Data          16  device_manager_peripheral.o(.constdata)
-    ble_ancs_base_uuid128                    0x00034608   Data          16  ble_ancs_c.o(.constdata)
-    ble_ancs_cp_base_uuid128                 0x00034618   Data          16  ble_ancs_c.o(.constdata)
-    ble_ancs_ns_base_uuid128                 0x00034628   Data          16  ble_ancs_c.o(.constdata)
-    ble_ancs_ds_base_uuid128                 0x00034638   Data          16  ble_ancs_c.o(.constdata)
-    bmp_ble_                                 0x00036500   Data          32  ui_win_main.o(.constdata)
-    Font_9x16                                0x00036520   Data         180  ui_win_main.o(.constdata)
-    gImage_pedomete_icon_s                   0x000365d4   Data         162  ui_win_main.o(.constdata)
-    gImage_distance_s                        0x00036676   Data         192  ui_win_main.o(.constdata)
-    Font5x8                                  0x00036736   Data          50  ui_win_main.o(.constdata)
-    gImage_s_hr                              0x00036768   Data         192  ui_win_main.o(.constdata)
-    gImage_s_calurie                         0x00036828   Data         160  ui_win_main.o(.constdata)
-    battery_level_style_1                    0x000368c8   Data         200  ui_win_main.o(.constdata)
-    bmp_month_7x12                           0x00036990   Data         432  ui_win_main.o(.constdata)
-    Font_Ascii_N_8x12                        0x00036b40   Data         176  ui_win_main.o(.constdata)
-    bmp_week_2                               0x00036bf0   Data         252  ui_win_main.o(.constdata)
-    bmp_ble_16x10                            0x00036cec   Data          32  ui_win_main.o(.constdata)
-    Font_17x17                               0x00036d0c   Data         520  ui_win_pedometer.o(.constdata)
-    jpeg_ui_bg_red                           0x00036f14   Data        1631  ui_win_function.o(.constdata)
-    jpeg_ui_bg_yellow                        0x00037573   Data        1754  ui_win_function.o(.constdata)
-    jpeg_ui_bg_blue                          0x00037c4d   Data        1819  ui_win_function.o(.constdata)
-    ncb                                      0x00038390   Data          80  ui_win_notify.o(.constdata)
-    winCnt                                   0x000383e0   Data           4  window.o(.constdata)
-    bmp_battery                              0x000383e4   Data         152  ui_main_icon.o(.constdata)
-    color_map                                0x0003847c   Data          10  ui_main_icon.o(.constdata)
-    gImage_running                           0x00038486   Data         880  ui_main_icon.o(.constdata)
-    Font_6x16                                0x000387f6   Data         144  ui_main_icon.o(.constdata)
-    Week_34x12                               0x00038886   Data         476  ui_main_icon.o(.constdata)
-    Time_12x12                               0x00038a62   Data         264  ui_main_icon.o(.constdata)
-    CurTemp_22x24                            0x00038b6a   Data         726  ui_main_icon.o(.constdata)
-    Temp_unit                                0x00038e40   Data         364  ui_main_icon.o(.constdata)
-    Zero                                     0x00038fac   Data         354  ui_main_icon.o(.constdata)
-    One                                      0x0003910e   Data         350  ui_main_icon.o(.constdata)
-    Tow                                      0x0003926c   Data         365  ui_main_icon.o(.constdata)
-    Three                                    0x000393d9   Data         373  ui_main_icon.o(.constdata)
-    Four                                     0x0003954e   Data         369  ui_main_icon.o(.constdata)
-    Five                                     0x000396bf   Data         367  ui_main_icon.o(.constdata)
-    Six                                      0x0003982e   Data         368  ui_main_icon.o(.constdata)
-    Seven                                    0x0003999e   Data         376  ui_main_icon.o(.constdata)
-    Eight                                    0x00039b16   Data         354  ui_main_icon.o(.constdata)
-    Nine                                     0x00039c78   Data         372  ui_main_icon.o(.constdata)
-    Unit_extent                              0x00039dec   Data         354  ui_main_icon.o(.constdata)
-    Sub                                      0x00039f4e   Data         334  ui_main_icon.o(.constdata)
-    Cent                                     0x0003a09c   Data         448  ui_main_icon.o(.constdata)
-    Wet                                      0x0003a25c   Data        1453  ui_main_icon.o(.constdata)
-    Cloudy                                   0x0003a809   Data        1320  ui_main_icon.o(.constdata)
-    Mote                                     0x0003ad31   Data        1658  ui_main_icon.o(.constdata)
-    Smaze                                    0x0003b3ab   Data        1641  ui_main_icon.o(.constdata)
-    Snow                                     0x0003ba14   Data        1532  ui_main_icon.o(.constdata)
-    Sunshine                                 0x0003c010   Data        1472  ui_main_icon.o(.constdata)
-    ui_jpeg_uv                               0x0003c5d0   Data        1073  ui_main_icon.o(.constdata)
-    jpeg_ui_tangle                           0x0003ca01   Data         713  ui_main_icon.o(.constdata)
-    jpeg_ui_glass                            0x0003ccca   Data         513  ui_main_icon.o(.constdata)
-    jpeg_ui_ok                               0x0003cecb   Data         530  ui_main_icon.o(.constdata)
-    jpeg_ui_hat                              0x0003d0dd   Data         517  ui_main_icon.o(.constdata)
-    jpeg_ui_sunscreen                        0x0003d2e2   Data         482  ui_main_icon.o(.constdata)
-    jpeg_ui_tent                             0x0003d4c4   Data         477  ui_main_icon.o(.constdata)
-    jpeg_ui_outside                          0x0003d6a1   Data         467  ui_main_icon.o(.constdata)
-    jpeg_ui_forbid                           0x0003d874   Data         581  ui_main_icon.o(.constdata)
-    jpeg_ui_umbrella                         0x0003dab9   Data         544  ui_main_icon.o(.constdata)
-    jpeg_ui_cycle_0                          0x0003dcd9   Data        1901  ui_main_icon.o(.constdata)
-    jpeg_ui_cycle_1                          0x0003e446   Data        1854  ui_main_icon.o(.constdata)
-    jpeg_ui_cycle_2                          0x0003eb84   Data        1936  ui_main_icon.o(.constdata)
-    jpeg_ui_cycle_3                          0x0003f314   Data        1847  ui_main_icon.o(.constdata)
-    jpeg_ui_cycle_4                          0x0003fa4b   Data        1812  ui_main_icon.o(.constdata)
-    jpeg_ui_bg_1                             0x0004015f   Data        6545  ui_main_icon.o(.constdata)
-    gImage_calurie_ss                        0x00041af0   Data         512  ui_pedometer_icon.o(.constdata)
-    gImage_distance                          0x00041cf0   Data         512  ui_pedometer_icon.o(.constdata)
-    bmp_km_pedometer                         0x00041ef0   Data          38  ui_pedometer_icon.o(.constdata)
-    bmp_mile_pedometer                       0x00041f16   Data          80  ui_pedometer_icon.o(.constdata)
-    bmp_kc_pedometer                         0x00041f66   Data          80  ui_pedometer_icon.o(.constdata)
-    bmp_steps_pedometer                      0x00041fb6   Data          64  ui_pedometer_icon.o(.constdata)
-    BMP_function_running                     0x00041ff6   Data         800  ui_function_icon.o(.constdata)
-    BMP_function_bycle                       0x00042316   Data         800  ui_function_icon.o(.constdata)
-    BMP_function_back                        0x00042636   Data         800  ui_function_icon.o(.constdata)
-    BMP_hr_1                                 0x00042956   Data         800  ui_function_icon.o(.constdata)
-    BMP_hr_2                                 0x00042c76   Data         800  ui_function_icon.o(.constdata)
-    BMP_hr_3                                 0x00042f96   Data         800  ui_function_icon.o(.constdata)
-    bmp_function_bycle                       0x000432b6   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_sleep                       0x00043336   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_alarm                       0x000433b6   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_findphone                   0x00043436   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_info                        0x000434b6   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_shutdown                    0x00043536   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_back                        0x000435b6   Data         128  ui_function_icon.o(.constdata)
-    bmp_hr_hr                                0x00043636   Data         128  ui_function_icon.o(.constdata)
-    bmp_function_swiming_b                   0x000436b6   Data         408  ui_function_icon.o(.constdata)
-    bmp_function_swiming_s                   0x0004384e   Data         270  ui_function_icon.o(.constdata)
-    bmp_error                                0x0004395c   Data          72  ui_hr_icon.o(.constdata)
-    gImage_hr_done                           0x000439a4   Data         512  ui_hr_icon.o(.constdata)
-    gImage_bp_done                           0x00043ba4   Data         512  ui_hr_icon.o(.constdata)
-    gImage_o2_done                           0x00043da4   Data         512  ui_hr_icon.o(.constdata)
-    gImage_mmhg_hr                           0x00043fa4   Data         640  ui_hr_icon.o(.constdata)
-    BMP_find_phone                           0x00044224   Data         800  ui_findphone_icon.o(.constdata)
-    Font_11x24                               0x00044544   Data         429  ui_comm_icon.o(.constdata)
-    Font_7x16                                0x000446f1   Data         196  ui_comm_icon.o(.constdata)
-    gImage_line                              0x000447b5   Data        8192  ui_notify_icon.o(.constdata)
-    BMP_call                                 0x000467b5   Data         200  ui_notify_icon.o(.constdata)
-    BMP_msg                                  0x0004687d   Data         196  ui_notify_icon.o(.constdata)
-    BMP_qq                                   0x00046941   Data         246  ui_notify_icon.o(.constdata)
-    BMP_wx                                   0x00046a37   Data         348  ui_notify_icon.o(.constdata)
-    BMP_wa                                   0x00046b93   Data         512  ui_notify_icon.o(.constdata)
-    BMP_fb                                   0x00046d93   Data         210  ui_notify_icon.o(.constdata)
-    BMP_ble                                  0x00046e65   Data         512  ui_notify_icon.o(.constdata)
-    BMP_sedentary                            0x00047065   Data         512  ui_notify_icon.o(.constdata)
-    BMP_phone                                0x00047265   Data         800  ui_notify_icon.o(.constdata)
-    BMP_Twitter                              0x00047585   Data         324  ui_notify_icon.o(.constdata)
-    BMP_ins_1                                0x000476c9   Data         288  ui_notify_icon.o(.constdata)
-    BMP_ins_2                                0x000477e9   Data         165  ui_notify_icon.o(.constdata)
-    BMP_skype_1                              0x0004788e   Data         300  ui_notify_icon.o(.constdata)
-    BMP_skype_2                              0x000479ba   Data         104  ui_notify_icon.o(.constdata)
-    jpeg_ui_uit_notify                       0x00047a22   Data        1969  ui_notify_icon.o(.constdata)
-    bmp_icon_drink_1                         0x000481d3   Data         800  ui_notify_icon.o(.constdata)
-    bmp_icon_drink_2                         0x000484f3   Data         800  ui_notify_icon.o(.constdata)
-    bmp_icon_medicine                        0x00048813   Data         800  ui_notify_icon.o(.constdata)
-    BMP_camera                               0x00048b33   Data         512  ui_camera_icon.o(.constdata)
-    bmp_start                                0x00048d33   Data          72  ui_sport_icon.o(.constdata)
-    BMP_str_back                             0x00048d7b   Data         174  ui_sport_icon.o(.constdata)
-    bmp_caluire                              0x00048e29   Data          32  ui_sport_icon.o(.constdata)
-    bmp_kc                                   0x00048e49   Data          48  ui_sport_icon.o(.constdata)
-    Font_8x16                                0x00048e79   Data         608  ui_sport_icon.o(.constdata)
-    Font_11x18                               0x000490d9   Data         363  ui_sport_icon.o(.constdata)
-    Font_8x16_Other                          0x00049244   Data         192  ui_sport_icon.o(.constdata)
-    __mathlib_zero                           0x00049890   Data           8  qnan.o(.constdata)
-    Region$$Table$$Base                      0x00049994   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000499b4   Number         0  anon$$obj.o(Region$$Table)
+    taskUItraviolet                          0x00030701   Thumb Code   558  task_uitraviolet.o(i.taskUItraviolet)
+    taskUItravioletInit                      0x0003095d   Thumb Code    10  task_uitraviolet.o(i.taskUItravioletInit)
+    taskUpload                               0x0003096d   Thumb Code  3470  task_upload.o(i.taskUpload)
+    taskUploadInit                           0x00031701   Thumb Code     6  task_upload.o(i.taskUploadInit)
+    ui_alarm_notify                          0x000317f9   Thumb Code    34  ui_win_notify.o(i.ui_alarm_notify)
+    ui_app_notify                            0x00031825   Thumb Code   100  ui_win_notify.o(i.ui_app_notify)
+    ui_ble_notify                            0x00031899   Thumb Code    56  ui_win_notify.o(i.ui_ble_notify)
+    ui_calling_notify                        0x000318dd   Thumb Code    68  ui_win_notify.o(i.ui_calling_notify)
+    ui_drink_notify                          0x00031931   Thumb Code    74  ui_win_notify.o(i.ui_drink_notify)
+    ui_earse_app_notify                      0x0003198d   Thumb Code     2  ui_win_notify.o(i.ui_earse_app_notify)
+    ui_erase_alarm_notify                    0x0003198f   Thumb Code     2  ui_win_notify.o(i.ui_erase_alarm_notify)
+    ui_erase_ble_notify                      0x00031991   Thumb Code     2  ui_win_notify.o(i.ui_erase_ble_notify)
+    ui_erase_calling_notify                  0x00031995   Thumb Code    20  ui_win_notify.o(i.ui_erase_calling_notify)
+    ui_erase_drink_notify                    0x000319ad   Thumb Code     2  ui_win_notify.o(i.ui_erase_drink_notify)
+    ui_erase_find_me_notify                  0x000319af   Thumb Code     2  ui_win_notify.o(i.ui_erase_find_me_notify)
+    ui_erase_medicine_notify                 0x000319b1   Thumb Code     2  ui_win_notify.o(i.ui_erase_medicine_notify)
+    ui_erase_message_notify                  0x000319b5   Thumb Code    20  ui_win_notify.o(i.ui_erase_message_notify)
+    ui_erase_sedentary_notify                0x000319cd   Thumb Code     2  ui_win_notify.o(i.ui_erase_sedentary_notify)
+    ui_erase_uit_notify                      0x000319cf   Thumb Code     2  ui_win_notify.o(i.ui_erase_uit_notify)
+    ui_find_me_notify                        0x000319d1   Thumb Code    58  ui_win_notify.o(i.ui_find_me_notify)
+    ui_medicine_notify                       0x00031a19   Thumb Code    56  ui_win_notify.o(i.ui_medicine_notify)
+    ui_message_notify                        0x00031a5d   Thumb Code    66  ui_win_notify.o(i.ui_message_notify)
+    ui_sedentary_notify                      0x00031aad   Thumb Code    56  ui_win_notify.o(i.ui_sedentary_notify)
+    ui_show_version                          0x00031af1   Thumb Code   126  ui_win_info.o(i.ui_show_version)
+    ui_uit_notify                            0x00031b75   Thumb Code   132  ui_win_notify.o(i.ui_uit_notify)
+    ui_weather                               0x00031c11   Thumb Code  1782  ui_win_main.o(i.ui_weather)
+    ui_win_hr_done                           0x00032315   Thumb Code   426  ui_win_hr.o(i.ui_win_hr_done)
+    ui_win_hr_error                          0x000324dd   Thumb Code    68  ui_win_hr.o(i.ui_win_hr_error)
+    ui_win_hr_none                           0x0003252d   Thumb Code    68  ui_win_hr.o(i.ui_win_hr_none)
+    ui_win_hr_ready                          0x0003257d   Thumb Code   124  ui_win_hr.o(i.ui_win_hr_ready)
+    ui_win_hr_stop                           0x00032609   Thumb Code   412  ui_win_hr.o(i.ui_win_hr_stop)
+    ui_win_sport                             0x000327bd   Thumb Code    36  ui_win_sport.o(i.ui_win_sport)
+    ui_window_manager                        0x000327e5   Thumb Code    38  window.o(i.ui_window_manager)
+    uit_get_level                            0x0003281f   Thumb Code    36  ui_win_main.o(i.uit_get_level)
+    unit_update                              0x00032845   Thumb Code   188  task_step.o(i.unit_update)
+    unziphfmex                               0x00032929   Thumb Code   270  hfma2ylib.o(i.unziphfmex)
+    v_to_cm2                                 0x00032b81   Thumb Code   392  task_uitraviolet.o(i.v_to_cm2)
+    wchat_pedometer_profile_init             0x00032d89   Thumb Code   162  ble_wechat_service.o(i.wchat_pedometer_profile_init)
+    wchat_target_profile_init                0x00032e31   Thumb Code   170  ble_wechat_service.o(i.wchat_target_profile_init)
+    wechat_indicate_pedometer                0x00032ee1   Thumb Code    82  ble_wechat_service.o(i.wechat_indicate_pedometer)
+    wechat_services_init                     0x00032f39   Thumb Code   108  ble_wechat_service.o(i.wechat_services_init)
+    win_alarm_proc                           0x00032fb5   Thumb Code   276  ui_win_alarm.o(i.win_alarm_proc)
+    win_camera_proc                          0x000330e9   Thumb Code   274  ui_win_camera.o(i.win_camera_proc)
+    win_findphone_proc                       0x0003321d   Thumb Code   438  ui_win_findphone.o(i.win_findphone_proc)
+    win_function_proc                        0x00033401   Thumb Code   384  ui_win_function.o(i.win_function_proc)
+    win_hr_proc                              0x000335a1   Thumb Code   526  ui_win_hr.o(i.win_hr_proc)
+    win_info_proc                            0x000337e1   Thumb Code   256  ui_win_info.o(i.win_info_proc)
+    win_main_proc                            0x00033901   Thumb Code   462  ui_win_main.o(i.win_main_proc)
+    win_notify_proc                          0x00033afd   Thumb Code   670  ui_win_notify.o(i.win_notify_proc)
+    win_pedometer_proc                       0x00033dd1   Thumb Code   386  ui_win_pedometer.o(i.win_pedometer_proc)
+    win_shutdown_proc                        0x00033f7d   Thumb Code   336  ui_win_shutdown.o(i.win_shutdown_proc)
+    win_sleep_proc                           0x000340ed   Thumb Code   252  ui_win_sleep.o(i.win_sleep_proc)
+    win_sport_proc                           0x00034209   Thumb Code   498  ui_win_sport.o(i.win_sport_proc)
+    window_get                               0x00034429   Thumb Code    46  window.o(i.window_get)
+    window_init                              0x0003445d   Thumb Code    52  window.o(i.window_init)
+    window_pop                               0x00034499   Thumb Code    32  window.o(i.window_pop)
+    window_push                              0x000344c1   Thumb Code    16  window.o(i.window_push)
+    window_tack_reset                        0x000344d9   Thumb Code    18  window.o(i.window_tack_reset)
+    hex                                      0x000344f4   Data          17  main.o(.constdata)
+    mtable                                   0x00034508   Data          48  clocktick.o(.constdata)
+    Mon_Table                                0x00034538   Data          13  clocktick.o(.constdata)
+    lcd_level                                0x00034545   Data           3  btprotocol.o(.constdata)
+    tasksArr                                 0x00034548   Data          52  osal_task.o(.constdata)
+    tasksCnt                                 0x0003457c   Data           4  osal_task.o(.constdata)
+    sp_h                                     0x00034584   Data          24  task_hr.o(.constdata)
+    sp_l                                     0x0003459c   Data          20  task_hr.o(.constdata)
+    bp_h                                     0x000345b0   Data          18  task_hr.o(.constdata)
+    bp_l                                     0x000345c2   Data          18  task_hr.o(.constdata)
+    m_context_init_len                       0x000345f4   Data           4  device_manager_peripheral.o(.constdata)
+    m_service_context_store                  0x000345f8   Data          16  device_manager_peripheral.o(.constdata)
+    m_service_context_load                   0x00034608   Data          16  device_manager_peripheral.o(.constdata)
+    m_service_context_apply                  0x00034618   Data          16  device_manager_peripheral.o(.constdata)
+    ble_ancs_base_uuid128                    0x00034628   Data          16  ble_ancs_c.o(.constdata)
+    ble_ancs_cp_base_uuid128                 0x00034638   Data          16  ble_ancs_c.o(.constdata)
+    ble_ancs_ns_base_uuid128                 0x00034648   Data          16  ble_ancs_c.o(.constdata)
+    ble_ancs_ds_base_uuid128                 0x00034658   Data          16  ble_ancs_c.o(.constdata)
+    bmp_ble_                                 0x00036520   Data          32  ui_win_main.o(.constdata)
+    Font_9x16                                0x00036540   Data         180  ui_win_main.o(.constdata)
+    gImage_pedomete_icon_s                   0x000365f4   Data         162  ui_win_main.o(.constdata)
+    gImage_distance_s                        0x00036696   Data         192  ui_win_main.o(.constdata)
+    Font5x8                                  0x00036756   Data          50  ui_win_main.o(.constdata)
+    gImage_s_hr                              0x00036788   Data         192  ui_win_main.o(.constdata)
+    gImage_s_calurie                         0x00036848   Data         160  ui_win_main.o(.constdata)
+    battery_level_style_1                    0x000368e8   Data         200  ui_win_main.o(.constdata)
+    bmp_month_7x12                           0x000369b0   Data         432  ui_win_main.o(.constdata)
+    Font_Ascii_N_8x12                        0x00036b60   Data         176  ui_win_main.o(.constdata)
+    bmp_week_2                               0x00036c10   Data         252  ui_win_main.o(.constdata)
+    bmp_ble_16x10                            0x00036d0c   Data          32  ui_win_main.o(.constdata)
+    Font_17x17                               0x00036d2c   Data         520  ui_win_pedometer.o(.constdata)
+    jpeg_ui_bg_red                           0x00036f34   Data        1631  ui_win_function.o(.constdata)
+    jpeg_ui_bg_yellow                        0x00037593   Data        1754  ui_win_function.o(.constdata)
+    jpeg_ui_bg_blue                          0x00037c6d   Data        1819  ui_win_function.o(.constdata)
+    ncb                                      0x000383b0   Data          80  ui_win_notify.o(.constdata)
+    winCnt                                   0x00038400   Data           4  window.o(.constdata)
+    bmp_battery                              0x00038404   Data         152  ui_main_icon.o(.constdata)
+    color_map                                0x0003849c   Data          10  ui_main_icon.o(.constdata)
+    gImage_running                           0x000384a6   Data         880  ui_main_icon.o(.constdata)
+    Font_6x16                                0x00038816   Data         144  ui_main_icon.o(.constdata)
+    Week_34x12                               0x000388a6   Data         476  ui_main_icon.o(.constdata)
+    Time_12x12                               0x00038a82   Data         264  ui_main_icon.o(.constdata)
+    CurTemp_22x24                            0x00038b8a   Data         726  ui_main_icon.o(.constdata)
+    Temp_unit                                0x00038e60   Data         364  ui_main_icon.o(.constdata)
+    Zero                                     0x00038fcc   Data         354  ui_main_icon.o(.constdata)
+    One                                      0x0003912e   Data         350  ui_main_icon.o(.constdata)
+    Tow                                      0x0003928c   Data         365  ui_main_icon.o(.constdata)
+    Three                                    0x000393f9   Data         373  ui_main_icon.o(.constdata)
+    Four                                     0x0003956e   Data         369  ui_main_icon.o(.constdata)
+    Five                                     0x000396df   Data         367  ui_main_icon.o(.constdata)
+    Six                                      0x0003984e   Data         368  ui_main_icon.o(.constdata)
+    Seven                                    0x000399be   Data         376  ui_main_icon.o(.constdata)
+    Eight                                    0x00039b36   Data         354  ui_main_icon.o(.constdata)
+    Nine                                     0x00039c98   Data         372  ui_main_icon.o(.constdata)
+    Unit_extent                              0x00039e0c   Data         354  ui_main_icon.o(.constdata)
+    Sub                                      0x00039f6e   Data         334  ui_main_icon.o(.constdata)
+    Cent                                     0x0003a0bc   Data         448  ui_main_icon.o(.constdata)
+    Wet                                      0x0003a27c   Data        1453  ui_main_icon.o(.constdata)
+    Cloudy                                   0x0003a829   Data        1320  ui_main_icon.o(.constdata)
+    Mote                                     0x0003ad51   Data        1658  ui_main_icon.o(.constdata)
+    Smaze                                    0x0003b3cb   Data        1641  ui_main_icon.o(.constdata)
+    Snow                                     0x0003ba34   Data        1532  ui_main_icon.o(.constdata)
+    Sunshine                                 0x0003c030   Data        1472  ui_main_icon.o(.constdata)
+    ui_jpeg_uv                               0x0003c5f0   Data        1073  ui_main_icon.o(.constdata)
+    jpeg_ui_tangle                           0x0003ca21   Data         713  ui_main_icon.o(.constdata)
+    jpeg_ui_glass                            0x0003ccea   Data         513  ui_main_icon.o(.constdata)
+    jpeg_ui_ok                               0x0003ceeb   Data         530  ui_main_icon.o(.constdata)
+    jpeg_ui_hat                              0x0003d0fd   Data         517  ui_main_icon.o(.constdata)
+    jpeg_ui_sunscreen                        0x0003d302   Data         482  ui_main_icon.o(.constdata)
+    jpeg_ui_tent                             0x0003d4e4   Data         477  ui_main_icon.o(.constdata)
+    jpeg_ui_outside                          0x0003d6c1   Data         467  ui_main_icon.o(.constdata)
+    jpeg_ui_forbid                           0x0003d894   Data         581  ui_main_icon.o(.constdata)
+    jpeg_ui_umbrella                         0x0003dad9   Data         544  ui_main_icon.o(.constdata)
+    jpeg_ui_cycle_0                          0x0003dcf9   Data        1901  ui_main_icon.o(.constdata)
+    jpeg_ui_cycle_1                          0x0003e466   Data        1854  ui_main_icon.o(.constdata)
+    jpeg_ui_cycle_2                          0x0003eba4   Data        1936  ui_main_icon.o(.constdata)
+    jpeg_ui_cycle_3                          0x0003f334   Data        1847  ui_main_icon.o(.constdata)
+    jpeg_ui_cycle_4                          0x0003fa6b   Data        1812  ui_main_icon.o(.constdata)
+    jpeg_ui_bg_1                             0x0004017f   Data        6545  ui_main_icon.o(.constdata)
+    gImage_calurie_ss                        0x00041b10   Data         512  ui_pedometer_icon.o(.constdata)
+    gImage_distance                          0x00041d10   Data         512  ui_pedometer_icon.o(.constdata)
+    bmp_km_pedometer                         0x00041f10   Data          38  ui_pedometer_icon.o(.constdata)
+    bmp_mile_pedometer                       0x00041f36   Data          80  ui_pedometer_icon.o(.constdata)
+    bmp_kc_pedometer                         0x00041f86   Data          80  ui_pedometer_icon.o(.constdata)
+    bmp_steps_pedometer                      0x00041fd6   Data          64  ui_pedometer_icon.o(.constdata)
+    BMP_function_running                     0x00042016   Data         800  ui_function_icon.o(.constdata)
+    BMP_function_bycle                       0x00042336   Data         800  ui_function_icon.o(.constdata)
+    BMP_function_back                        0x00042656   Data         800  ui_function_icon.o(.constdata)
+    BMP_hr_1                                 0x00042976   Data         800  ui_function_icon.o(.constdata)
+    BMP_hr_2                                 0x00042c96   Data         800  ui_function_icon.o(.constdata)
+    BMP_hr_3                                 0x00042fb6   Data         800  ui_function_icon.o(.constdata)
+    bmp_function_bycle                       0x000432d6   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_sleep                       0x00043356   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_alarm                       0x000433d6   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_findphone                   0x00043456   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_info                        0x000434d6   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_shutdown                    0x00043556   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_back                        0x000435d6   Data         128  ui_function_icon.o(.constdata)
+    bmp_hr_hr                                0x00043656   Data         128  ui_function_icon.o(.constdata)
+    bmp_function_swiming_b                   0x000436d6   Data         408  ui_function_icon.o(.constdata)
+    bmp_function_swiming_s                   0x0004386e   Data         270  ui_function_icon.o(.constdata)
+    bmp_error                                0x0004397c   Data          72  ui_hr_icon.o(.constdata)
+    gImage_hr_done                           0x000439c4   Data         512  ui_hr_icon.o(.constdata)
+    gImage_bp_done                           0x00043bc4   Data         512  ui_hr_icon.o(.constdata)
+    gImage_o2_done                           0x00043dc4   Data         512  ui_hr_icon.o(.constdata)
+    gImage_mmhg_hr                           0x00043fc4   Data         640  ui_hr_icon.o(.constdata)
+    BMP_find_phone                           0x00044244   Data         800  ui_findphone_icon.o(.constdata)
+    Font_11x24                               0x00044564   Data         429  ui_comm_icon.o(.constdata)
+    Font_7x16                                0x00044711   Data         196  ui_comm_icon.o(.constdata)
+    gImage_line                              0x000447d5   Data        8192  ui_notify_icon.o(.constdata)
+    BMP_call                                 0x000467d5   Data         200  ui_notify_icon.o(.constdata)
+    BMP_msg                                  0x0004689d   Data         196  ui_notify_icon.o(.constdata)
+    BMP_qq                                   0x00046961   Data         246  ui_notify_icon.o(.constdata)
+    BMP_wx                                   0x00046a57   Data         348  ui_notify_icon.o(.constdata)
+    BMP_wa                                   0x00046bb3   Data         512  ui_notify_icon.o(.constdata)
+    BMP_fb                                   0x00046db3   Data         210  ui_notify_icon.o(.constdata)
+    BMP_ble                                  0x00046e85   Data         512  ui_notify_icon.o(.constdata)
+    BMP_sedentary                            0x00047085   Data         512  ui_notify_icon.o(.constdata)
+    BMP_phone                                0x00047285   Data         800  ui_notify_icon.o(.constdata)
+    BMP_Twitter                              0x000475a5   Data         324  ui_notify_icon.o(.constdata)
+    BMP_ins_1                                0x000476e9   Data         288  ui_notify_icon.o(.constdata)
+    BMP_ins_2                                0x00047809   Data         165  ui_notify_icon.o(.constdata)
+    BMP_skype_1                              0x000478ae   Data         300  ui_notify_icon.o(.constdata)
+    BMP_skype_2                              0x000479da   Data         104  ui_notify_icon.o(.constdata)
+    jpeg_ui_uit_notify                       0x00047a42   Data        1969  ui_notify_icon.o(.constdata)
+    bmp_icon_drink_1                         0x000481f3   Data         800  ui_notify_icon.o(.constdata)
+    bmp_icon_drink_2                         0x00048513   Data         800  ui_notify_icon.o(.constdata)
+    bmp_icon_medicine                        0x00048833   Data         800  ui_notify_icon.o(.constdata)
+    BMP_camera                               0x00048b53   Data         512  ui_camera_icon.o(.constdata)
+    bmp_start                                0x00048d53   Data          72  ui_sport_icon.o(.constdata)
+    BMP_str_back                             0x00048d9b   Data         174  ui_sport_icon.o(.constdata)
+    bmp_caluire                              0x00048e49   Data          32  ui_sport_icon.o(.constdata)
+    bmp_kc                                   0x00048e69   Data          48  ui_sport_icon.o(.constdata)
+    Font_8x16                                0x00048e99   Data         608  ui_sport_icon.o(.constdata)
+    Font_11x18                               0x000490f9   Data         363  ui_sport_icon.o(.constdata)
+    Font_8x16_Other                          0x00049264   Data         192  ui_sport_icon.o(.constdata)
+    __mathlib_zero                           0x000498b0   Data           8  qnan.o(.constdata)
+    Region$$Table$$Base                      0x000499b4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000499d4   Number         0  anon$$obj.o(Region$$Table)
     Image$$RW_IRAM1$$Base                    0x20002080   Number         0  anon$$obj.o ABSOLUTE
     alarm                                    0x20002080   Data          36  alarm.o(.data)
     current_timer                            0x200020a4   Data           8  clocktick.o(.data)
@@ -5774,9 +5775,9 @@ Memory Map of the image
 
   Image Entry point : 0x0001c201
 
-  Load Region LR_IROM1 (Base: 0x0001c000, Size: 0x0002e44c, Max: 0x00064000, ABSOLUTE, COMPRESSED[0x0002dbcc])
+  Load Region LR_IROM1 (Base: 0x0001c000, Size: 0x0002e46c, Max: 0x00064000, ABSOLUTE, COMPRESSED[0x0002dbec])
 
-    Execution Region ER_IROM1 (Base: 0x0001c000, Size: 0x0002d9b4, Max: 0x00064000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x0001c000, Size: 0x0002d9d4, Max: 0x00064000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -6410,240 +6411,240 @@ Memory Map of the image
     0x0003060c   0x0000000c   Code   RO         1814    i.taskStoreInit     task_store.o
     0x00030618   0x000000dc   Code   RO         1436    i.taskTouch         task_touch.o
     0x000306f4   0x0000000c   Code   RO         1437    i.taskTouchInit     task_touch.o
-    0x00030700   0x0000023c   Code   RO         1895    i.taskUItraviolet   task_uitraviolet.o
-    0x0003093c   0x00000010   Code   RO         1896    i.taskUItravioletInit  task_uitraviolet.o
-    0x0003094c   0x00000d94   Code   RO         1479    i.taskUpload        task_upload.o
-    0x000316e0   0x0000000c   Code   RO         1480    i.taskUploadInit    task_upload.o
-    0x000316ec   0x00000048   Code   RO         2959    i.tx_buffer_process  ble_ancs_c.o
-    0x00031734   0x000000a2   Code   RO         2050    i.tx_char_add       ble_nus.o
-    0x000317d6   0x00000002   PAD
-    0x000317d8   0x0000002c   Code   RO         6322    i.ui_alarm_notify   ui_win_notify.o
-    0x00031804   0x00000074   Code   RO         6323    i.ui_app_notify     ui_win_notify.o
-    0x00031878   0x00000044   Code   RO         6324    i.ui_ble_notify     ui_win_notify.o
-    0x000318bc   0x00000054   Code   RO         6325    i.ui_calling_notify  ui_win_notify.o
-    0x00031910   0x0000005c   Code   RO         6326    i.ui_drink_notify   ui_win_notify.o
-    0x0003196c   0x00000002   Code   RO         6327    i.ui_earse_app_notify  ui_win_notify.o
-    0x0003196e   0x00000002   Code   RO         6328    i.ui_erase_alarm_notify  ui_win_notify.o
-    0x00031970   0x00000002   Code   RO         6329    i.ui_erase_ble_notify  ui_win_notify.o
-    0x00031972   0x00000002   PAD
-    0x00031974   0x00000018   Code   RO         6330    i.ui_erase_calling_notify  ui_win_notify.o
-    0x0003198c   0x00000002   Code   RO         6331    i.ui_erase_drink_notify  ui_win_notify.o
-    0x0003198e   0x00000002   Code   RO         6332    i.ui_erase_find_me_notify  ui_win_notify.o
-    0x00031990   0x00000002   Code   RO         6333    i.ui_erase_medicine_notify  ui_win_notify.o
+    0x00030700   0x0000025c   Code   RO         1895    i.taskUItraviolet   task_uitraviolet.o
+    0x0003095c   0x00000010   Code   RO         1896    i.taskUItravioletInit  task_uitraviolet.o
+    0x0003096c   0x00000d94   Code   RO         1479    i.taskUpload        task_upload.o
+    0x00031700   0x0000000c   Code   RO         1480    i.taskUploadInit    task_upload.o
+    0x0003170c   0x00000048   Code   RO         2959    i.tx_buffer_process  ble_ancs_c.o
+    0x00031754   0x000000a2   Code   RO         2050    i.tx_char_add       ble_nus.o
+    0x000317f6   0x00000002   PAD
+    0x000317f8   0x0000002c   Code   RO         6322    i.ui_alarm_notify   ui_win_notify.o
+    0x00031824   0x00000074   Code   RO         6323    i.ui_app_notify     ui_win_notify.o
+    0x00031898   0x00000044   Code   RO         6324    i.ui_ble_notify     ui_win_notify.o
+    0x000318dc   0x00000054   Code   RO         6325    i.ui_calling_notify  ui_win_notify.o
+    0x00031930   0x0000005c   Code   RO         6326    i.ui_drink_notify   ui_win_notify.o
+    0x0003198c   0x00000002   Code   RO         6327    i.ui_earse_app_notify  ui_win_notify.o
+    0x0003198e   0x00000002   Code   RO         6328    i.ui_erase_alarm_notify  ui_win_notify.o
+    0x00031990   0x00000002   Code   RO         6329    i.ui_erase_ble_notify  ui_win_notify.o
     0x00031992   0x00000002   PAD
-    0x00031994   0x00000018   Code   RO         6334    i.ui_erase_message_notify  ui_win_notify.o
-    0x000319ac   0x00000002   Code   RO         6335    i.ui_erase_sedentary_notify  ui_win_notify.o
-    0x000319ae   0x00000002   Code   RO         6336    i.ui_erase_uit_notify  ui_win_notify.o
-    0x000319b0   0x00000048   Code   RO         6337    i.ui_find_me_notify  ui_win_notify.o
-    0x000319f8   0x00000044   Code   RO         6338    i.ui_medicine_notify  ui_win_notify.o
-    0x00031a3c   0x00000050   Code   RO         6339    i.ui_message_notify  ui_win_notify.o
-    0x00031a8c   0x00000044   Code   RO         6340    i.ui_sedentary_notify  ui_win_notify.o
-    0x00031ad0   0x00000084   Code   RO         6216    i.ui_show_version   ui_win_info.o
-    0x00031b54   0x0000009c   Code   RO         6341    i.ui_uit_notify     ui_win_notify.o
-    0x00031bf0   0x00000704   Code   RO         5626    i.ui_weather        ui_win_main.o
-    0x000322f4   0x000001c8   Code   RO         5997    i.ui_win_hr_done    ui_win_hr.o
-    0x000324bc   0x00000050   Code   RO         5998    i.ui_win_hr_error   ui_win_hr.o
-    0x0003250c   0x00000050   Code   RO         5999    i.ui_win_hr_none    ui_win_hr.o
-    0x0003255c   0x0000008c   Code   RO         6000    i.ui_win_hr_ready   ui_win_hr.o
-    0x000325e8   0x000001b4   Code   RO         6001    i.ui_win_hr_stop    ui_win_hr.o
-    0x0003279c   0x00000028   Code   RO         5922    i.ui_win_sport      ui_win_sport.o
-    0x000327c4   0x00000030   Code   RO         6706    i.ui_window_manager  window.o
-    0x000327f4   0x0000000a   Code   RO         2191    i.uint16_encode     ble_advdata.o
-    0x000327fe   0x00000024   Code   RO         5627    i.uit_get_level     ui_win_main.o
-    0x00032822   0x00000002   PAD
-    0x00032824   0x000000e4   Code   RO         1352    i.unit_update       task_step.o
-    0x00032908   0x00000114   Code   RO         7418    i.unziphfmex        nrf52832_xxaa.lib(hfma2ylib.o)
-    0x00032a1c   0x00000014   Code   RO         2424    i.update_status_bit_reset  device_manager_peripheral.o
-    0x00032a30   0x00000060   Code   RO         2274    i.update_timeout_handler  ble_conn_params.o
-    0x00032a90   0x00000030   Code   RO         2192    i.uuid_list_encode  ble_advdata.o
-    0x00032ac0   0x0000009e   Code   RO         2193    i.uuid_list_sized_encode  ble_advdata.o
-    0x00032b5e   0x00000002   PAD
-    0x00032b60   0x00000208   Code   RO         1897    i.v_to_cm2          task_uitraviolet.o
-    0x00032d68   0x000000a8   Code   RO         5404    i.wchat_pedometer_profile_init  ble_wechat_service.o
-    0x00032e10   0x000000b0   Code   RO         5405    i.wchat_target_profile_init  ble_wechat_service.o
-    0x00032ec0   0x00000058   Code   RO         5406    i.wechat_indicate_pedometer  ble_wechat_service.o
-    0x00032f18   0x0000006c   Code   RO         5407    i.wechat_services_init  ble_wechat_service.o
-    0x00032f84   0x0000000e   Code   RO         2105    i.whitelist_has_entries  ble_advertising.o
-    0x00032f92   0x00000002   PAD
-    0x00032f94   0x00000134   Code   RO         6096    i.win_alarm_proc    ui_win_alarm.o
-    0x000330c8   0x00000134   Code   RO         6133    i.win_camera_proc   ui_win_camera.o
-    0x000331fc   0x000001e4   Code   RO         6174    i.win_findphone_proc  ui_win_findphone.o
-    0x000333e0   0x000001a0   Code   RO         5875    i.win_function_proc  ui_win_function.o
-    0x00033580   0x00000240   Code   RO         6002    i.win_hr_proc       ui_win_hr.o
-    0x000337c0   0x00000120   Code   RO         6217    i.win_info_proc     ui_win_info.o
-    0x000338e0   0x000001fc   Code   RO         5628    i.win_main_proc     ui_win_main.o
-    0x00033adc   0x000002d4   Code   RO         6342    i.win_notify_proc   ui_win_notify.o
-    0x00033db0   0x000001ac   Code   RO         5798    i.win_pedometer_proc  ui_win_pedometer.o
-    0x00033f5c   0x00000170   Code   RO         6271    i.win_shutdown_proc  ui_win_shutdown.o
-    0x000340cc   0x0000011c   Code   RO         6063    i.win_sleep_proc    ui_win_sleep.o
-    0x000341e8   0x00000220   Code   RO         5923    i.win_sport_proc    ui_win_sport.o
-    0x00034408   0x00000034   Code   RO         6710    i.window_get        window.o
-    0x0003443c   0x0000003c   Code   RO         6711    i.window_init       window.o
-    0x00034478   0x00000028   Code   RO         6712    i.window_pop        window.o
-    0x000344a0   0x00000018   Code   RO         6713    i.window_push       window.o
-    0x000344b8   0x0000001c   Code   RO         6716    i.window_tack_reset  window.o
-    0x000344d4   0x00000011   Data   RO           52    .constdata          main.o
-    0x000344e5   0x00000003   PAD
-    0x000344e8   0x0000003d   Data   RO          168    .constdata          clocktick.o
-    0x00034525   0x00000003   Data   RO          311    .constdata          btprotocol.o
-    0x00034528   0x00000034   Data   RO          731    .constdata          osal_task.o
-    0x0003455c   0x00000004   Data   RO          732    .constdata          osal_task.o
-    0x00034560   0x00000004   Data   RO         1084    .constdata          task_ble.o
-    0x00034564   0x00000050   Data   RO         1623    .constdata          task_hr.o
-    0x000345b4   0x00000010   Data   RO         1967    .constdata          ble_dfu.o
-    0x000345c4   0x00000010   Data   RO         2051    .constdata          ble_nus.o
-    0x000345d4   0x00000034   Data   RO         2426    .constdata          device_manager_peripheral.o
-    0x00034608   0x00000040   Data   RO         2961    .constdata          ble_ancs_c.o
-    0x00034648   0x00000028   Data   RO         3223    .constdata          pstorage.o
-    0x00034670   0x000019e4   Data   RO         5171    .constdata          qr_encode.o
-    0x00036054   0x00000007   Data   RO         5172    .constdata          qr_encode.o
-    0x0003605b   0x0000000a   Data   RO         5173    .constdata          qr_encode.o
-    0x00036065   0x0000000d   Data   RO         5174    .constdata          qr_encode.o
-    0x00036072   0x0000000f   Data   RO         5175    .constdata          qr_encode.o
-    0x00036081   0x00000010   Data   RO         5176    .constdata          qr_encode.o
-    0x00036091   0x00000011   Data   RO         5177    .constdata          qr_encode.o
-    0x000360a2   0x00000012   Data   RO         5178    .constdata          qr_encode.o
-    0x000360b4   0x00000014   Data   RO         5179    .constdata          qr_encode.o
-    0x000360c8   0x00000016   Data   RO         5180    .constdata          qr_encode.o
-    0x000360de   0x00000018   Data   RO         5181    .constdata          qr_encode.o
-    0x000360f6   0x0000001a   Data   RO         5182    .constdata          qr_encode.o
-    0x00036110   0x0000001c   Data   RO         5183    .constdata          qr_encode.o
-    0x0003612c   0x0000001e   Data   RO         5184    .constdata          qr_encode.o
-    0x0003614a   0x00000020   Data   RO         5185    .constdata          qr_encode.o
-    0x0003616a   0x00000022   Data   RO         5186    .constdata          qr_encode.o
-    0x0003618c   0x00000024   Data   RO         5187    .constdata          qr_encode.o
-    0x000361b0   0x00000026   Data   RO         5188    .constdata          qr_encode.o
-    0x000361d6   0x00000028   Data   RO         5189    .constdata          qr_encode.o
-    0x000361fe   0x0000002a   Data   RO         5190    .constdata          qr_encode.o
-    0x00036228   0x0000002c   Data   RO         5191    .constdata          qr_encode.o
-    0x00036254   0x0000002e   Data   RO         5192    .constdata          qr_encode.o
-    0x00036282   0x00000030   Data   RO         5193    .constdata          qr_encode.o
-    0x000362b2   0x00000032   Data   RO         5194    .constdata          qr_encode.o
-    0x000362e4   0x00000034   Data   RO         5195    .constdata          qr_encode.o
-    0x00036318   0x00000036   Data   RO         5196    .constdata          qr_encode.o
-    0x0003634e   0x00000038   Data   RO         5197    .constdata          qr_encode.o
-    0x00036386   0x0000003a   Data   RO         5198    .constdata          qr_encode.o
-    0x000363c0   0x0000003c   Data   RO         5199    .constdata          qr_encode.o
-    0x000363fc   0x0000003e   Data   RO         5200    .constdata          qr_encode.o
-    0x0003643a   0x00000040   Data   RO         5201    .constdata          qr_encode.o
-    0x0003647a   0x00000042   Data   RO         5202    .constdata          qr_encode.o
-    0x000364bc   0x00000044   Data   RO         5203    .constdata          qr_encode.o
-    0x00036500   0x0000080c   Data   RO         5629    .constdata          ui_win_main.o
-    0x00036d0c   0x00000208   Data   RO         5809    .constdata          ui_win_pedometer.o
-    0x00036f14   0x00001454   Data   RO         5876    .constdata          ui_win_function.o
-    0x00038368   0x00000078   Data   RO         6343    .constdata          ui_win_notify.o
-    0x000383e0   0x00000004   Data   RO         6718    .constdata          window.o
-    0x000383e4   0x00000098   Data   RO         6814    .constdata          ui_main_icon.o
-    0x0003847c   0x0000000a   Data   RO         6821    .constdata          ui_main_icon.o
-    0x00038486   0x00000370   Data   RO         6824    .constdata          ui_main_icon.o
-    0x000387f6   0x00000090   Data   RO         6859    .constdata          ui_main_icon.o
-    0x00038886   0x000001dc   Data   RO         6860    .constdata          ui_main_icon.o
-    0x00038a62   0x00000108   Data   RO         6861    .constdata          ui_main_icon.o
-    0x00038b6a   0x000002d6   Data   RO         6862    .constdata          ui_main_icon.o
-    0x00038e40   0x0000016c   Data   RO         6863    .constdata          ui_main_icon.o
-    0x00038fac   0x00000162   Data   RO         6864    .constdata          ui_main_icon.o
-    0x0003910e   0x0000015e   Data   RO         6865    .constdata          ui_main_icon.o
-    0x0003926c   0x0000016d   Data   RO         6866    .constdata          ui_main_icon.o
-    0x000393d9   0x00000175   Data   RO         6867    .constdata          ui_main_icon.o
-    0x0003954e   0x00000171   Data   RO         6868    .constdata          ui_main_icon.o
-    0x000396bf   0x0000016f   Data   RO         6869    .constdata          ui_main_icon.o
-    0x0003982e   0x00000170   Data   RO         6870    .constdata          ui_main_icon.o
-    0x0003999e   0x00000178   Data   RO         6871    .constdata          ui_main_icon.o
-    0x00039b16   0x00000162   Data   RO         6872    .constdata          ui_main_icon.o
-    0x00039c78   0x00000174   Data   RO         6873    .constdata          ui_main_icon.o
-    0x00039dec   0x00000162   Data   RO         6874    .constdata          ui_main_icon.o
-    0x00039f4e   0x0000014e   Data   RO         6875    .constdata          ui_main_icon.o
-    0x0003a09c   0x000001c0   Data   RO         6876    .constdata          ui_main_icon.o
-    0x0003a25c   0x000005ad   Data   RO         6877    .constdata          ui_main_icon.o
-    0x0003a809   0x00000528   Data   RO         6878    .constdata          ui_main_icon.o
-    0x0003ad31   0x0000067a   Data   RO         6879    .constdata          ui_main_icon.o
-    0x0003b3ab   0x00000669   Data   RO         6880    .constdata          ui_main_icon.o
-    0x0003ba14   0x000005fc   Data   RO         6881    .constdata          ui_main_icon.o
-    0x0003c010   0x000005c0   Data   RO         6882    .constdata          ui_main_icon.o
-    0x0003c5d0   0x00000431   Data   RO         6883    .constdata          ui_main_icon.o
-    0x0003ca01   0x000002c9   Data   RO         6884    .constdata          ui_main_icon.o
-    0x0003ccca   0x00000201   Data   RO         6887    .constdata          ui_main_icon.o
-    0x0003cecb   0x00000212   Data   RO         6888    .constdata          ui_main_icon.o
-    0x0003d0dd   0x00000205   Data   RO         6889    .constdata          ui_main_icon.o
-    0x0003d2e2   0x000001e2   Data   RO         6890    .constdata          ui_main_icon.o
-    0x0003d4c4   0x000001dd   Data   RO         6891    .constdata          ui_main_icon.o
-    0x0003d6a1   0x000001d3   Data   RO         6892    .constdata          ui_main_icon.o
-    0x0003d874   0x00000245   Data   RO         6893    .constdata          ui_main_icon.o
-    0x0003dab9   0x00000220   Data   RO         6894    .constdata          ui_main_icon.o
-    0x0003dcd9   0x0000076d   Data   RO         6895    .constdata          ui_main_icon.o
-    0x0003e446   0x0000073e   Data   RO         6896    .constdata          ui_main_icon.o
-    0x0003eb84   0x00000790   Data   RO         6897    .constdata          ui_main_icon.o
-    0x0003f314   0x00000737   Data   RO         6898    .constdata          ui_main_icon.o
-    0x0003fa4b   0x00000714   Data   RO         6899    .constdata          ui_main_icon.o
-    0x0004015f   0x00001991   Data   RO         6900    .constdata          ui_main_icon.o
-    0x00041af0   0x00000200   Data   RO         6916    .constdata          ui_pedometer_icon.o
-    0x00041cf0   0x00000200   Data   RO         6918    .constdata          ui_pedometer_icon.o
-    0x00041ef0   0x00000026   Data   RO         6919    .constdata          ui_pedometer_icon.o
-    0x00041f16   0x00000050   Data   RO         6920    .constdata          ui_pedometer_icon.o
-    0x00041f66   0x00000050   Data   RO         6921    .constdata          ui_pedometer_icon.o
-    0x00041fb6   0x00000040   Data   RO         6922    .constdata          ui_pedometer_icon.o
-    0x00041ff6   0x00000320   Data   RO         6934    .constdata          ui_function_icon.o
-    0x00042316   0x00000320   Data   RO         6935    .constdata          ui_function_icon.o
-    0x00042636   0x00000320   Data   RO         6941    .constdata          ui_function_icon.o
-    0x00042956   0x00000320   Data   RO         6942    .constdata          ui_function_icon.o
-    0x00042c76   0x00000320   Data   RO         6943    .constdata          ui_function_icon.o
-    0x00042f96   0x00000320   Data   RO         6944    .constdata          ui_function_icon.o
-    0x000432b6   0x00000080   Data   RO         6946    .constdata          ui_function_icon.o
-    0x00043336   0x00000080   Data   RO         6947    .constdata          ui_function_icon.o
-    0x000433b6   0x00000080   Data   RO         6948    .constdata          ui_function_icon.o
-    0x00043436   0x00000080   Data   RO         6949    .constdata          ui_function_icon.o
-    0x000434b6   0x00000080   Data   RO         6950    .constdata          ui_function_icon.o
-    0x00043536   0x00000080   Data   RO         6951    .constdata          ui_function_icon.o
-    0x000435b6   0x00000080   Data   RO         6952    .constdata          ui_function_icon.o
-    0x00043636   0x00000080   Data   RO         6955    .constdata          ui_function_icon.o
-    0x000436b6   0x00000198   Data   RO         6956    .constdata          ui_function_icon.o
-    0x0004384e   0x0000010e   Data   RO         6957    .constdata          ui_function_icon.o
-    0x0004395c   0x00000048   Data   RO         6969    .constdata          ui_hr_icon.o
-    0x000439a4   0x00000200   Data   RO         6970    .constdata          ui_hr_icon.o
-    0x00043ba4   0x00000200   Data   RO         6971    .constdata          ui_hr_icon.o
-    0x00043da4   0x00000200   Data   RO         6972    .constdata          ui_hr_icon.o
-    0x00043fa4   0x00000280   Data   RO         6973    .constdata          ui_hr_icon.o
-    0x00044224   0x00000320   Data   RO         7007    .constdata          ui_findphone_icon.o
-    0x00044544   0x000001ad   Data   RO         7030    .constdata          ui_comm_icon.o
-    0x000446f1   0x000000c4   Data   RO         7031    .constdata          ui_comm_icon.o
-    0x000447b5   0x00002000   Data   RO         7045    .constdata          ui_notify_icon.o
-    0x000467b5   0x000000c8   Data   RO         7046    .constdata          ui_notify_icon.o
-    0x0004687d   0x000000c4   Data   RO         7047    .constdata          ui_notify_icon.o
-    0x00046941   0x000000f6   Data   RO         7048    .constdata          ui_notify_icon.o
-    0x00046a37   0x0000015c   Data   RO         7049    .constdata          ui_notify_icon.o
-    0x00046b93   0x00000200   Data   RO         7050    .constdata          ui_notify_icon.o
-    0x00046d93   0x000000d2   Data   RO         7051    .constdata          ui_notify_icon.o
-    0x00046e65   0x00000200   Data   RO         7052    .constdata          ui_notify_icon.o
-    0x00047065   0x00000200   Data   RO         7053    .constdata          ui_notify_icon.o
-    0x00047265   0x00000320   Data   RO         7054    .constdata          ui_notify_icon.o
-    0x00047585   0x00000144   Data   RO         7055    .constdata          ui_notify_icon.o
-    0x000476c9   0x00000120   Data   RO         7056    .constdata          ui_notify_icon.o
-    0x000477e9   0x000000a5   Data   RO         7057    .constdata          ui_notify_icon.o
-    0x0004788e   0x0000012c   Data   RO         7058    .constdata          ui_notify_icon.o
-    0x000479ba   0x00000068   Data   RO         7059    .constdata          ui_notify_icon.o
-    0x00047a22   0x000007b1   Data   RO         7060    .constdata          ui_notify_icon.o
-    0x000481d3   0x00000320   Data   RO         7061    .constdata          ui_notify_icon.o
-    0x000484f3   0x00000320   Data   RO         7062    .constdata          ui_notify_icon.o
-    0x00048813   0x00000320   Data   RO         7063    .constdata          ui_notify_icon.o
-    0x00048b33   0x00000200   Data   RO         7075    .constdata          ui_camera_icon.o
-    0x00048d33   0x00000048   Data   RO         7097    .constdata          ui_sport_icon.o
-    0x00048d7b   0x000000ae   Data   RO         7098    .constdata          ui_sport_icon.o
-    0x00048e29   0x00000020   Data   RO         7101    .constdata          ui_sport_icon.o
-    0x00048e49   0x00000030   Data   RO         7103    .constdata          ui_sport_icon.o
-    0x00048e79   0x00000260   Data   RO         7104    .constdata          ui_sport_icon.o
-    0x000490d9   0x0000016b   Data   RO         7105    .constdata          ui_sport_icon.o
-    0x00049244   0x000000c0   Data   RO         7108    .constdata          ui_sport_icon.o
-    0x00049304   0x000004c0   Data   RO         7794    .constdata          jpeg_decode.lib(tjpgd.o)
-    0x000497c4   0x00000004   PAD
-    0x000497c8   0x00000088   Data   RO         7855    .constdata          m_wm.l(pow.o)
-    0x00049850   0x0000000c   Data   RO         7901    .constdata          mc_w.l(mktime.o)
-    0x0004985c   0x00000004   PAD
-    0x00049860   0x00000030   Data   RO         7938    .constdata          m_wm.l(cos_i.o)
-    0x00049890   0x00000008   Data   RO         7964    .constdata          m_wm.l(qnan.o)
-    0x00049898   0x000000c8   Data   RO         7967    .constdata          m_wm.l(rred.o)
-    0x00049960   0x00000028   Data   RO         7971    .constdata          m_wm.l(sin_i.o)
-    0x00049988   0x0000000c   Data   RO         8000    .constdata          mc_w.l(localtime_i.o)
-    0x00049994   0x00000020   Data   RO         8026    Region$$Table       anon$$obj.o
+    0x00031994   0x00000018   Code   RO         6330    i.ui_erase_calling_notify  ui_win_notify.o
+    0x000319ac   0x00000002   Code   RO         6331    i.ui_erase_drink_notify  ui_win_notify.o
+    0x000319ae   0x00000002   Code   RO         6332    i.ui_erase_find_me_notify  ui_win_notify.o
+    0x000319b0   0x00000002   Code   RO         6333    i.ui_erase_medicine_notify  ui_win_notify.o
+    0x000319b2   0x00000002   PAD
+    0x000319b4   0x00000018   Code   RO         6334    i.ui_erase_message_notify  ui_win_notify.o
+    0x000319cc   0x00000002   Code   RO         6335    i.ui_erase_sedentary_notify  ui_win_notify.o
+    0x000319ce   0x00000002   Code   RO         6336    i.ui_erase_uit_notify  ui_win_notify.o
+    0x000319d0   0x00000048   Code   RO         6337    i.ui_find_me_notify  ui_win_notify.o
+    0x00031a18   0x00000044   Code   RO         6338    i.ui_medicine_notify  ui_win_notify.o
+    0x00031a5c   0x00000050   Code   RO         6339    i.ui_message_notify  ui_win_notify.o
+    0x00031aac   0x00000044   Code   RO         6340    i.ui_sedentary_notify  ui_win_notify.o
+    0x00031af0   0x00000084   Code   RO         6216    i.ui_show_version   ui_win_info.o
+    0x00031b74   0x0000009c   Code   RO         6341    i.ui_uit_notify     ui_win_notify.o
+    0x00031c10   0x00000704   Code   RO         5626    i.ui_weather        ui_win_main.o
+    0x00032314   0x000001c8   Code   RO         5997    i.ui_win_hr_done    ui_win_hr.o
+    0x000324dc   0x00000050   Code   RO         5998    i.ui_win_hr_error   ui_win_hr.o
+    0x0003252c   0x00000050   Code   RO         5999    i.ui_win_hr_none    ui_win_hr.o
+    0x0003257c   0x0000008c   Code   RO         6000    i.ui_win_hr_ready   ui_win_hr.o
+    0x00032608   0x000001b4   Code   RO         6001    i.ui_win_hr_stop    ui_win_hr.o
+    0x000327bc   0x00000028   Code   RO         5922    i.ui_win_sport      ui_win_sport.o
+    0x000327e4   0x00000030   Code   RO         6706    i.ui_window_manager  window.o
+    0x00032814   0x0000000a   Code   RO         2191    i.uint16_encode     ble_advdata.o
+    0x0003281e   0x00000024   Code   RO         5627    i.uit_get_level     ui_win_main.o
+    0x00032842   0x00000002   PAD
+    0x00032844   0x000000e4   Code   RO         1352    i.unit_update       task_step.o
+    0x00032928   0x00000114   Code   RO         7418    i.unziphfmex        nrf52832_xxaa.lib(hfma2ylib.o)
+    0x00032a3c   0x00000014   Code   RO         2424    i.update_status_bit_reset  device_manager_peripheral.o
+    0x00032a50   0x00000060   Code   RO         2274    i.update_timeout_handler  ble_conn_params.o
+    0x00032ab0   0x00000030   Code   RO         2192    i.uuid_list_encode  ble_advdata.o
+    0x00032ae0   0x0000009e   Code   RO         2193    i.uuid_list_sized_encode  ble_advdata.o
+    0x00032b7e   0x00000002   PAD
+    0x00032b80   0x00000208   Code   RO         1897    i.v_to_cm2          task_uitraviolet.o
+    0x00032d88   0x000000a8   Code   RO         5404    i.wchat_pedometer_profile_init  ble_wechat_service.o
+    0x00032e30   0x000000b0   Code   RO         5405    i.wchat_target_profile_init  ble_wechat_service.o
+    0x00032ee0   0x00000058   Code   RO         5406    i.wechat_indicate_pedometer  ble_wechat_service.o
+    0x00032f38   0x0000006c   Code   RO         5407    i.wechat_services_init  ble_wechat_service.o
+    0x00032fa4   0x0000000e   Code   RO         2105    i.whitelist_has_entries  ble_advertising.o
+    0x00032fb2   0x00000002   PAD
+    0x00032fb4   0x00000134   Code   RO         6096    i.win_alarm_proc    ui_win_alarm.o
+    0x000330e8   0x00000134   Code   RO         6133    i.win_camera_proc   ui_win_camera.o
+    0x0003321c   0x000001e4   Code   RO         6174    i.win_findphone_proc  ui_win_findphone.o
+    0x00033400   0x000001a0   Code   RO         5875    i.win_function_proc  ui_win_function.o
+    0x000335a0   0x00000240   Code   RO         6002    i.win_hr_proc       ui_win_hr.o
+    0x000337e0   0x00000120   Code   RO         6217    i.win_info_proc     ui_win_info.o
+    0x00033900   0x000001fc   Code   RO         5628    i.win_main_proc     ui_win_main.o
+    0x00033afc   0x000002d4   Code   RO         6342    i.win_notify_proc   ui_win_notify.o
+    0x00033dd0   0x000001ac   Code   RO         5798    i.win_pedometer_proc  ui_win_pedometer.o
+    0x00033f7c   0x00000170   Code   RO         6271    i.win_shutdown_proc  ui_win_shutdown.o
+    0x000340ec   0x0000011c   Code   RO         6063    i.win_sleep_proc    ui_win_sleep.o
+    0x00034208   0x00000220   Code   RO         5923    i.win_sport_proc    ui_win_sport.o
+    0x00034428   0x00000034   Code   RO         6710    i.window_get        window.o
+    0x0003445c   0x0000003c   Code   RO         6711    i.window_init       window.o
+    0x00034498   0x00000028   Code   RO         6712    i.window_pop        window.o
+    0x000344c0   0x00000018   Code   RO         6713    i.window_push       window.o
+    0x000344d8   0x0000001c   Code   RO         6716    i.window_tack_reset  window.o
+    0x000344f4   0x00000011   Data   RO           52    .constdata          main.o
+    0x00034505   0x00000003   PAD
+    0x00034508   0x0000003d   Data   RO          168    .constdata          clocktick.o
+    0x00034545   0x00000003   Data   RO          311    .constdata          btprotocol.o
+    0x00034548   0x00000034   Data   RO          731    .constdata          osal_task.o
+    0x0003457c   0x00000004   Data   RO          732    .constdata          osal_task.o
+    0x00034580   0x00000004   Data   RO         1084    .constdata          task_ble.o
+    0x00034584   0x00000050   Data   RO         1623    .constdata          task_hr.o
+    0x000345d4   0x00000010   Data   RO         1967    .constdata          ble_dfu.o
+    0x000345e4   0x00000010   Data   RO         2051    .constdata          ble_nus.o
+    0x000345f4   0x00000034   Data   RO         2426    .constdata          device_manager_peripheral.o
+    0x00034628   0x00000040   Data   RO         2961    .constdata          ble_ancs_c.o
+    0x00034668   0x00000028   Data   RO         3223    .constdata          pstorage.o
+    0x00034690   0x000019e4   Data   RO         5171    .constdata          qr_encode.o
+    0x00036074   0x00000007   Data   RO         5172    .constdata          qr_encode.o
+    0x0003607b   0x0000000a   Data   RO         5173    .constdata          qr_encode.o
+    0x00036085   0x0000000d   Data   RO         5174    .constdata          qr_encode.o
+    0x00036092   0x0000000f   Data   RO         5175    .constdata          qr_encode.o
+    0x000360a1   0x00000010   Data   RO         5176    .constdata          qr_encode.o
+    0x000360b1   0x00000011   Data   RO         5177    .constdata          qr_encode.o
+    0x000360c2   0x00000012   Data   RO         5178    .constdata          qr_encode.o
+    0x000360d4   0x00000014   Data   RO         5179    .constdata          qr_encode.o
+    0x000360e8   0x00000016   Data   RO         5180    .constdata          qr_encode.o
+    0x000360fe   0x00000018   Data   RO         5181    .constdata          qr_encode.o
+    0x00036116   0x0000001a   Data   RO         5182    .constdata          qr_encode.o
+    0x00036130   0x0000001c   Data   RO         5183    .constdata          qr_encode.o
+    0x0003614c   0x0000001e   Data   RO         5184    .constdata          qr_encode.o
+    0x0003616a   0x00000020   Data   RO         5185    .constdata          qr_encode.o
+    0x0003618a   0x00000022   Data   RO         5186    .constdata          qr_encode.o
+    0x000361ac   0x00000024   Data   RO         5187    .constdata          qr_encode.o
+    0x000361d0   0x00000026   Data   RO         5188    .constdata          qr_encode.o
+    0x000361f6   0x00000028   Data   RO         5189    .constdata          qr_encode.o
+    0x0003621e   0x0000002a   Data   RO         5190    .constdata          qr_encode.o
+    0x00036248   0x0000002c   Data   RO         5191    .constdata          qr_encode.o
+    0x00036274   0x0000002e   Data   RO         5192    .constdata          qr_encode.o
+    0x000362a2   0x00000030   Data   RO         5193    .constdata          qr_encode.o
+    0x000362d2   0x00000032   Data   RO         5194    .constdata          qr_encode.o
+    0x00036304   0x00000034   Data   RO         5195    .constdata          qr_encode.o
+    0x00036338   0x00000036   Data   RO         5196    .constdata          qr_encode.o
+    0x0003636e   0x00000038   Data   RO         5197    .constdata          qr_encode.o
+    0x000363a6   0x0000003a   Data   RO         5198    .constdata          qr_encode.o
+    0x000363e0   0x0000003c   Data   RO         5199    .constdata          qr_encode.o
+    0x0003641c   0x0000003e   Data   RO         5200    .constdata          qr_encode.o
+    0x0003645a   0x00000040   Data   RO         5201    .constdata          qr_encode.o
+    0x0003649a   0x00000042   Data   RO         5202    .constdata          qr_encode.o
+    0x000364dc   0x00000044   Data   RO         5203    .constdata          qr_encode.o
+    0x00036520   0x0000080c   Data   RO         5629    .constdata          ui_win_main.o
+    0x00036d2c   0x00000208   Data   RO         5809    .constdata          ui_win_pedometer.o
+    0x00036f34   0x00001454   Data   RO         5876    .constdata          ui_win_function.o
+    0x00038388   0x00000078   Data   RO         6343    .constdata          ui_win_notify.o
+    0x00038400   0x00000004   Data   RO         6718    .constdata          window.o
+    0x00038404   0x00000098   Data   RO         6814    .constdata          ui_main_icon.o
+    0x0003849c   0x0000000a   Data   RO         6821    .constdata          ui_main_icon.o
+    0x000384a6   0x00000370   Data   RO         6824    .constdata          ui_main_icon.o
+    0x00038816   0x00000090   Data   RO         6859    .constdata          ui_main_icon.o
+    0x000388a6   0x000001dc   Data   RO         6860    .constdata          ui_main_icon.o
+    0x00038a82   0x00000108   Data   RO         6861    .constdata          ui_main_icon.o
+    0x00038b8a   0x000002d6   Data   RO         6862    .constdata          ui_main_icon.o
+    0x00038e60   0x0000016c   Data   RO         6863    .constdata          ui_main_icon.o
+    0x00038fcc   0x00000162   Data   RO         6864    .constdata          ui_main_icon.o
+    0x0003912e   0x0000015e   Data   RO         6865    .constdata          ui_main_icon.o
+    0x0003928c   0x0000016d   Data   RO         6866    .constdata          ui_main_icon.o
+    0x000393f9   0x00000175   Data   RO         6867    .constdata          ui_main_icon.o
+    0x0003956e   0x00000171   Data   RO         6868    .constdata          ui_main_icon.o
+    0x000396df   0x0000016f   Data   RO         6869    .constdata          ui_main_icon.o
+    0x0003984e   0x00000170   Data   RO         6870    .constdata          ui_main_icon.o
+    0x000399be   0x00000178   Data   RO         6871    .constdata          ui_main_icon.o
+    0x00039b36   0x00000162   Data   RO         6872    .constdata          ui_main_icon.o
+    0x00039c98   0x00000174   Data   RO         6873    .constdata          ui_main_icon.o
+    0x00039e0c   0x00000162   Data   RO         6874    .constdata          ui_main_icon.o
+    0x00039f6e   0x0000014e   Data   RO         6875    .constdata          ui_main_icon.o
+    0x0003a0bc   0x000001c0   Data   RO         6876    .constdata          ui_main_icon.o
+    0x0003a27c   0x000005ad   Data   RO         6877    .constdata          ui_main_icon.o
+    0x0003a829   0x00000528   Data   RO         6878    .constdata          ui_main_icon.o
+    0x0003ad51   0x0000067a   Data   RO         6879    .constdata          ui_main_icon.o
+    0x0003b3cb   0x00000669   Data   RO         6880    .constdata          ui_main_icon.o
+    0x0003ba34   0x000005fc   Data   RO         6881    .constdata          ui_main_icon.o
+    0x0003c030   0x000005c0   Data   RO         6882    .constdata          ui_main_icon.o
+    0x0003c5f0   0x00000431   Data   RO         6883    .constdata          ui_main_icon.o
+    0x0003ca21   0x000002c9   Data   RO         6884    .constdata          ui_main_icon.o
+    0x0003ccea   0x00000201   Data   RO         6887    .constdata          ui_main_icon.o
+    0x0003ceeb   0x00000212   Data   RO         6888    .constdata          ui_main_icon.o
+    0x0003d0fd   0x00000205   Data   RO         6889    .constdata          ui_main_icon.o
+    0x0003d302   0x000001e2   Data   RO         6890    .constdata          ui_main_icon.o
+    0x0003d4e4   0x000001dd   Data   RO         6891    .constdata          ui_main_icon.o
+    0x0003d6c1   0x000001d3   Data   RO         6892    .constdata          ui_main_icon.o
+    0x0003d894   0x00000245   Data   RO         6893    .constdata          ui_main_icon.o
+    0x0003dad9   0x00000220   Data   RO         6894    .constdata          ui_main_icon.o
+    0x0003dcf9   0x0000076d   Data   RO         6895    .constdata          ui_main_icon.o
+    0x0003e466   0x0000073e   Data   RO         6896    .constdata          ui_main_icon.o
+    0x0003eba4   0x00000790   Data   RO         6897    .constdata          ui_main_icon.o
+    0x0003f334   0x00000737   Data   RO         6898    .constdata          ui_main_icon.o
+    0x0003fa6b   0x00000714   Data   RO         6899    .constdata          ui_main_icon.o
+    0x0004017f   0x00001991   Data   RO         6900    .constdata          ui_main_icon.o
+    0x00041b10   0x00000200   Data   RO         6916    .constdata          ui_pedometer_icon.o
+    0x00041d10   0x00000200   Data   RO         6918    .constdata          ui_pedometer_icon.o
+    0x00041f10   0x00000026   Data   RO         6919    .constdata          ui_pedometer_icon.o
+    0x00041f36   0x00000050   Data   RO         6920    .constdata          ui_pedometer_icon.o
+    0x00041f86   0x00000050   Data   RO         6921    .constdata          ui_pedometer_icon.o
+    0x00041fd6   0x00000040   Data   RO         6922    .constdata          ui_pedometer_icon.o
+    0x00042016   0x00000320   Data   RO         6934    .constdata          ui_function_icon.o
+    0x00042336   0x00000320   Data   RO         6935    .constdata          ui_function_icon.o
+    0x00042656   0x00000320   Data   RO         6941    .constdata          ui_function_icon.o
+    0x00042976   0x00000320   Data   RO         6942    .constdata          ui_function_icon.o
+    0x00042c96   0x00000320   Data   RO         6943    .constdata          ui_function_icon.o
+    0x00042fb6   0x00000320   Data   RO         6944    .constdata          ui_function_icon.o
+    0x000432d6   0x00000080   Data   RO         6946    .constdata          ui_function_icon.o
+    0x00043356   0x00000080   Data   RO         6947    .constdata          ui_function_icon.o
+    0x000433d6   0x00000080   Data   RO         6948    .constdata          ui_function_icon.o
+    0x00043456   0x00000080   Data   RO         6949    .constdata          ui_function_icon.o
+    0x000434d6   0x00000080   Data   RO         6950    .constdata          ui_function_icon.o
+    0x00043556   0x00000080   Data   RO         6951    .constdata          ui_function_icon.o
+    0x000435d6   0x00000080   Data   RO         6952    .constdata          ui_function_icon.o
+    0x00043656   0x00000080   Data   RO         6955    .constdata          ui_function_icon.o
+    0x000436d6   0x00000198   Data   RO         6956    .constdata          ui_function_icon.o
+    0x0004386e   0x0000010e   Data   RO         6957    .constdata          ui_function_icon.o
+    0x0004397c   0x00000048   Data   RO         6969    .constdata          ui_hr_icon.o
+    0x000439c4   0x00000200   Data   RO         6970    .constdata          ui_hr_icon.o
+    0x00043bc4   0x00000200   Data   RO         6971    .constdata          ui_hr_icon.o
+    0x00043dc4   0x00000200   Data   RO         6972    .constdata          ui_hr_icon.o
+    0x00043fc4   0x00000280   Data   RO         6973    .constdata          ui_hr_icon.o
+    0x00044244   0x00000320   Data   RO         7007    .constdata          ui_findphone_icon.o
+    0x00044564   0x000001ad   Data   RO         7030    .constdata          ui_comm_icon.o
+    0x00044711   0x000000c4   Data   RO         7031    .constdata          ui_comm_icon.o
+    0x000447d5   0x00002000   Data   RO         7045    .constdata          ui_notify_icon.o
+    0x000467d5   0x000000c8   Data   RO         7046    .constdata          ui_notify_icon.o
+    0x0004689d   0x000000c4   Data   RO         7047    .constdata          ui_notify_icon.o
+    0x00046961   0x000000f6   Data   RO         7048    .constdata          ui_notify_icon.o
+    0x00046a57   0x0000015c   Data   RO         7049    .constdata          ui_notify_icon.o
+    0x00046bb3   0x00000200   Data   RO         7050    .constdata          ui_notify_icon.o
+    0x00046db3   0x000000d2   Data   RO         7051    .constdata          ui_notify_icon.o
+    0x00046e85   0x00000200   Data   RO         7052    .constdata          ui_notify_icon.o
+    0x00047085   0x00000200   Data   RO         7053    .constdata          ui_notify_icon.o
+    0x00047285   0x00000320   Data   RO         7054    .constdata          ui_notify_icon.o
+    0x000475a5   0x00000144   Data   RO         7055    .constdata          ui_notify_icon.o
+    0x000476e9   0x00000120   Data   RO         7056    .constdata          ui_notify_icon.o
+    0x00047809   0x000000a5   Data   RO         7057    .constdata          ui_notify_icon.o
+    0x000478ae   0x0000012c   Data   RO         7058    .constdata          ui_notify_icon.o
+    0x000479da   0x00000068   Data   RO         7059    .constdata          ui_notify_icon.o
+    0x00047a42   0x000007b1   Data   RO         7060    .constdata          ui_notify_icon.o
+    0x000481f3   0x00000320   Data   RO         7061    .constdata          ui_notify_icon.o
+    0x00048513   0x00000320   Data   RO         7062    .constdata          ui_notify_icon.o
+    0x00048833   0x00000320   Data   RO         7063    .constdata          ui_notify_icon.o
+    0x00048b53   0x00000200   Data   RO         7075    .constdata          ui_camera_icon.o
+    0x00048d53   0x00000048   Data   RO         7097    .constdata          ui_sport_icon.o
+    0x00048d9b   0x000000ae   Data   RO         7098    .constdata          ui_sport_icon.o
+    0x00048e49   0x00000020   Data   RO         7101    .constdata          ui_sport_icon.o
+    0x00048e69   0x00000030   Data   RO         7103    .constdata          ui_sport_icon.o
+    0x00048e99   0x00000260   Data   RO         7104    .constdata          ui_sport_icon.o
+    0x000490f9   0x0000016b   Data   RO         7105    .constdata          ui_sport_icon.o
+    0x00049264   0x000000c0   Data   RO         7108    .constdata          ui_sport_icon.o
+    0x00049324   0x000004c0   Data   RO         7794    .constdata          jpeg_decode.lib(tjpgd.o)
+    0x000497e4   0x00000004   PAD
+    0x000497e8   0x00000088   Data   RO         7855    .constdata          m_wm.l(pow.o)
+    0x00049870   0x0000000c   Data   RO         7901    .constdata          mc_w.l(mktime.o)
+    0x0004987c   0x00000004   PAD
+    0x00049880   0x00000030   Data   RO         7938    .constdata          m_wm.l(cos_i.o)
+    0x000498b0   0x00000008   Data   RO         7964    .constdata          m_wm.l(qnan.o)
+    0x000498b8   0x000000c8   Data   RO         7967    .constdata          m_wm.l(rred.o)
+    0x00049980   0x00000028   Data   RO         7971    .constdata          m_wm.l(sin_i.o)
+    0x000499a8   0x0000000c   Data   RO         8000    .constdata          mc_w.l(localtime_i.o)
+    0x000499b4   0x00000020   Data   RO         8026    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20002080, Size: 0x0000d870, Max: 0x0000df80, ABSOLUTE, COMPRESSED[0x00000218])
@@ -6832,7 +6833,7 @@ Image component sizes
       2708        162          0         72        156      44015   task_step.o
       1532         64          0          8         20       3651   task_store.o
        232         22          0         12          0       5072   task_touch.o
-      1652        310          0         36         48      10595   task_uitraviolet.o
+      1684        316          0         36         48      10623   task_uitraviolet.o
       3700         82          0         20       4132      10737   task_upload.o
        428          8          0          0          0       1782   u2k.o
          0          0        512          0          0        521   ui_camera_icon.o
@@ -6861,7 +6862,7 @@ Image component sizes
        252         50          4        300         16       5794   window.o
 
     ----------------------------------------------------------------------
-     82278       5292      86096       2600      48452    1020684   Object Totals
+     82310       5298      86096       2600      48452    1020712   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        102          4          3         11          6          0   (incl. Padding)
 
@@ -6953,15 +6954,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     99028       6630      87776       2712      52696    1008113   Grand Totals
-     99028       6630      87776        536      52696    1008113   ELF Image Totals (compressed)
-     99028       6630      87776        536          0          0   ROM Totals
+     99060       6636      87776       2712      52696    1008141   Grand Totals
+     99060       6636      87776        536      52696    1008141   ELF Image Totals (compressed)
+     99060       6636      87776        536          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               186804 ( 182.43kB)
+    Total RO  Size (Code + RO Data)               186836 ( 182.46kB)
     Total RW  Size (RW Data + ZI Data)             55408 (  54.11kB)
-    Total ROM Size (Code + RO Data + RW Data)     187340 ( 182.95kB)
+    Total ROM Size (Code + RO Data + RW Data)     187372 ( 182.98kB)
 
 ==============================================================================
 

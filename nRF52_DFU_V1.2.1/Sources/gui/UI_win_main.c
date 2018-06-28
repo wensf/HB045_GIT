@@ -989,7 +989,7 @@ jpeg_ui_cycle_4,
 
 int uit_get_level( int uit_level )
 {
-    if ( uit_level < 3 )
+    if ( uit_level < 2 )
     {
         return 0;
     }else if ( uit_level < 5 )
