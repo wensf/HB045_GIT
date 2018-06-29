@@ -26,7 +26,7 @@ kal_uint16 count_hr = 0x00;
 kal_uint32 num_hr = 0x00;
 kal_uint8  blood_h=0;
 kal_uint8  blood_l=0;
-unsigned char bpm_tmp;
+unsigned char bpm_tmp = 75;
 /*******************************************************************************
 Modulm  Function
 ********************************************************************************/
@@ -146,10 +146,10 @@ void EM7028_hrs_get_data()
     
     bpm_data = em70xx_bpm_dynamic(data,0,0,0);
 
-    Blood_Process();
+    // Blood_Process();
     // Get_Hr(bpm_data);
-    blood_h = GET_BP_MAX();
-    blood_l = GET_BP_MIN();
+    // blood_h = GET_BP_MAX();
+    // blood_l = GET_BP_MIN();
 
     if ( (bpm_data > 54) && (bpm_data) < 150 )
     {

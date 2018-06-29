@@ -676,7 +676,7 @@ void ui_uit_notify( int msg_id, unsigned long arg )
 	{	
         DrawUI_JPEG((80-36)/2,20,ui_jpeg_uv);
 		DrawUI_JPEG( 17, 57, jpeg_ui_uit_notify );
-        int lvl = UIT_i[0];
+        int lvl = UIT_i;
         
         DrawUI_Bitmap_Exx( (80-11*2)/2,(160-18)/2,11, 24, Font_11x18[lvl/10], 0x0000);
         DrawUI_Bitmap_Exx( (80-11*2)/2+11,(160-18)/2,11, 24, Font_11x18[lvl%10], 0x0000);        

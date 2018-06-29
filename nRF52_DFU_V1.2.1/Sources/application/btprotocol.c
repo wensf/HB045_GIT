@@ -655,7 +655,7 @@ int bt_protocol_rx(const unsigned char *buf, int length )
             if ( buf[2] == 0x0 )          // 查询当前(最近一次)
             {
                 txbuf[1] = 0x00;
-                txbuf[2] = (int)UIT_i[0];
+                txbuf[2] = (int)UIT_i;
             }else if ( buf[2] == 0x1 ){   // 获取历史记录
                 osal_set_event ( taskStoreTaskId, TASK_UPLOAD_STORE_UIT_EVT);
                 return 0;

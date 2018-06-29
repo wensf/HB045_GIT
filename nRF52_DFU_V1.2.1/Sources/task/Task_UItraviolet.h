@@ -8,8 +8,10 @@
 
 extern volatile short UIT_adc;
 extern float UIT_vol;
-extern float UIT_cm2[2];
-extern float UIT_i[2]; 
+extern float UIT_cm2;
+extern float UIT_i; 
+extern float UIT_cm2_save[2];
+extern float UIT_i_save[2]; 
 extern unsigned char uit_notify_enable;
 
 extern unsigned long taskUItravioletTaskId;

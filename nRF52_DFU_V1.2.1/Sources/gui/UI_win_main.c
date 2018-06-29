@@ -1047,7 +1047,7 @@ void show_uit_win( void)
     DrawUI_Bitmap_Ex(16+32,64,8,16, Font_8x16_O[0],0xFFFF);  
     DrawUI_Bitmap_Ex(16+40,64,8,16, Font_8x16_O[1],0xFFFF);  
     
-    int tmp = (int)(UIT_cm2[0]*1000);
+    int tmp = (int)(UIT_cm2*1000);
     
     tmp %= 10000;
     
@@ -1060,7 +1060,7 @@ void show_uit_win( void)
     tmp %= 10;
     DrawUI_Bitmap_Ex(16+32,80,8,16, Font_8x16[tmp],0xFFFF);
     
-    tmp = (int)(UIT_i[0]*1000);
+    tmp = (int)(UIT_i*1000);
     
     tmp %= 10000;
 
@@ -1140,7 +1140,7 @@ void show_uit_win( void)
         }
     }        
     
-    int uit_lvl = uit_get_level(UIT_i[0]);
+    int uit_lvl = uit_get_level(UIT_i);
     
     for ( int i = 16 * uit_lvl; i < 16 * uit_lvl + 15; i++ )
     {

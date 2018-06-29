@@ -94,8 +94,10 @@ unsigned long taskUItravioletTaskId;
 volatile short UIT_adc = 0;
 float UIT_vol;
 
-float UIT_cm2[2];
-float UIT_i[2];
+float UIT_cm2;
+float UIT_i;
+float UIT_cm2_save[2];
+float UIT_i_save[2];
 
 #include <math.h>
 #include "btprotocol.h"
@@ -177,26 +179,21 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         UIT_adc = (UIT_adcs[0]+UIT_adcs[1]+UIT_adcs[2])/3;
         
+        /** 求电压 */
         UIT_vol = UIT_adc * (0.6f/4096.0f) * 2;
         
-        UIT_cm2[0] = v_to_cm2(UIT_vol);
+        /** 通过电压查表求出功率 */
+        UIT_cm2 = v_to_cm2(UIT_vol);
         
-        #if 1
-        UIT_i[0] = cm_to_i(UIT_cm2[0]);
-        #else
+        /** 通过功率查表求出指数 */
+        UIT_i = cm_to_i(UIT_cm2);
+        //UIT_i = 2;
         
-        UIT_i[0] += 1;
-        if ( UIT_i[0] > 11 )
-        {
-            UIT_i[0] = 0;
-        }
-        #endif
-        
-        if ( UIT_i[0] > MAX_UIT )
+        if ( UIT_i > MAX_UIT )
         {
             dangerius_cnt++;
             
-            if ( dangerius_cnt > 30000/200 )
+            if ( dangerius_cnt > 3*60 )               /* 持续3分钟超过提醒阈值,则报警提示 */
             {
                 dangerius_cnt = 0;
 
@@ -204,16 +201,29 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             }
         }else{
             dangerius_cnt = 0;
-        }            
+        }        
+
+        /* 更新每半个小时的最大最小值 */
+        if ( UIT_cm2 > UIT_cm2_save[0] )
+        {
+            UIT_cm2_save[0] = UIT_cm2;
+        }
+        
+        if ( UIT_i_save[0] > UIT_i )
+        {
+            UIT_i_save[0] = UIT_i;
+        }
         
         sampleCnt++;
 
         osal_start_timerEx ( task_id, TASK_UITRAVIOLET_START_EVT, 1000 );
         
-        if ( (uit_notify_enable & 0x1 ) && !( sampleCnt % 5) ) /** 3秒上传一次 */
+        if ( (uit_notify_enable & 0x1 ) && !( sampleCnt % 5) ) /** 5秒上传一次 */
         {
             osal_set_event ( task_id, TASK_UIT_UPDATE_UV_EVT );
         }
+        
+        #if 0
         
         if ( !(sampleCnt % 30) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 3分钟保存1个,1次保存2个,6分钟1组 */
         {
@@ -228,11 +238,31 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             } 
         }
         
-        if ( !(sampleCnt % 60) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
+        #else
+         
+        if ( !(sampleCnt % 30*60*1000) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 30分钟保存1个,1次保存2个,60分钟1组 */
+        {
+            if ( dataCnt == 0 )
+            {   /* 第一个数据，先缓存 */
+                UIT_i_save[1]   = UIT_i_save[0];
+                UIT_cm2_save[1] = UIT_cm2_save[0];
+                UIT_i_save[0] = 0;
+                UIT_cm2_save[0] = 0;
+                dataCnt = 1;
+            }else{
+                /* 第二个数据, 保存 */
+                dataCnt = 0;
+                osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
+            } 
+        }
+               
+        #endif
+        
+        if ( !(sampleCnt % 60*60*1000) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
         {
             local_tx[0] = 0x28;
             local_tx[1] = 0x02;
-            local_tx[2] = fm.erea[FMC_ID_UIT].items & 0xFF;     
+            local_tx[2] = fm.erea[FMC_ID_UIT].items;     
 
             bt_protocol_tx( local_tx, sizeof(local_tx));            
         }
@@ -246,7 +276,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         local_tx[0] = 0x28;
         local_tx[1] = 0x00;
-        local_tx[2] = (int)UIT_i[0];
+        local_tx[2] = (int)UIT_i;
         local_tx[3] = p[3];
         local_tx[4] = p[2];
         local_tx[5] = p[1];

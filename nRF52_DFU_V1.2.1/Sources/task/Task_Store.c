@@ -333,9 +333,9 @@ unsigned long taskStore (unsigned long task_id, unsigned long events )
         txbuf[2] = utc>> 8;
         txbuf[3] = utc>> 0;
         
-        txbuf[4] = (int)UIT_i[0];
+        txbuf[4] = (int)UIT_i_save[1];
         
-        unsigned char *p0 = (unsigned char *)&UIT_cm2[0];
+        unsigned char *p0 = (unsigned char *)&UIT_cm2_save[1];
 
         txbuf[5] = p0[3];
         txbuf[6] = p0[2];
@@ -344,14 +344,19 @@ unsigned long taskStore (unsigned long task_id, unsigned long events )
         
         txbuf[9] = 5*6;  /*间隔30秒*/
 
-        txbuf[10] = (int)UIT_i[1];
+        txbuf[10] = (int)UIT_i_save[0];
         
-        unsigned char *p1 = (unsigned char *)&UIT_cm2[1];
+        unsigned char *p1 = (unsigned char *)&UIT_cm2_save[0];
 
         txbuf[11] = p1[3];
         txbuf[12] = p1[2];
         txbuf[13] = p1[1];
         txbuf[14] = p1[0]; 
+                        /** reset */
+        UIT_i_save[1] = 0x0;
+        UIT_i_save[0] = 0x0;
+        UIT_cm2_save[1] = 0;
+        UIT_cm2_save[0] = 0;
         
 		flash_temp_queue_put( FMC_ID_UIT, txbuf, 16);
         
