@@ -353,6 +353,51 @@ const unsigned char Font5x8[][5] =
 {0x86,0x89,0x89,0x89,0x7E},/*"F:\BandAll\HB021\彩屏niyajia\界面2\与界面3数字相同\9.bmp",0*/
 };
 
+const unsigned char Font_5x7[][5] = 
+{
+
+{0x7F,0x41,0x41,0x41,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\0.BMP",0*/
+
+
+{0x00,0x02,0x7F,0x00,0x00},/*"E:\BandAll\HB045_GIT\UI\表盘数字\1.BMP",0*/
+
+
+
+{0x79,0x49,0x49,0x49,0x4F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\2.BMP",0*/
+
+    
+{0x49,0x49,0x49,0x49,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\3.BMP",0*/
+
+{0x0F,0x08,0x08,0x08,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\4.BMP",0*/
+
+
+{0x4F,0x49,0x49,0x49,0x79},/*"E:\BandAll\HB045_GIT\UI\表盘数字\5.BMP",0*/
+
+
+{0x7F,0x49,0x49,0x49,0x79},/*"E:\BandAll\HB045_GIT\UI\表盘数字\6.BMP",0*/
+
+
+
+{0x01,0x01,0x01,0x01,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\7.BMP",0*/
+
+
+
+{0x7F,0x49,0x49,0x49,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\8.BMP",0*/
+
+
+
+{0x4F,0x49,0x49,0x49,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\9.BMP",0*/
+
+
+
+{0x00,0x7F,0x41,0x41,0x7F},/*"E:\BandAll\HB045_GIT\UI\表盘数字\00.BMP",0*/
+
+
+
+
+
+};
+
 const unsigned char gImage_s_hr[192] = { /* 0X00,0X10,0X0C,0X00,0X08,0X00,0X01,0X1B, */
 0X00,0X00,0X00,0X28,0X00,0XD0,0X00,0XF8,0X00,0XB8,0X00,0X28,0X00,0XB8,0X00,0XF8,
 0X00,0XD0,0X00,0X28,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0XC8,0X00,0XF8,0X00,0XF8,
@@ -731,6 +776,25 @@ void show_main_ui_style_0(void)
 	
 	// 绘制背景
 	DrawUI_JPEG(0,0,jpeg_ui_bg_1);
+    
+    DrawUI_Bitmap_Exx(52,51,5,7,Font_5x7[1],0xFFFF);
+    DrawUI_Bitmap_Exx(61,63,5,7,Font_5x7[2],0xFFFF);
+    DrawUI_Bitmap_Exx(67-3,74,5,7,Font_5x7[3],0xFFFF);
+    DrawUI_Bitmap_Exx(61-1,88,5,7,Font_5x7[4],0xFFFF);
+    DrawUI_Bitmap_Exx(52,98,5,7,Font_5x7[5],0xFFFF);
+    DrawUI_Bitmap_Exx(40,100,5,7,Font_5x7[6],0xFFFF);
+    DrawUI_Bitmap_Exx(27,98,5,7,Font_5x7[7],0xFFFF);    
+    DrawUI_Bitmap_Exx(17,88,5,7,Font_5x7[8],0xFFFF);
+    DrawUI_Bitmap_Exx(13,74,5,7,Font_5x7[9],0xFFFF);
+    
+    DrawUI_Bitmap_Exx(15,63,5,7,Font_5x7[1],0xFFFF);
+    DrawUI_Bitmap_Exx(18,63,5,7,Font_5x7[10+0],0xFFFF);    
+    
+    DrawUI_Bitmap_Exx(20+4,51,5,7,Font_5x7[1],0xFFFF);
+    DrawUI_Bitmap_Exx(23+4,51,5,7,Font_5x7[1],0xFFFF);  
+
+    DrawUI_Bitmap_Exx(36,49,5,7,Font_5x7[1],0xFFFF);
+    DrawUI_Bitmap_Exx(40,49,5,7,Font_5x7[2],0xFFFF);
 	
 	// 绘制蓝牙图标和电池图标
 	if ( ble.isConnected == 1 )
@@ -1684,7 +1748,6 @@ unsigned long win_main_proc(unsigned long wid, unsigned long msg_type,
                     window_push(window_get(win_current));
                     msg_type |= WINDOW_DISTORY;
                     show_weath_flag = 0;
-                    config.ui_style = 0;
                 }
                 else 
                 {

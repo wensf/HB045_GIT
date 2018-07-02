@@ -16,6 +16,7 @@
 #include "UI_lib.h"
 #include "SPI_HW.h"
 #include "HFMA2Ylib.h"
+#include "Task_Motor.h"
 
 void WritePage( unsigned long addr, unsigned char *buf, int len );
 void EraseSector( unsigned long addr );
@@ -287,6 +288,9 @@ unsigned long taskGUI( unsigned long task_id, unsigned long events )
         if ( read_Cur_page != read_All_page )
         {
         //    osal_start_timerEx ( task_id,TASK_GUI_FONT_READ_PAGE_EVT, 100); 
+        }else{
+            
+            osal_set_event ( taskMotorTaskId, TASK_MOTOR_BMA_DONE_EVT );
         }
         
         return ( events ^ TASK_GUI_FONT_READ_PAGE_EVT );
