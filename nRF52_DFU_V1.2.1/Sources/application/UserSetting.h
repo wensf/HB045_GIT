@@ -133,5 +133,6 @@ extern BLE_Typdef ble;
 extern unsigned char gsensor_ok;
 extern unsigned char update_flag;
 extern unsigned char ancs_ancs_flag;
+extern unsigned char uit_debug_enable;
 
 #endif

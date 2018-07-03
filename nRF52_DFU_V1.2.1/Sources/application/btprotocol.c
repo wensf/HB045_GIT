@@ -668,6 +668,8 @@ int bt_protocol_rx(const unsigned char *buf, int length )
                 uit_notify_enable = buf[3] & 0x1;
                 txbuf[1] = 0x80;
                 txbuf[2] = uit_notify_enable;                
+            }else if ( buf[2] == 0x81) {
+                uit_debug_enable = buf[3] & 0x1;
             }else{
                 txbuf[0] |= 0x1<<7;
             }
