@@ -371,9 +371,9 @@
             <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>CONFIG_USING_ANCS=1 CONFIG_USING_WECHAT=1 CONFIG_USING_FPU=1 BLE_DFU_APP_SUPPORT BLE_STACK_SUPPORT_REQD S132 NRF52_PAN_24 NRF52_PAN_25 NRF52_PAN_26 NRF52_PAN_27 NRF52_PAN_28 NRF52_PAN_29 NRF52_PAN_30 NRF52_PAN_32 NRF52_PAN_33 NRF52_PAN_34 NRF52_PAN_35 NRF52_PAN_36 NRF52_PAN_37 NRF52_PAN_38 NRF52_PAN_39 NRF52_PAN_40 NRF52_PAN_41 NRF52_PAN_42 NRF52_PAN_43 NRF52_PAN_44 NRF52_PAN_46 NRF52_PAN_47 NRF52_PAN_48 NRF52_PAN_49 NRF52_PAN_58 NRF52_PAN_63 NRF52_PAN_64 NRF52_PAN_65 CONFIG_GPIO_AS_PINRESET  NRF52_PAN_1 NRF52_PAN_2 NRF52_PAN_3 NRF52_PAN_4 NRF52_PAN_7 NRF52_PAN_8 NRF52_PAN_9 NRF52_PAN_10 NRF52_PAN_11 NRF52_PAN_12 NRF52_PAN_15 NRF52_PAN_16 NRF52_PAN_17 NRF52_PAN_20 NRF52_PAN_23 NRF_LOG_USES_UART=0 SWI_DISABLE0 SOFTDEVICE_PRESENT NRF52</Define>
+              <Define>SENSOR_EM7028 CONFIG_USING_ANCS=1 CONFIG_USING_WECHAT=1 CONFIG_USING_FPU=1 BLE_DFU_APP_SUPPORT BLE_STACK_SUPPORT_REQD S132 NRF52_PAN_24 NRF52_PAN_25 NRF52_PAN_26 NRF52_PAN_27 NRF52_PAN_28 NRF52_PAN_29 NRF52_PAN_30 NRF52_PAN_32 NRF52_PAN_33 NRF52_PAN_34 NRF52_PAN_35 NRF52_PAN_36 NRF52_PAN_37 NRF52_PAN_38 NRF52_PAN_39 NRF52_PAN_40 NRF52_PAN_41 NRF52_PAN_42 NRF52_PAN_43 NRF52_PAN_44 NRF52_PAN_46 NRF52_PAN_47 NRF52_PAN_48 NRF52_PAN_49 NRF52_PAN_58 NRF52_PAN_63 NRF52_PAN_64 NRF52_PAN_65 CONFIG_GPIO_AS_PINRESET  NRF52_PAN_1 NRF52_PAN_2 NRF52_PAN_3 NRF52_PAN_4 NRF52_PAN_7 NRF52_PAN_8 NRF52_PAN_9 NRF52_PAN_10 NRF52_PAN_11 NRF52_PAN_12 NRF52_PAN_15 NRF52_PAN_16 NRF52_PAN_17 NRF52_PAN_20 NRF52_PAN_23 NRF_LOG_USES_UART=0 SWI_DISABLE0 SOFTDEVICE_PRESENT NRF52</Define>
               <Undefine></Undefine>
-              <IncludePath>.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\common;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\hal;.\nRF5_SDK_11.0.0_89a8197\components\libraries\util;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\delay;.\nRF5_SDK_11.0.0_89a8197\components\softdevice\s132\headers;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_dfu;.\nRF5_SDK_11.0.0_89a8197\components\ble\common;.\nRF5_SDK_11.0.0_89a8197\components\libraries\bootloader_dfu;.\nRF5_SDK_11.0.0_89a8197\components\ble\device_manager;.\nRF5_SDK_11.0.0_89a8197\components\ble\device_manager\config;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_advertising;.\nRF5_SDK_11.0.0_89a8197\components\softdevice\common\softdevice_handler;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_nus;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\pstorage;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\pstorage\config;,\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\hal;.\nRF5_SDK_11.0.0_89a8197\components\libraries\fstorage\config;.\nRF5_SDK_11.0.0_89a8197\components\libraries\fstorage;.\nRF5_SDK_11.0.0_89a8197\components\libraries\experimental_section_vars;;\nRF5_SDK_11.0.0_89a8197\components\libraries\trace;.\nRF52_DFU\nRF5_SDK_11.0.0_89a8197\components\libraries\trace;.\Sources\algorithm;.\Sources\application;.\Sources\drivers;.\Sources\utils\qrcode;.\Sources\task;.\Sources\osal\inc;.\nRF5_SDK_11.0.0_89a8197\components\libraries\trace;.\Sources\gui;.\Sources\gsensor;.\Sources\utils;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\config;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_dis;.\Sources\wechat;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_db_discovery;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_ancs_c;.\Sources\ancc;.\nRF5_SDK_11.0.0_89a8197\external\segger_rtt;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_db_discovery;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\saadc;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\config;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\hal;.\Sources\icon;.\NRF51832_GT24L24A2Y;.\Sources\wdt</IncludePath>
+              <IncludePath>.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\common;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\hal;.\nRF5_SDK_11.0.0_89a8197\components\libraries\util;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\delay;.\nRF5_SDK_11.0.0_89a8197\components\softdevice\s132\headers;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_dfu;.\nRF5_SDK_11.0.0_89a8197\components\ble\common;.\nRF5_SDK_11.0.0_89a8197\components\libraries\bootloader_dfu;.\nRF5_SDK_11.0.0_89a8197\components\ble\device_manager;.\nRF5_SDK_11.0.0_89a8197\components\ble\device_manager\config;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_advertising;.\nRF5_SDK_11.0.0_89a8197\components\softdevice\common\softdevice_handler;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_nus;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\pstorage;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\pstorage\config;,\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\hal;.\nRF5_SDK_11.0.0_89a8197\components\libraries\fstorage\config;.\nRF5_SDK_11.0.0_89a8197\components\libraries\fstorage;.\nRF5_SDK_11.0.0_89a8197\components\libraries\experimental_section_vars;;\nRF5_SDK_11.0.0_89a8197\components\libraries\trace;.\nRF52_DFU\nRF5_SDK_11.0.0_89a8197\components\libraries\trace;.\Sources\algorithm;.\Sources\application;.\Sources\drivers;.\Sources\utils\qrcode;.\Sources\task;.\Sources\osal\inc;.\nRF5_SDK_11.0.0_89a8197\components\libraries\trace;.\Sources\gui;.\Sources\gsensor;.\Sources\utils;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\config;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_dis;.\Sources\wechat;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_db_discovery;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_services\ble_ancs_c;.\Sources\ancc;.\nRF5_SDK_11.0.0_89a8197\external\segger_rtt;.\nRF5_SDK_11.0.0_89a8197\components\ble\ble_db_discovery;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\saadc;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\config;.\nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\hal;.\Sources\icon;.\NRF51832_GT24L24A2Y;.\Sources\wdt;.\Sources\HeartRate</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -722,11 +722,6 @@
               <FilePath>.\Sources\algorithm\HeartComp.c</FilePath>
             </File>
             <File>
-              <FileName>FFT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Sources\algorithm\FFT.c</FilePath>
-            </File>
-            <File>
               <FileName>SleepMonitor.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Sources\algorithm\SleepMonitor.c</FilePath>
@@ -905,6 +900,31 @@
               <FileName>wdt.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Sources\wdt\wdt.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HeartRate</GroupName>
+          <Files>
+            <File>
+              <FileName>em70x8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Sources\HeartRate\em70x8.c</FilePath>
+            </File>
+            <File>
+              <FileName>em70x8_gpio_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Sources\HeartRate\em70x8_gpio_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>libBp.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\Sources\HeartRate\libBp.lib</FilePath>
+            </File>
+            <File>
+              <FileName>libBpm.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\Sources\HeartRate\libBpm.lib</FilePath>
             </File>
           </Files>
         </Group>

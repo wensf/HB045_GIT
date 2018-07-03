@@ -98,7 +98,7 @@ unsigned long taskHr( unsigned long task_id, unsigned long events )
 	if ( events & TASK_HR_START_EVT )
 	{
 		hr_pwr_enable(true);
-		nrf_delay_us(47);
+		nrf_delay_ms(5);
 		   
 		dect_mTicks = hr_mticks;		
 		hr.stop = 0;
@@ -145,6 +145,13 @@ unsigned long taskHr( unsigned long task_id, unsigned long events )
 	{
 		if ( hr.stat == HR_DECT_STAT_DECTING )
 		{
+            if ( pid != 0x36 )
+            {
+                hr.stat = HR_DECT_STAT_ERROR; /* 进入正常检测模式, 允许图标闪动 */		
+                osal_set_event( task_id, TASK_HR_STOP_EVT );  
+                return ( events ^ TASK_HR_NORMAL_EVT );                
+            }
+            
 			dect_mTicks = hr_mticks;
 			
 			hr.stat = HR_DECT_STAT_NORMAL; /* 进入正常检测模式, 允许图标闪动 */		

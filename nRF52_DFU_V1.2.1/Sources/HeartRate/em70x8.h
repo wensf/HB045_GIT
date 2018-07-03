@@ -14,6 +14,7 @@
 extern kal_uint16 data;
 extern kal_uint8 bpm_data;
 extern unsigned char bpm_tmp;
+extern kal_uint8 pid;
 
 extern void EM70X8_blood500ms_get_data(void);
 extern void EM70X8_blood50ms_get_data(void);

@@ -778,23 +778,23 @@ void show_main_ui_style_0(void)
 	DrawUI_JPEG(0,0,jpeg_ui_bg_1);
     
     DrawUI_Bitmap_Exx(52,51,5,7,Font_5x7[1],0xFFFF);
-    DrawUI_Bitmap_Exx(61,63,5,7,Font_5x7[2],0xFFFF);
+    DrawUI_Bitmap_Exx(61,62,5,7,Font_5x7[2],0xFFFF);
     DrawUI_Bitmap_Exx(67-3,74,5,7,Font_5x7[3],0xFFFF);
     DrawUI_Bitmap_Exx(61-1,88,5,7,Font_5x7[4],0xFFFF);
-    DrawUI_Bitmap_Exx(52,98,5,7,Font_5x7[5],0xFFFF);
-    DrawUI_Bitmap_Exx(40,100,5,7,Font_5x7[6],0xFFFF);
-    DrawUI_Bitmap_Exx(27,98,5,7,Font_5x7[7],0xFFFF);    
+    DrawUI_Bitmap_Exx(50,98,5,7,Font_5x7[5],0xFFFF);
+    DrawUI_Bitmap_Exx(40-2,100,5,7,Font_5x7[6],0xFFFF);
+    DrawUI_Bitmap_Exx(27-2,98,5,7,Font_5x7[7],0xFFFF);    
     DrawUI_Bitmap_Exx(17,88,5,7,Font_5x7[8],0xFFFF);
     DrawUI_Bitmap_Exx(13,74,5,7,Font_5x7[9],0xFFFF);
     
-    DrawUI_Bitmap_Exx(15,63,5,7,Font_5x7[1],0xFFFF);
-    DrawUI_Bitmap_Exx(18,63,5,7,Font_5x7[10+0],0xFFFF);    
+    DrawUI_Bitmap_Exx(15,62,5,7,Font_5x7[1],0xFFFF);
+    DrawUI_Bitmap_Exx(18,62,5,7,Font_5x7[10+0],0xFFFF);    
     
     DrawUI_Bitmap_Exx(20+4,51,5,7,Font_5x7[1],0xFFFF);
     DrawUI_Bitmap_Exx(23+4,51,5,7,Font_5x7[1],0xFFFF);  
 
-    DrawUI_Bitmap_Exx(36,49,5,7,Font_5x7[1],0xFFFF);
-    DrawUI_Bitmap_Exx(40,49,5,7,Font_5x7[2],0xFFFF);
+    DrawUI_Bitmap_Exx(35,49,5,7,Font_5x7[1],0xFFFF);
+    DrawUI_Bitmap_Exx(39,49,5,7,Font_5x7[2],0xFFFF);
 	
 	// 绘制蓝牙图标和电池图标
 	if ( ble.isConnected == 1 )
@@ -1053,19 +1053,20 @@ jpeg_ui_cycle_4,
 
 int uit_get_level( int uit_level )
 {
-    if ( uit_level < 2 )
+    if ( uit_level < 3 )
     {
         return 0;
-    }else if ( uit_level < 5 )
+    }else if ( uit_level < 6 )
     {
         return 1;
-    }else if ( uit_level < 7 )
+    }else if ( uit_level < 8 )
     {
         return 2;
-    }else if ( uit_level < 10 )
+    }else if ( uit_level < 11 )
     {
         return 3;
-    }else{
+    }else
+    {
         return 4;
     }
 }
@@ -1085,16 +1086,18 @@ void UI_Draw_Title_Bluetooth_2(void)
 
 void show_uit_win( void)
 {
-    #if 0
-    UIT_adc %= 10000;
+    if ( uit_debug_enable == 1 )
+    {
+    int temp = UIT_adc;
+    temp %= 10000;
     
-    DrawUI_Bitmap_Ex( 16+0,48,8,16, Font_8x16[UIT_adc/1000],0xFFFF);
-    UIT_adc %= 1000;
-    DrawUI_Bitmap_Ex( 16+8,48,8,16, Font_8x16[UIT_adc/100],0xFFFF);
-    UIT_adc %= 100;
-    DrawUI_Bitmap_Ex(16+16,48,8,16, Font_8x16[UIT_adc/10],0xFFFF); 
-    UIT_adc %= 10;
-    DrawUI_Bitmap_Ex(16+24,48,8,16, Font_8x16[UIT_adc],0xFFFF);    
+    DrawUI_Bitmap_Ex( 16+0,48,8,16, Font_8x16[temp/1000],0xFFFF);
+    temp %= 1000;
+    DrawUI_Bitmap_Ex( 16+8,48,8,16, Font_8x16[temp/100],0xFFFF);
+    temp %= 100;
+    DrawUI_Bitmap_Ex(16+16,48,8,16, Font_8x16[temp/10],0xFFFF); 
+    temp %= 10;
+    DrawUI_Bitmap_Ex(16+24,48,8,16, Font_8x16[temp],0xFFFF);    
     
     int vol = (int)(UIT_vol*1000);
 
@@ -1136,7 +1139,9 @@ void show_uit_win( void)
     DrawUI_Bitmap_Ex(16+24,96,8,16, Font_8x16[tmp/10],0xFFFF); 
     tmp %= 10;
     DrawUI_Bitmap_Ex(16+32,96,8,16, Font_8x16[tmp],0xFFFF);       
-    #else
+    
+    }else{
+        
     // UI_Draw_Title_Bluetooth_(36,0);
     UI_Draw_Title_Bluetooth_2();
     UI_Draw_Title();
@@ -1232,6 +1237,7 @@ void show_uit_win( void)
     DrawUI_Bitmap_Exx( (80-11*2)/2,110-11+3+2,11, 24, Font_11x18[uit_lvl/10], 0x0000);
     DrawUI_Bitmap_Exx( (80-11*2)/2+11,110-11+3+2,11, 24, Font_11x18[uit_lvl%10], 0x0000); 
     
+    #if 0
     switch ( uit_lvl )
     {
     case 0:  
@@ -1260,7 +1266,40 @@ void show_uit_win( void)
     default:
         break;
     }
+    #else
+    switch ( uit_lvl )
+    {
+    case 0:  
+        if ( UIT_i < 1 )
+        {
+            DrawUI_JPEG( 30, 140, jpeg_ui_ok);
+        }else{
+            DrawUI_JPEG( 30, 140, jpeg_ui_sunscreen);
+        }            
+        break;
+    case 1:
+        DrawUI_JPEG( 30, 140, jpeg_ui_sunscreen);            
+        break;
+    case 2:
+        DrawUI_JPEG( 6, 140, jpeg_ui_glass);  
+        DrawUI_JPEG( 30, 140, jpeg_ui_hat);    
+        DrawUI_JPEG( 51, 140, jpeg_ui_sunscreen);            
+        break;
+    case 3:
+        DrawUI_JPEG( 6, 140, jpeg_ui_glass);  
+        DrawUI_JPEG( 30, 140, jpeg_ui_hat);    
+        DrawUI_JPEG( 51, 140, jpeg_ui_sunscreen);             
+        break;
+    case 4:   
+        DrawUI_JPEG( 6, 140, jpeg_ui_glass);  
+        DrawUI_JPEG( 30, 140, jpeg_ui_hat);    
+        DrawUI_JPEG( 51, 140, jpeg_ui_sunscreen);             
+        break;
+    default:
+        break;
+    }    
     #endif
+    }
 }
 
 const unsigned char *weather_p[] = 
@@ -1660,12 +1699,12 @@ unsigned long win_main_proc(unsigned long wid, unsigned long msg_type,
 		}
 		
         #if 1
-		if ( (win_ticks > 8) && (config.ui_style == 2) )				
+		if ( (win_ticks > 12) && (config.ui_style == 2) )				
 		{
 			lcd_display(0);
 			return ( msg_type ^ WINDOW_UPDATE );
 		}else{
-            if ( (win_ticks > 6) && (config.ui_style != 2) )
+            if ( (win_ticks > 12) && (config.ui_style != 2) )
             {
                 lcd_display(0);
                 return ( msg_type ^ WINDOW_UPDATE );                

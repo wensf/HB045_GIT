@@ -27,6 +27,7 @@ kal_uint32 num_hr = 0x00;
 kal_uint8  blood_h=0;
 kal_uint8  blood_l=0;
 unsigned char bpm_tmp = 75;
+kal_uint8 pid;
 /*******************************************************************************
 Modulm  Function
 ********************************************************************************/
@@ -59,8 +60,6 @@ void EM70X8_blood50ms_get_data(void);
 ********************************************************************************/
 kal_uint8 EM7028_hrs_pid()
 {
-	kal_uint8  pid = 0x00;
-
 	HRS_ReadBytes(&pid,0x00);
 
 	return pid;
@@ -96,7 +95,7 @@ void EM7028_hrs_init()
 	HRS_WriteBytes(EM7028_GAIN_REG,0x7f);
 	HRS_WriteBytes(EM7028_CONFIG_REG,0xc7);
 	HRS_WriteBytes(0x0e,0x06);
-	//EM7028_hrs_pid();
+	EM7028_hrs_pid();
 	faraway_hand_f=0;
 	em70xx_reset(0);
 
