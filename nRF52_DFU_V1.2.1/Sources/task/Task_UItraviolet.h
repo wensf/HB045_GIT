@@ -6,7 +6,7 @@
 #define TASK_UITRAVIOLET_INIT_EVET          0x00000004
 #define TASK_UIT_UPDATE_UV_EVT              0x00000008
 
-extern volatile short UIT_adc;
+extern short UIT_adc;
 extern float UIT_vol;
 extern float UIT_cm2;
 extern float UIT_i; 
