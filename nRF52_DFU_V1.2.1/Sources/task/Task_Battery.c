@@ -130,7 +130,7 @@ unsigned long taskBattery( unsigned long task_id, unsigned long events )
 			}
 		}
 		
-        #if 0
+        #if 1
 		osal_set_event ( task_id, TASK_BATTERY_PROTECT_EVT ); 
 			#else
         #warning "............."

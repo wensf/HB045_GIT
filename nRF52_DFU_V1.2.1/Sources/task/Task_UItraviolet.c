@@ -152,139 +152,6 @@ struct map_cm2_to_level
   float level;
 };
 
-struct map_cm2_to_level map_1[]=
-{
-{  0,0.000f},
-{ 10,0.086f},
-{ 20,0.173f},
-{ 30,0.260f},    
-{ 40,0.346f},
-{ 50,0.433f},
-{ 60,0.520f},
-{ 70,0.615f},
-{ 80,0.720f},
-{ 90,0.810f},
-{100,0.900f},
-{110,0.990f},    
-{120,1.045f},
-{130,1.120f},
-{140,1.130f},
-{150,1.138f},
-{160,1.145f},
-{170,1.520f},
-{180,1.580f},    
-{190,1.640f},
-{200,1.700f},
-{210,1.750f},
-{220,1.800f},
-{230,1.860f},
-{240,1.910f},
-{250,1.980f},
-{260,2.040f},    
-{270,2.090f},
-{280,2.141f},
-{290,2.239f},
-{300,2.250f},
-{310,2.300f},
-{320,2.410f},
-{330,2.457f},    
-{340,2.505f},
-{350,2.552f},
-{360,2.580f},
-{370,2.600f},
-{380,2.666f},
-{390,2.733f},
-{400,2.800f},
-{410,2.900f},    
-{420,3.000f},
-{430,3.160f},
-{440,3.280f},
-{450,3.340f},
-{460,3.400f},
-{470,3.446f},
-{480,3.493f},    
-{490,3.540f},
-{500,3.600f},
-{510,3.720f},
-{520,3.770f},
-{530,3.820f},
-{540,3.910f},
-{550,4.000f},
-{560,4.050f},    
-{570,4.100f},
-{580,4.120f},
-{590,4.140f},
-{600,4.160f},
-{610,4.195f},
-{620,4.230f}, 
-{630,4.280f},
-{640,4.330f},
-{650,4.380f},
-{660,4.445f},
-{670,4.530f},
-{680,4.580f},
-{690,4.630f},
-{700,4.680f},
-{710,4.740f},
-{720,4.830f},
-{730,4.883f},
-{740,4.936f},
-{750,4.990f},
-{760,5.055f},
-{770,5.120f},
-{780,5.240f},
-{790,5.320f},
-{800,5.350f},
-{810,5.490f},
-};
-
-/** 
- * 二分查找法，找到对应ADC值的数组下标 
- * 注意：原数据为逆序存放，经典二分查找算法要修改一下。
- */
-static int get_index(float voltage)
-{
-	float min = voltage-map_1[0].idx;
-	if ( min < 0 ) min *= -1;
-	
-	int idx = 0;
-	
-	for ( int i = 0; i < (sizeof(map_1)/sizeof(map_1[0])); i++ )
-	{
-		float temp = voltage-map_1[i].idx;
-		if ( temp < 0 ) temp *= -1;
-		if ( min > temp )
-		{
-			min = temp;
-			idx = i;
-		}
-	}
-    
-    /* 若没有查找到，则返回最临近的 */
-    return idx;
-}
-
-/**
- * 根据下标在温度值数组中取得对应温度值。
- */
-static float getTvalue(int index)
-{ 
-  return map_1[index].level;
-}
-   
-
-/**
-* 外部调用接口
-*/
-float get_cm2(float voltage)
-{
-    int idx;
-    
-    idx = get_index( voltage );
-    
-    return getTvalue(idx);
-}
-
 struct map_cm2_to_level map_2[]=
 {
 {0.0,0.000f},
@@ -407,16 +274,16 @@ struct map_cm2_to_level map_2[]=
  * 二分查找法，找到对应ADC值的数组下标 
  * 注意：原数据为逆序存放，经典二分查找算法要修改一下。
  */
-static int get_index_i(float cm2)
+static int get_index_i(float level)
 {
-	float min = cm2-map_2[0].level;
+	float min = level-map_2[0].idx;
 	if ( min < 0 ) min *= -1;
 	
 	int idx = 0;
 	
 	for ( int i = 0; i < (sizeof(map_2)/sizeof(map_2[0])); i++ )
 	{
-		float temp = cm2-map_2[i].level;
+		float temp = level-map_2[i].idx;
 		if ( temp < 0 ) temp *= -1;
 		if ( min > temp )
 		{
@@ -434,21 +301,95 @@ static int get_index_i(float cm2)
  */
 static float getTvalue_i(int index)
 { 
-  return map_2[index].idx;
+  return map_2[index].level;
 }
    
 
 /**
 * 外部调用接口
 */
-float get_uit_level(float cm2)
+float get_uit_level(float level)
 {
     int idx;
     
-    idx = get_index_i( cm2 );
+    idx = get_index_i( level );
     
     return getTvalue_i(idx);
 }
+
+
+/////////////////////////////////////////////////////
+struct MAP_TAG
+{
+    int uit_level;
+    float vol;
+};
+
+struct MAP_TAG map_3[]=
+{
+{0,0.0f},
+{1,10.0f},
+{2,90.0f},
+{3,129.0f},
+{4,161.0f},
+{5,198.0f},
+{6,235.0f},
+{7,279.0f},
+{8,296.0f},
+{9,326.0f},
+{10,398.0f},
+{11,437.0f},
+{12,489.0f},
+};
+
+/** 
+ * 二分查找法，找到对应ADC值的数组下标 
+ * 注意：原数据为逆序存放，经典二分查找算法要修改一下。
+ */
+static int get_index_ii(float vol)
+{
+	float min = vol-map_3[0].vol;
+	if ( min < 0 ) min *= -1;
+	
+	int idx = 0;
+	
+	for ( int i = 0; i < (sizeof(map_3)/sizeof(map_3[0])); i++ )
+	{
+		float temp = vol-map_3[i].vol;
+		if ( temp < 0 ) temp *= -1;
+		if ( min > temp )
+		{
+			min = temp;
+			idx = i;
+		}
+	}
+    
+    /* 若没有查找到，则返回最临近的 */
+    return idx;
+}
+
+/**
+ * 根据下标在温度值数组中取得对应温度值。
+ */
+static float getTvalue_ii(int index)
+{ 
+  return map_3[index].uit_level;
+}
+   
+
+/**
+* 外部调用接口
+*/
+float get_uit_level_ex(float vol)
+{
+    int idx;
+    
+    idx = get_index_ii( vol );
+    
+    return getTvalue_ii(idx);
+}
+
+/////////////////////////////////////////////////////
 
 int UIT_adcs[3] = {0};
 int dangerius_cnt = 0;
@@ -486,22 +427,14 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         /** 求电压 */
         UIT_vol = UIT_adc * (0.6f/4096.0f) * 2;
         
-        #if 0
-        /** 通过电压查表求出功率 */
-        UIT_cm2 = v_to_cm2(UIT_vol);
-        
-        /** 通过功率查表求出指数 */
-        UIT_i = cm_to_i(UIT_cm2);
-        #else
-        UIT_cm2 = get_cm2((int)(UIT_vol*1000));
-        UIT_i = get_uit_level(UIT_cm2);
-        #endif
+        UIT_i = get_uit_level_ex(UIT_vol*1000);
+        UIT_cm2 = get_uit_level(UIT_i);
         
         if ( UIT_i > MAX_UIT )
         {
             dangerius_cnt++;
             
-            if ( dangerius_cnt > 3*60 )               /* 持续3分钟超过提醒阈值,则报警提示 */
+            if ( dangerius_cnt > 1*30*4 )               /* 持续3分钟超过提醒阈值,则报警提示 */
             {
                 dangerius_cnt = 0;
 
@@ -524,16 +457,16 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         sampleCnt++;
 
-        osal_start_timerEx ( task_id, TASK_UITRAVIOLET_START_EVT, 1000 );
+        osal_start_timerEx ( task_id, TASK_UITRAVIOLET_START_EVT, 250 );
         
-        if ( (uit_notify_enable & 0x1 ) && !( sampleCnt % 5) ) /** 5秒上传一次 */
+        if ( (uit_notify_enable & 0x1 ) && !( sampleCnt % 5*4) ) /** 5秒上传一次 */
         {
             osal_set_event ( task_id, TASK_UIT_UPDATE_UV_EVT );
         }
         
         #if 0
         
-        if ( !(sampleCnt % 30) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 3分钟保存1个,1次保存2个,6分钟1组 */
+        if ( !(sampleCnt % 30*4) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 3分钟保存1个,1次保存2个,6分钟1组 */
         {
             if ( dataCnt == 0 )
             {
@@ -548,7 +481,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         #else
          
-        if ( !(sampleCnt % 30*60*1000) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 30分钟保存1个,1次保存2个,60分钟1组 */
+        if ( !(sampleCnt % 30*60*1000*4) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 30分钟保存1个,1次保存2个,60分钟1组 */
         {
             if ( dataCnt == 0 )
             {   /* 第一个数据，先缓存 */
@@ -566,7 +499,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
                
         #endif
         
-        if ( !(sampleCnt % 60*60*1000) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
+        if ( !(sampleCnt % 60*60*1000*4) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
         {
             local_tx[0] = 0x28;
             local_tx[1] = 0x02;

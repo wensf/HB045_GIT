@@ -66,5 +66,5 @@ unsigned char hr_ok = 0;
 unsigned char update_flag;
 unsigned char ancs_ancs_flag;
 
-unsigned char uit_debug_enable;
+unsigned char uit_debug_enable = 1;
 
