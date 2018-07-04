@@ -89,11 +89,17 @@ int bt_protocol_rx(const unsigned char *buf, int length )
                 txbuf[7]  = DECToBCD(H(0));
                 txbuf[8]  = DECToBCD(M(0));
                 
-                txbuf[9]  = DECToBCD(H(3));
-                txbuf[10] = DECToBCD(M(3));
+                txbuf[9]  = DECToBCD(H(1));
+                txbuf[10] = DECToBCD(M(1));
                 
-                txbuf[11] = DECToBCD(H(6));
-                txbuf[12] = DECToBCD(M(6));               
+                txbuf[11] = DECToBCD(H(2));
+                txbuf[12] = DECToBCD(M(2));  
+
+                txbuf[13]  = DECToBCD(H(3));
+                txbuf[14] = DECToBCD(M(3));
+                
+                txbuf[15] = DECToBCD(H(4));
+                txbuf[16] = DECToBCD(M(4));                
             }else{
                 if ( SetAlarm( buf+3 ) )
                 {
