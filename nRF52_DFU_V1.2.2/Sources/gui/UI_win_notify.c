@@ -733,7 +733,7 @@ static const int notify_max[10] =
     4,  /* APP_MSG 2s */
     30, /* ALARM 15s */
     14, /* FINDME 7s */   
-    4,  /* BLE Disconnnected 8s */
+    6,  /* BLE Disconnnected 3s */
     8,  /* Sedentary notification 4s */ 
     90, /* uit notification 45s */ 
     30, /* Drinking water */
