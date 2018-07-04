@@ -11,7 +11,7 @@ typedef struct
 
 typedef struct
 {
-   Alarm_Typef al[9];
+   Alarm_Typef al[5];
    unsigned long alarm_s;
    unsigned long alarm_ss;/* 附加标识，用于标识被用户按键触摸取消的闹钟 */
    unsigned char g_Ahour_next;
