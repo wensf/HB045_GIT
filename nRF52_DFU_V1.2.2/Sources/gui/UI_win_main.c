@@ -1249,8 +1249,10 @@ void show_uit_win( void)
 
     #endif
     
-    DrawUI_Bitmap_Exx( (80-11*2)/2,110-11+3+2,11, 24, Font_11x18[uit_lvl/10], 0x0000);
-    DrawUI_Bitmap_Exx( (80-11*2)/2+11,110-11+3+2,11, 24, Font_11x18[uit_lvl%10], 0x0000); 
+    int uv = (int)(UIT_i);
+    
+    DrawUI_Bitmap_Exx( (80-11*2)/2,110-11+3+2,11, 24, Font_11x18[uv/10], 0x0000);
+    DrawUI_Bitmap_Exx( (80-11*2)/2+11,110-11+3+2,11, 24, Font_11x18[uv%10], 0x0000); 
     
     #if 0
     switch ( uit_lvl )
@@ -1713,7 +1715,7 @@ unsigned long win_main_proc(unsigned long wid, unsigned long msg_type,
 			fristBootFlag = 0;
 		}
 		
-        #if 0
+        #if 1
 		if ( (win_ticks > 12) && (config.ui_style == 2) )				
 		{
 			lcd_display(0);
