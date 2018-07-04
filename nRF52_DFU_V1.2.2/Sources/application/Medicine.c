@@ -75,8 +75,8 @@ int SetMedicine( const unsigned char *buf )
  */
 void calc_next_Medicine( int init_flag )
 {
-    unsigned int alarm_time_to_min_today[9];
-    unsigned int alarm_time_to_min_tomorrow[9];
+    unsigned int alarm_time_to_min_today[5];
+    unsigned int alarm_time_to_min_tomorrow[5];
 
     unsigned int alarm_time_to_min_now = current_timer.hour * 60 +
 		current_timer.minute;
