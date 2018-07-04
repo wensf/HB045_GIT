@@ -60,11 +60,11 @@ BLE_Typdef ble = {
 	.ancs_notify_enable = 0,
 };
 
-unsigned char gsensor_ok = 0;
-unsigned char test_lock = 0;
-unsigned char hr_ok = 0;
+unsigned char gsensor_ok        = 0;
+unsigned char test_lock         = 0;
+unsigned char hr_ok             = 0;
 unsigned char update_flag;
 unsigned char ancs_ancs_flag;
 
-unsigned char uit_debug_enable = 1;
+unsigned char uit_debug_enable  = 0;
 
