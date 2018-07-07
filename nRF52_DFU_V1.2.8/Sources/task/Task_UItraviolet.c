@@ -456,7 +456,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             UIT_cm2_save[0] = UIT_cm2;
         }
         
-        if ( UIT_i_save[0] > UIT_i )
+        if ( UIT_i > UIT_i_save[0] )
         {
             UIT_i_save[0] = UIT_i;
         }
@@ -498,7 +498,8 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
     {
         /* 6-18点: 30分钟保存1个,1次保存2个,60分钟1组 */
         
-        if ( (TimerHH() >= 6) && (TimerHH() <= 18) )       
+        if ( (TimerHH() >= 6) && 
+            ( (TimerHH() < 18) || ( (TimerHH() == 18) && (TimerMI() == 0)) ) )      
         {
             osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
             
