@@ -10,6 +10,7 @@
 
 #include "HeartComp.h"
 #include "ClockTick.h"
+#include "Task_UItraviolet.h"
 
 struct time_struct current_timer = { DEFAULT_HOUR,DEFAULT_MINUTE,DEFAULT_SECOND,
                              DEFAULT_YEAR,DEFAULT_MONTH,DEFAULT_DAY,
@@ -71,6 +72,11 @@ void system_clock_click(unsigned long seconds )
 		osal_set_event( taskFlashTaskId, TASK_FLASH_UPDATE_CONFIG_EVT);
 	}
 	#endif
+    
+    if ( !(current_timer.minute % 30 )) 
+    {
+        osal_set_event( taskUItravioletTaskId, TASK_UIT_SAVE_UIT_EVT );
+    }
 	
     if(current_timer.minute < 60 ){
         return;

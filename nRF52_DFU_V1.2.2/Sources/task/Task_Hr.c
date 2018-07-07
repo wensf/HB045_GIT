@@ -294,7 +294,7 @@ unsigned long taskHr( unsigned long task_id, unsigned long events )
 			return ( events ^ TASK_HR_DECT_AUTO_EVT );
 		}
 			
-		osal_start_timerEx( task_id, TASK_HR_DECT_AUTO_EVT, hr.auto_measure_interval*60*1000);
+		osal_start_timerEx( task_id, TASK_HR_DECT_AUTO_EVT, hr.auto_measure_interval*60*1000+1);
 		
 		if ( (hr.stop == 1) && (config.shutdown == 0) )
 		{

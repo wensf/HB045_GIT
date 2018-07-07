@@ -932,7 +932,7 @@ void taskBleInit( unsigned long task_id )
 	
 	/** To initialize the BLE stack */
 	{		
-		bool erase_bonds;
+		bool erase_bonds = true;
 
 		// Initialize.
 		ble_stack_init();		

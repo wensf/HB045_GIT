@@ -399,7 +399,7 @@ unsigned char uit_warnning_enable;
 unsigned char uit_warnning_val = MAX_UIT;
 unsigned char uit_warnning_interval = 2;
 unsigned char dataCnt = 0;
-unsigned long sampleCnt = 0;
+long sampleCnt = 0;
 
 unsigned char local_tx[20];
 
@@ -440,7 +440,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             /**
              * 持续uit_warnning_interval分钟超过提醒阈值,则报警提示
              */
-            if ( dangerius_cnt > uit_warnning_interval*60*4 ) 
+            if ( dangerius_cnt > uit_warnning_interval*60 ) 
             {
                 dangerius_cnt = 0;
 
@@ -463,55 +463,15 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         sampleCnt++;
 
-        osal_start_timerEx ( task_id, TASK_UITRAVIOLET_START_EVT, 250 );
+        osal_start_timerEx ( task_id, TASK_UITRAVIOLET_START_EVT, 1000 );
         
-        if ( (uit_notify_enable & 0x1 ) && !( sampleCnt % 5*4) ) /** 5秒上传一次 */
+        if ( (uit_notify_enable & 0x1 ) && !( sampleCnt % 5) ) /** 5秒上传一次 */
         {
             osal_set_event ( task_id, TASK_UIT_UPDATE_UV_EVT );
         }
-        
-        #if 0
-        
-        if ( !(sampleCnt % 30*4) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 3分钟保存1个,1次保存2个,6分钟1组 */
-        {
-            if ( dataCnt == 0 )
-            {
-                UIT_i[1]   = UIT_i[0];
-                UIT_cm2[1] = UIT_cm2[0]; 
-                dataCnt = 1;
-            }else{
-                dataCnt = 0;
-                osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
-            } 
-        }
-        
-        #else
-         
-        if ( !(sampleCnt % 30*60*1000*4) && (TimerHH() >= 6) && (TimerHH() < 18) )           /* 6-18点: 30分钟保存1个,1次保存2个,60分钟1组 */
-        {
-            if ( dataCnt == 0 )
-            {   /* 第一个数据，先缓存 */
-                UIT_i_save[1]   = UIT_i_save[0];
-                UIT_cm2_save[1] = UIT_cm2_save[0];
-                UIT_i_save[0] = 0;
-                UIT_cm2_save[0] = 0;
-                dataCnt = 1;
-            }else{
-                /* 第二个数据, 保存 */
-                dataCnt = 0;
-                osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
-            } 
-        }
                
-        #endif
-        
-        if ( !(sampleCnt % 60*60*1000*4) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
-        {
-            local_tx[0] = 0x28;
-            local_tx[1] = 0x02;
-            local_tx[2] = fm.erea[FMC_ID_UIT].items;     
-
-            bt_protocol_tx( local_tx, sizeof(local_tx));            
+        if ( ((sampleCnt % 3600) == 0 ) && (TimerHH() >= 6) && (TimerHH() < 18) )         /* 每个60分钟上报一次 */
+        {            
         }
         
 		return ( events ^ TASK_UITRAVIOLET_START_EVT );
@@ -532,6 +492,24 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         bt_protocol_tx( local_tx, sizeof(local_tx));
         
         return ( events ^ TASK_UIT_UPDATE_UV_EVT );
+    }
+    
+    if ( events & TASK_UIT_SAVE_UIT_EVT )
+    {
+        /* 6-18点: 30分钟保存1个,1次保存2个,60分钟1组 */
+        
+        if ( (TimerHH() >= 6) && (TimerHH() <= 18) )       
+        {
+            osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
+            
+            local_tx[0] = 0x28;
+            local_tx[1] = 0x02;
+            local_tx[2] = fm.erea[FMC_ID_UIT].items;     
+
+            bt_protocol_tx( local_tx, sizeof(local_tx));                 
+        }
+        
+        return ( events ^ TASK_UIT_SAVE_UIT_EVT );
     }
 	
 	if ( events & TASK_UITRAVIOLET_STOP_EVT )
