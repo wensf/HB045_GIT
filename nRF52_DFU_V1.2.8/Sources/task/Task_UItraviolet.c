@@ -502,15 +502,22 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             ( (TimerHH() < 18) || ( (TimerHH() == 18) && (TimerMI() == 0)) ) )      
         {
             osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
-            
-            local_tx[0] = 0x28;
-            local_tx[1] = 0x02;
-            local_tx[2] = fm.erea[FMC_ID_UIT].items;     
-
-            bt_protocol_tx( local_tx, sizeof(local_tx));                 
+        
+            osal_start_timerEx ( task_id, TASK_UIT_REPORT_UIT_EVT, 500 );
         }
         
         return ( events ^ TASK_UIT_SAVE_UIT_EVT );
+    }
+    
+    if ( events & TASK_UIT_REPORT_UIT_EVT )
+    {
+        local_tx[0] = 0x28;
+        local_tx[1] = 0x02;
+        local_tx[2] = fm.erea[FMC_ID_UIT].items;     
+
+        bt_protocol_tx( local_tx, sizeof(local_tx));
+        
+        return ( events ^ TASK_UIT_REPORT_UIT_EVT );
     }
 	
 	if ( events & TASK_UITRAVIOLET_STOP_EVT )

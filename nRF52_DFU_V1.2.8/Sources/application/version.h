@@ -7,7 +7,7 @@
 
 #define VERSION_MAJOR           1
 #define VERSION_MINOR           2
-#define VERSION_REVISON         8
+#define VERSION_REVISON         9
 
 #define PRODUCT_ID_H            0x80 
 #define PRODUCT_ID_L            0x68

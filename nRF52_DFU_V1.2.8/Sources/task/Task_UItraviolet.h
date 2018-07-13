@@ -6,6 +6,7 @@
 #define TASK_UITRAVIOLET_INIT_EVET          0x00000004
 #define TASK_UIT_UPDATE_UV_EVT              0x00000008
 #define TASK_UIT_SAVE_UIT_EVT               0x00000010
+#define TASK_UIT_REPORT_UIT_EVT             0x00000020
 
 extern short UIT_adc;
 extern float UIT_vol;
